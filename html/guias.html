@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <a href="../index.html"><li>Equipo</li></a>
+                <a href="./guias.html"><li>Guias de ayuda y usuarios</li></a> 
+                <a href="./vuelos.html"><li>Vuelos</li></a>
+                <a href="./remisiones.html"><li>Remisiones</li></a>
+                <a href="./devoluciones.html"><li>Devoluciones</li></a>
+                <a href="./colas.html"><li>Colas</li></a>
+                <a href="./form.html"><li>Sugerencias</li></a> 
+            </ul>
+        </nav>
+    </header>
+  
+    <div>
+        <h1>Guias de ayuda</h1>
+            <ul>
+                <a href="#inicio"><li>Inicio de dia laboral</li></a>
+                <a href="#prioridad"><li>Prioridades</li></a>
+                <a href="#ae"><li>Manejo de admins pendientes de revision AE</li></a>
+                <a href="#bankias"><li>Manejo de bankias</li></a>
+                <a href="#canjes"><li>Manejo de canjes</li></a>
+            </ul>
+        </div>
+        <section id="inicio">
+            <h2>Pasos a seguir para comenzar a gestionar</h2>
+                <ol>
+                    <li>Loguearnos en <a href="https://go.invoxcontact.io/login/?redirect=https://go.invoxcontact.io/webagent/" target="_blank">Numintec.</a> -Se debe marcar estado Tarea Off </li>
+                    <li>Abrimos todas nuestras herramientas de trabajo.
+                        <ul>
+                            <li>Gmail</li>
+                            <li><a href="https://atrapaloargentina.freshdesk.com/a/dashboard/default" target="_blank">FD</a></li>
+                            <li>Galileo</li>
+                            <li><a href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank">Amadeus</a></li>
+                            <li><a href="https://live.decidir.com/sac/LoginServlet" target="_blank">Decidir</a></li>
+                            <li><a href="https://prismanet.prismamediosdepago.com/cspv/adm/GetLoginPPI.event" target="_blank">Lapos</a></li>
+                            <li><a href="https://sgts.firstdata.com/sgts/servlet/com.fiserv.geologin" target="_blank">Master</a></li>
+                        </ul>
+                    </li>
+                </ol>    
+        </section>
+        <section id="prioridad">
+            <h2>Prioridades</h2>
+            <p>Al comenzar nuestra gestion es necesario hacerlo siguiendo un lineamiento unificado para lograr mejores resultados. <br>
+            Teniendo en cuenta nuestra expereciencia este seria el orden más adecuado:
+            </p>
+            <ol>
+                <li>Verificacion de mails op (la idea es que puedan hacer un vistazo rápido para identificar en base al asunto si hay alguna nueva bajada o pendiente urgente)</li>
+                <li>Nuestra tarea principal y prioritaria siempre es la <b>emisión de vuelos</b> </li>
+                <li>Hoteles (no se cuanto tiempo más estará la tarea asi que no me voy a meter en profundidad)</li>
+                <li>Cola 50 (ya que implican un cobro generado al pax)</li>
+                <li>Cola 72 (ya que pueden caerse los lugares tomados)</li>
+                <li>Cola 23 (ya que pueden haber errores de emisiones automaticas)</li>
+                <li>Cola 30/31</li>
+                <li>Rechequeo mail op</li>
+                <li>Devos/Adms</li>
+                <li>Canjes</li>
+            </ol>
+        </section>
+        <section id="ae">
+            <h2>Manejo de admins pendientes de revision AE</h2>
+            <p>En los siguientes casos no se avanza con la gestion
+                <ul>
+                    <li>Sin datos de ttlar de tc en admin</li>
+                    <li>Forzar compra pendientes</li>
+                </ul>
+                El resto de los admins podemos avanzar.
+                <ul>
+                    <li>Si esta ok se emite y envia confirmacion</li>
+                    <li>Si esta en alerta se emite, se carga comision y servicios, se coloca tag prioridad 1 y se da aviso por chat </li>
+                </ul>  
+            </p>           
+        </section>
+        <section id="bankias">
+            <h2>Bankias</h2>
+            <h3>Se considera bankia a toda aquella reserva que tiene un trabajo de recontacto con el pax para avanzar.</h3>
+            <p>
+                Estos pueden ser por:
+                <ul>
+                    <li>TCR</li>
+                    <li>Tramos HX</li>
+                    <li>Bin no aplica</li>
+                    <li>Error de equipaje</li>
+                </ul>
+                Si se presenta cualquier de los casos anteriores lo primero que debemos hacer es cargar el tag bankia, anular el cobro si es posible y comunicarnos con el pax
+                <b>El pax tiene que saber el estado de su reserva y nosotros cumplimos con informarle</b>
+                Teniendo en cuenta que para que la empresa siga creciendo y nosotros por consecuencia (o esa es la idea) debemos intentar convertir esa reserva en venta finalmente
+                Por esta razon y sabiendo que es tiempo que deben invertir en el cierre del pedido se decidió para un incentivo por cada admin que pasen a vendido.
+                
+                <h3>Condiciones para que se pague ese plus</h3>
+                <ul>
+                    <li>Contacto telefonico: si o si tiene que haber un llamado (real jaja) de contacto con el pax o en su defecto 2 intentos de contacto </li>
+                    <li>Tiene que estar cargada la informacion del pedido en la planilla de op</li>
+                </ul>
+            </p>
+        </section>
+   
+</body>
+</html>
