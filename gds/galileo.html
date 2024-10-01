@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Galileo</h1>
+
+    <li><a href="#logueo">Como loguearse?</a></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <section id="logueo">
+        <p>Ingreso con usuario y contraseña</p>
+        <img src="../img/logueogds.png" alt="">
+        <p>
+            Ya dentro del gds tenemos que indicar a que ciudad queremos ingresar y recien poder proceder.
+            Nosotros tenemos 4 ciudades que trabajamos:
+            <li>CIUDAD BUE PARA VUELOS SEM/7C08/AG</li>
+            <li>CIUDAD BUE PARA VUELOS+HOTEL SEM/313T/AG</li>
+            <li>CIUDAD PERU PARA VUELOS SEM/55MR/AG</li>
+            <li>CIUDAD MEX PARA VUELOS SEM/825G/AG</li> <br>
+
+            <img src="../img/logueo2.png" alt="">
+        </p>
+    </section>
+
+
+    <p>
+        
+        
+        Cuotas
+        ¿Dónde cobro?
+        ¿Cómo lo cargo para cobrarlo?
+        ¿Cómo lo reflejo en GDS?
+        VISA
+        1
+        GSD EN 1 pago o
+        LAPOS = PAYWAY
+        1 CUOTAS = 1
+        TMU1FVIXXXXXXXXXXXXXX*D1023 + COMANDO DE EMISION SEGUIDO DE /F*ICVV (COD DE SEG 3 DIGITOS)
+        3
+        3 CUOTAS = 13
+        TMU1FVIXXXXXXXXXXXXX*D1023*E13*AXXXXXX
+        6
+        6 CUOTAS = 16
+        TMU1FVIXXXXXXXXXXXXX*D1023*E16*AXXXXXX
+        MASTER
+        1
+        WEBPOSNET O TELEFONO
+        1 CUOTAS = 1
+        TMU1FCAXXXXXXXXXXXXXXX*D1023*AXXXXXX
+        3
+        3 CUOTAS = 13
+        TMU1FCAXXXXXXXXXXXXXXXX*D1023*E13*AXXXXXX
+        6
+        6 CUOTAS = 16
+        TMU1FCAXXXXXXXXXXXXXXXX*D1023*E16*AXXXXXX
+        AMEX
+        1
+        GDS
+        1 CUOTAS = 01
+        TMU1FAXXXXXXXXXXXXXXXX*D1023 
+        Firmar y guardar
+        COMANDO DE EMISION SEGUIDO DE /F*IXXXX (COD DE SEG 4 DIGITOS)
+        CABAL
+        1
+        TELEFONO
+        1 CUOTAS = 01
+        TMU1FCCCLXXXXXXXXXXXXXXXX*D1023*AXXXXXX
+        NARANJA
+        1
+        TELEFONO
+        1 CUOTAS = 01
+        TMU1FCCTNXXXXXXXXXXXXXX*D1023*AXXXXXX
+        3
+        3 CUOTAS = 3
+        TMU1FCCTNXXXXXXXXXXXXXX*E03*AXXXXXX
+        6
+        6 CUOTAS = 6
+        TMU1FCCTNXXXXXXXXXXXXXX*E06*AXXXXXX
+        
+        
+        
+        GALILEO
+        
+        ¿Cómo loguearse en Galileo?
+        Ingreso con usuario y contraseña
+        Poner Duty code / ciudad de trabajo SEM/7C08/AG (Solo vuelos)
+        Ciudad de vuelos + hotel: SEM/313T/AG
+        Asignar impresora → HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA
+        
+        ¿Cómo tomar una reserva de cero en Galileo? 
+        Datos Mandatorios:
+        
+        Nombre Pax
+        N.APELLIDO/NOMBRE
+        Teléfono Atrápalo
+        CM/
+        Buscar dispo
+        A10OCTBUEBRC/AR
+        Tomar segmento
+        01Y3 (0: Vender / 1: Cantidad pax / Y: Clase / 3: Segmento vlo)
+        o Hacer click en la clase tarifaria el vuelo que quiero
+        Tarificar
+        
+        
+        FQ (Cotiza la clase que tengo tomada) 
+        FQBB (Me busca si en ese mismo vuelo que tome hay una tarifa más barata)
+        FQ/BAG (Tarifa con equipaje)
+        FQ/USD
+Ver tarifa que tengo guardada
+*FF
+Tiempo limite
+T.T*
+Firma del agente
+R.CT (iniciales ejecutivo)
+Cerrar y desplegar
+ER
+
+
+Status segmentos:
+HS Segmento solicitado
+HK Segmento confirmado una vez que cerraste la reserva, tengo código de reserva
+HX Segmento cancelado
+HK / UN Vuelo vendido tuvo una reprogramación
+
+Otros comandos:
+
+Teléfono
+Solicitud servicio especial /miscellaneus / código ssrr
+Mail
+Solicitud servicio especial /miscellaneus / código ssrr
+Dni /Foid
+Solicitud servicio especial /miscellaneus / código ssrr
+Docs
+Solicitud servicio especial /miscellaneus / código ssrr
+Ignorar y despegar
+IR
+Borrar Segmento
+X1
+Buscar pnr de Cia Aérea
+*VL
+Ver toda la reserva desplegada
+*ALL
+Ingresar ARNK
+Y
+Borrar nombre de pax
+N.P2@ borra el nombre
+Historial general de la reserva
+*H 
+Historial solo del itinerario
+*HI
+Aceptar reprogramación
+@ALL 
+Remark
+NP.
+Splitear un pax de la reserva
+DP1
+Abrir una reserva despues de disfrutado
+PQ + PNR
+Cargar endoso con EXENCIÓN DE PERCEPCIONES AR
+TMU1EBPAXEE CUIT27350167957
+Cargar ENDOSO CON CUIT/CUIL (Solo inter)
+TMU1EBCUIL20418866110
+Como cambiar fecha de segmento
+@2(Segmento)/fechanueva 
+Cambiar segmento de clase
+@A/B
+Cambiar la cantidad de paxs
+@A/3
+Tirar un Fare display
+FD25APRBUEMAD/AV
+Desplegar todo lo emitido en el día
+HMPR
+Comando para eximir impuestos
+FQTE-Q1-S5
+
+
+COMANDO PAST DATE
+PNR PURGADO 
+Abrir un pnr que ya está volado el Ticket o vencido
+
+
+PQ/R-PNR
+Tipear CONFIRM
+Tab y enter en el punto final
+Te lo pasa a una cola de 24hs
+Q/1*CPD Categoria past date
+Tipo de cambio histórico
+FZSUSD1ARS.13DEC23
+Mensaje NP
+np. texto libre
+
+
+¿Cómo grabar una cotización en Galileo?
+
+
+Cotizar las clases que tengo
+FQ
+Recotizar a + barato 
+FQBB
+Borrar tarifa que está guardada
+FX1 (Número de PQ)
+Cotizar por pax
+FQP2
+Cotizar historico
+FQ.H10OCT22
+FQP1.H10OCT22
+Separar dos PQ
+
+
+
+
+¿Cómo Cotizar un tkt inter en USD sin los impuestos que no se cobran?
+
+FQ:USD 
+FQBB:USD
+
+Aéreos:  siempre tomamos el cambio BSP
+Tenemos dos opciones:
+1- Cuando cotizamos aéreos desde GDS:
+El procedimiento es el siguiente:
+
+
+1- Grabamos tarifa en dólares en GDS (Galileo fq:usd / Amadeus fxp/r,fc-usd)
+2- sumamos fee en dólares
+Fee para vuelos de larga distancia internacionales sumamos 12%
+Fee para vuelos regionales  (internacionales) sumamos 10%
+
+
+Para realizar el cuadre en Admin utilizamos Tipo de cambio de BSP
+
+
+2- Cuando cotizamos aéreos desde web Atrápalo y cobramos en USD
+1- hacemos la reserva en nuestra web
+2- Ajustamos tasas (restamos Impuesto pais y RG, esto lo vemos en el gds)
+3- el precio que refleja el admin luego que ajustamos las tasas lo dividimos por el cambio de BSP y el resultado es el monto a cobrar en dólares al pasajero (precio de venta).
+
+
+
+
+¿Cómo emitir un ticket en Galileo?
+CHECK LIST Ticket Nacional  
+Forma de pago
+Comisión
+Over
+
+CHECK LIST Ticket Internacional
+Forma de pago
+Comisión
+Over
+Cuit
+Tarifa solidaria
+
+
+
+Comandos
+
+Para ver que Over y Comisión   *RI
+Galileo responde con esto:
+
+QP: MATCH COM: 0.0 OVER: 0.0 TCODE:  26SEP 15:02
+
+Cargar la comisión TMU1Z0 (Varia el último número)
+Poner Over según ruta  TMU1AI-BUE29/VC-ZA
+Ingreso forma de pago
+TMU1FS           (CASH) 
+TMUFVI             VISA
+TMU1FCA         MASTER
+TMU1FAX          AMEX
+            TMU1FCCTN    NARANJA
+            TMU1FCCCL     CABAL
+            
+            Número de Tarjeta
+            *D Vencimiento
+            *A Número de autorización
+            EJ VISA: TMUFVI4585967816441515*D0129*A5455
+            6)   Emitir     TKPDXD.FE60D2.6PI3
+            
+            Tarifas netas no se carga comisión ni over en GALILEO!!! 
+            
+            NETAS IB 
+            
+            
+            
+            
+            ¿Qué pasa si no tengo cargado nada en *RI?
+            Lo tengo que encolar en un robot que lo carga con el comando QEB/80. Tarda aprox  minutos
+            
+            Desglose de comando de forma de pago tarjeta
+            
+            TMUFVI4585967816441515*D0129*A5455
+            
+            TMU1 = Solo emito el FQ1
+            F: Forma de Pago
+            VI: VISA
+            Número de TC
+            *D = Vencimiento
+            *E = Cuotas
+            *A = Autorización
+            
+            ¿Cómo calcular Comisiónes/ Over para modificar en ADMIN?
+            
+            CUENTA (Over GDS + Comisión GDS) - Comisión RICALE = Resultado cargo en ADMIN
+            
+            
+            
+            Doméstico
+            Internacional
+            Ejemplo
+            Ejemplo 2
+            Over GDS
+            SUMA 
+            SUMA
+            2
+            2
+            Comisión GDS
+            SUMA
+            SUMA
+            +3
+            0
+            
+            
+            
+            
+
+            
+            5
+            
+            
+            Comisión Ricale
+            RESTA
+            -0.5
+            RESTA
+            -1
+            -0.5
+            -1
+            RESULTADO
+            
+            
+            
+            
+            4.5
+            1
+            
+            
+        </p>
+        </body>
+        </html>

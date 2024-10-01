@@ -25,37 +25,45 @@
         </nav>
     </header>
   
-    <div>
-        <h1>Guias de ayuda</h1>
+    <div >
+        <h1>Guias de ayuda y usuarios</h1>
             <ul>
                 <a href="#inicio"><li>Inicio de dia laboral</li></a>
                 <a href="#prioridad"><li>Prioridades</li></a>
+                <a href="#fd"><li>Manejo de FD</li></a>
                 <a href="#ae"><li>Manejo de admins pendientes de revision AE</li></a>
                 <a href="#bankias"><li>Manejo de bankias</li></a>
-                <a href="#canjes"><li>Manejo de canjes</li></a>
             </ul>
         </div>
         <section id="inicio">
             <h2>Pasos a seguir para comenzar a gestionar</h2>
                 <ol>
-                    <li>Loguearnos en <a href="https://go.invoxcontact.io/login/?redirect=https://go.invoxcontact.io/webagent/" target="_blank">Numintec.</a> -Se debe marcar estado Tarea Off </li>
-                    <li>Abrimos todas nuestras herramientas de trabajo.
-                        <ul>
-                            <li>Gmail</li>
-                            <li><a href="https://atrapaloargentina.freshdesk.com/a/dashboard/default" target="_blank">FD</a></li>
-                            <li>Galileo</li>
-                            <li><a href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank">Amadeus</a></li>
-                            <li><a href="https://live.decidir.com/sac/LoginServlet" target="_blank">Decidir</a></li>
-                            <li><a href="https://prismanet.prismamediosdepago.com/cspv/adm/GetLoginPPI.event" target="_blank">Lapos</a></li>
-                            <li><a href="https://sgts.firstdata.com/sgts/servlet/com.fiserv.geologin" target="_blank">Master</a></li>
-                        </ul>
+                    <li>1- Tenemos que loguearnos en <a href="https://go.invoxcontact.io/login/?redirect=https://go.invoxcontact.io/webagent/" target="_blank">Numintec</a> y cambiar el estado a <strong> tareas off</strong>
                     </li>
+                    <p>
+                    Desde el telefono rojo vamos a ingresar a la pantalla para cambiar y guardar el nuevo estado <br>
+                    <img src="../img/logueo.png" alt="">
+                    <img src="../img/logueo-1.png" alt="">
+                    </p>
+                    <li>2- Vamos a abrir todas nuestras herramientas de trabajo.
+                    </li>
+                    <ul>
+                        <li>Gmail</li>
+                        <li><a href="https://atrapaloargentina.freshdesk.com/a/dashboard/default" target="_blank">FD</a></li>
+                        <li>VPN</li>
+                        <li><a href="https://admin.atrapalo.com.ar/" target="_blank">Admin</a></li>
+                        <li>Galileo</li>
+                        <li><a href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank">Amadeus</a></li>
+                        <li><a href="https://live.decidir.com/sac/LoginServlet" target="_blank">Decidir</a></li>
+                        <li><a href="https://prismanet.prismamediosdepago.com/cspv/adm/GetLoginPPI.event" target="_blank">Lapos</a></li>
+                        <li><a href="https://sgts.firstdata.com/sgts/servlet/com.fiserv.geologin" target="_blank">Master</a></li>
+                    </ul>
                 </ol>    
         </section>
         <section id="prioridad">
             <h2>Prioridades</h2>
             <p>Al comenzar nuestra gestion es necesario hacerlo siguiendo un lineamiento unificado para lograr mejores resultados. <br>
-            Teniendo en cuenta nuestra expereciencia este seria el orden más adecuado:
+            Teniendo en cuenta nuestra expereciencia este seria el orden más adecuado: <br>
             </p>
             <ol>
                 <li>Verificacion de mails op (la idea es que puedan hacer un vistazo rápido para identificar en base al asunto si hay alguna nueva bajada o pendiente urgente)</li>
@@ -65,23 +73,68 @@
                 <li>Cola 72 (ya que pueden caerse los lugares tomados)</li>
                 <li>Cola 23 (ya que pueden haber errores de emisiones automaticas)</li>
                 <li>Cola 30/31</li>
-                <li>Rechequeo mail op</li>
                 <li>Devos/Adms</li>
+                <li>Rechequeo mail op y fd</li>
                 <li>Canjes</li>
             </ol>
         </section>
+        <section id="fd">
+            <h2>Manejo de FD (freshdesk)</h2>
+            <p>El FD es nuestra via de comunicacion con los pasajeros a traves de su correo electronico. <br>
+            Todos los sectores tienen acceso a esta plataforma ya que tenemos todo el historial de los pasajeros y sus diferentes casos.
+            Al ingresar vamos a entrar a directo al panel central.
+            <img src="../img/fdcentral.png" alt="" width="80%"> <br>
+<h5>
+
+    Aca podemos ver la cantidad de fd que tenemos Sin Resolver, ya sea Abiertos o Pendientes de respuesta y las calificaciones que nos ponen los pasajeros.
+</h5>
+
+Tenemos que ingresar a Sin resolver para ver todo lo que tenemos por trabajar.
+
+<img src="../img/fd1.png" alt="" width="80%">
+<img src="../img/fd2.png" alt="" width="80%">
+
+<h3>Recuadro ROJO</h3>
+Nos muestra todos los casos pendientes de respuesta con el detalle del estado actual
+<h3>Recuadro NARANJA</h3>
+El detalle del fd se especifica con lo siguiente:
+<li>Prioridad del caso: BAJA/MEDIA/ALTA/URGENTE</li>
+<li>Grupo y agente al cual esta asignado</li>
+<li>Estado de respuesta</li>
+<h3>Recuadro VERDE</h3>
+Tenemos el filtrador para justamente poder buscar, modificar y cerrar de acuerdo al caso.
+Tambien podemos filtrar por cualquier agente y grupo. <br>
+
+<h2>Tips y puntos a tener en cuenta para trabajar los fd</h2>
+
+<li>Para que nos cuente en nuestra productividad siempre tiene que estar asignado a Grupo OPERACIONES y con el nombre de agente</li>
+<li>Si algun caso aun esta en proceso de resolucion, el estado tiene que quedar en PENDIENTE</li>
+<li>Para trabajar los casos de manera ordenada, vamos a dar importancia y guiarnos por la prioridad del caso</li>
+<li>Para finalizar el caso, se debe pasar a estado Resuelto</li>
+
+
+
+
+
+            
+               
+            </p>           
+        </section>
         <section id="ae">
             <h2>Manejo de admins pendientes de revision AE</h2>
-            <p>En los siguientes casos no se avanza con la gestion
+            <p>Ae es parte fundamental para el cierre de un pedido ya que es la tarea de verificacion y validacion de los datos que ingresan.
+                Para poder hacer un trabajo eficiente es clave saber qué pedidos podemos procesar y cuales no en base al estado inicial de la informacion <br>
+                En los siguientes casos no se avanza con la gestion
                 <ul>
-                    <li>Sin datos de ttlar de tc en admin</li>
-                    <li>Forzar compra pendientes</li>
+                    <li>Si no hay datos del titular de la tarjeta en admin</li>
+                    <li>Estado Forzar compra pendiente y Pago seguro</li>
                 </ul>
-                El resto de los admins podemos avanzar.
+                El resto de casos, permite nuestra gestion y avance de la siguiente manera:
                 <ul>
-                    <li>Si esta ok se emite y envia confirmacion</li>
-                    <li>Si esta en alerta se emite, se carga comision y servicios, se coloca tag prioridad 1 y se da aviso por chat </li>
+                    <li>Si el estado es OK AE, se emite y envia confirmacion a pasajero</li>
+                    <li>Si esta en alerta, se emite, se carga comision, tickets y servicios, se coloca TAG PROIRIDAD 1 y se da aviso por chat para que puedan ver el admin con prioridad </li>
                 </ul>  
+                Para ver mas detalles de la operatoria de AE dar clik <a href="../sectores/ae.html" target="_blank">acá</a>
             </p>           
         </section>
         <section id="bankias">
@@ -95,18 +148,24 @@
                     <li>Bin no aplica</li>
                     <li>Error de equipaje</li>
                 </ul>
-                Si se presenta cualquier de los casos anteriores lo primero que debemos hacer es cargar el tag bankia, anular el cobro si es posible y comunicarnos con el pax
-                <b>El pax tiene que saber el estado de su reserva y nosotros cumplimos con informarle</b>
+                Si se presenta cualquiera de los casos anteriores lo primero que debemos hacer es cargar el tag bankia, anular el cobro si es posible y comunicarnos con el pax <br>
+                <strong>El pax tiene que saber el estado de su reserva y nosotros cumplimos con informarle</strong> <br>
                 Teniendo en cuenta que para que la empresa siga creciendo y nosotros por consecuencia (o esa es la idea) debemos intentar convertir esa reserva en venta finalmente
                 Por esta razon y sabiendo que es tiempo que deben invertir en el cierre del pedido se decidió para un incentivo por cada admin que pasen a vendido.
                 
                 <h3>Condiciones para que se pague ese plus</h3>
                 <ul>
-                    <li>Contacto telefonico: si o si tiene que haber un llamado (real jaja) de contacto con el pax o en su defecto 2 intentos de contacto </li>
-                    <li>Tiene que estar cargada la informacion del pedido en la planilla de op</li>
+                    <li><strong>Contacto telefonico:</strong> si o si tiene que haber un llamado (real jaja) de contacto con el pax o en su defecto 2 intentos de contacto </li>
+                    <li>Tiene que estar cargada la informacion completa del pedido en la planilla de op</li>
                 </ul>
+                <a href="https://docs.google.com/spreadsheets/d/1OpdbBQYlEwgebtnjrrr7IpDE2_4DcG1s7OVhZsX-qIQ/edit?gid=814470273#gid=814470273" target="_blank">
+
+                    Verificar comisiones
+                </a>
             </p>
         </section>
-   
+   <footer>
+    <p>Sitio creado por CG</p>
+   </footer>
 </body>
 </html>
