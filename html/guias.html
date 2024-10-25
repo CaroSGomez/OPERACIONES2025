@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Guias Op2025</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="../img/logo.png" alt="logo">
-        <nav>
+        <nav class="menu">
             <ul>
                 <a href="../index.html"><li>Equipo</li></a>
                 <a href="./guias.html"><li>Guias de ayuda y usuarios</li></a> 
@@ -20,152 +20,157 @@
                 <a href="./remisiones.html"><li>Remisiones</li></a>
                 <a href="./devoluciones.html"><li>Devoluciones</li></a>
                 <a href="./colas.html"><li>Colas</li></a>
+                <a href="./kpis.html"><li>Kpis y productividad</li></a>
                 <a href="./form.html"><li>Sugerencias</li></a> 
             </ul>
         </nav>
     </header>
-  
-    <div >
-        <h1>Guias de ayuda y usuarios</h1>
+    <h1>Guías de ayuda y usuarios</h1>
+    <div class="submenu">
+        <ul>
+            <a href="#inicio"><li>Inicio de dia laboral</li></a>
+            <a href="#prioridad"><li>Prioridades</li></a>
+            <a href="#fd"><li>Manejo de FD</li></a>
+            <a href="#ae"><li>Manejo de admins pendientes de revision AE</li></a>
+            <a href="#bankias"><li>Manejo de bankias</li></a>
+        </ul>
+    </div>
+    <section id="inicio">
+        <h2>Pasos a seguir para comenzar a gestionar</h2>
+        <p>
+            Tenemos que loguearnos en <a href="https://go.invoxcontact.io/login/?redirect=https://go.invoxcontact.io/webagent/" target="_blank" class="link">Numintec</a> y cambiar el estado a <strong> Tareas off.</strong> <br>
+            Desde el teléfono rojo vamos a ingresar a la pantalla para cambiar y guardar el nuevo estado 
+            <img src="../img/logueo.png" alt="">
+            <img src="../img/logueo-1.png" alt=""> <br>
+            Vamos a abrir todas nuestras herramientas de trabajo.
             <ul>
-                <a href="#inicio"><li>Inicio de dia laboral</li></a>
-                <a href="#prioridad"><li>Prioridades</li></a>
-                <a href="#fd"><li>Manejo de FD</li></a>
-                <a href="#ae"><li>Manejo de admins pendientes de revision AE</li></a>
-                <a href="#bankias"><li>Manejo de bankias</li></a>
+                <li>Gmail</li>
+                <li><a href="https://atrapaloargentina.freshdesk.com/a/dashboard/default" target="_blank" class="link">FD</a></li>
+                <li>VPN</li>
+                <li><a href="https://admin.atrapalo.com.ar/" target="_blank" class="link">Admin</a></li>
+                <li>Galileo</li>
+                <li><a href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank" class="link">Amadeus</a></li>
+                <li><a href="https://live.decidir.com/sac/LoginServlet" target="_blank" class="link">Decidir</a></li>
+                <li><a href="https://prismanet.prismamediosdepago.com/cspv/adm/GetLoginPPI.event" target="_blank" class="link">Lapos</a></li>
+                <li><a href="https://sgts.firstdata.com/sgts/servlet/com.fiserv.geologin" target="_blank" class="link">Master</a></li>
+            </ul>
+        </p>
+    </section>
+    <section id="prioridad">
+        <h2>Prioridades</h2>
+        <p>Al comenzar nuestra gestión es necesario hacerlo siguiendo un lineamiento unificado para lograr mejores resultados. <br>
+            Teniendo en cuenta nuestra experiencia este seria el orden más adecuado: <br>
+        </p>
+        <ol>
+            <li>Verificacion de mails op (la idea es que puedan hacer un vistazo rápido para identificar en base al asunto si hay alguna nueva bajada o pendiente urgente)</li>
+            <li>Nuestra tarea principal y prioritaria siempre es la <b>emisión de vuelos</b> </li>
+            <li>Hoteles (no se cuanto tiempo más estará la tarea asi que no me voy a meter en profundidad)</li>
+            <li>Cola 50 (ya que implican un cobro generado al pax)</li>
+            <li>Cola 72 (ya que pueden caerse los lugares tomados)</li>
+            <li>Cola 23 (ya que pueden haber errores de emisiones automaticas)</li>
+            <li>Cola 30/31</li>
+            <li>Devos/Adms</li>
+            <li>Rechequeo mail op y fd</li>
+            <li>Canjes</li>
+        </ol>
+    </section>
+    <section id="fd">
+        <h2>Manejo de FD (freshdesk)</h2>
+        <p>
+            El FD es nuestra vía de comunicación con los pasajeros a través de mails.<br>
+            Todos los sectores tienen acceso a esta plataforma ya que tenemos el historial de los pasajeros y sus diferentes casos. <br>
+            Al ingresar vamos a entrar a directo al panel central. <br>
+            Acá podemos ver la cantidad de fd que tenemos <span>Sin Resolver (ya sea Abiertos o Pendientes de respuesta)</span>  y las calificaciones que nos ponen los pasajeros.
+            <img src="../img/fdcentral.png" alt=""> 
+        </p>
+        <img src="../img/fd1.png" alt="" >
+        <img src="../img/fd2.png" alt="" >
+        <div class="red">
+            <h3>Recuadro ROJO</h3>
+            <p>Nos muestra todos los casos pendientes de respuesta con el detalle del estado actual</p>
+        </div>
+        <div class="orange">
+            <h3>Recuadro NARANJA</h3>
+            <ul> Indica:
+                <li>Prioridad del caso: <strong>BAJA/MEDIA/ALTA/URGENTE</strong></li>
+                <li>Agente y grupo al que pertenece</li>
+                <li>Estado de respuesta: <strong>PENDIENTE/RESUELTO</strong></li>
+           </ul>
+        </div>
+        <div class="green">
+            <h3>Recuadro VERDE</h3>
+            <p> 
+                El filtrador permite buscar, modificar y cerrar fd de acuerdo al caso. <br>
+                Tambien podemos filtrar por cualquier agente y grupo
+            </p>           
+        </div>
+        <div class="tips">
+            <h3>***Tips y puntos a tener en cuenta para trabajar los fd***</h3>
+            <ul>
+                <li>Para que cuente en nuestra productividad siempre tiene que estar asignado a <strong>Grupo OPERACIONES</strong></li>
+                <li>Si algún caso aún está en proceso de resolución, el estado debe ser <strong>PENDIENTE</strong></li>
+                <li>Para trabajar los casos de manera ordenada, debemos guiarnos por la prioridad del caso</li>
+                <li>Para finalizar el caso, se debe pasar a estado <strong> RESUELTO</strong></li>    
             </ul>
         </div>
-        <section id="inicio">
-            <h2>Pasos a seguir para comenzar a gestionar</h2>
-                <ol>
-                    <li>1- Tenemos que loguearnos en <a href="https://go.invoxcontact.io/login/?redirect=https://go.invoxcontact.io/webagent/" target="_blank">Numintec</a> y cambiar el estado a <strong> tareas off</strong>
-                    </li>
-                    <p>
-                    Desde el telefono rojo vamos a ingresar a la pantalla para cambiar y guardar el nuevo estado <br>
-                    <img src="../img/logueo.png" alt="">
-                    <img src="../img/logueo-1.png" alt="">
-                    </p>
-                    <li>2- Vamos a abrir todas nuestras herramientas de trabajo.
-                    </li>
-                    <ul>
-                        <li>Gmail</li>
-                        <li><a href="https://atrapaloargentina.freshdesk.com/a/dashboard/default" target="_blank">FD</a></li>
-                        <li>VPN</li>
-                        <li><a href="https://admin.atrapalo.com.ar/" target="_blank">Admin</a></li>
-                        <li>Galileo</li>
-                        <li><a href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank">Amadeus</a></li>
-                        <li><a href="https://live.decidir.com/sac/LoginServlet" target="_blank">Decidir</a></li>
-                        <li><a href="https://prismanet.prismamediosdepago.com/cspv/adm/GetLoginPPI.event" target="_blank">Lapos</a></li>
-                        <li><a href="https://sgts.firstdata.com/sgts/servlet/com.fiserv.geologin" target="_blank">Master</a></li>
-                    </ul>
-                </ol>    
-        </section>
-        <section id="prioridad">
-            <h2>Prioridades</h2>
-            <p>Al comenzar nuestra gestion es necesario hacerlo siguiendo un lineamiento unificado para lograr mejores resultados. <br>
-            Teniendo en cuenta nuestra expereciencia este seria el orden más adecuado: <br>
-            </p>
-            <ol>
-                <li>Verificacion de mails op (la idea es que puedan hacer un vistazo rápido para identificar en base al asunto si hay alguna nueva bajada o pendiente urgente)</li>
-                <li>Nuestra tarea principal y prioritaria siempre es la <b>emisión de vuelos</b> </li>
-                <li>Hoteles (no se cuanto tiempo más estará la tarea asi que no me voy a meter en profundidad)</li>
-                <li>Cola 50 (ya que implican un cobro generado al pax)</li>
-                <li>Cola 72 (ya que pueden caerse los lugares tomados)</li>
-                <li>Cola 23 (ya que pueden haber errores de emisiones automaticas)</li>
-                <li>Cola 30/31</li>
-                <li>Devos/Adms</li>
-                <li>Rechequeo mail op y fd</li>
-                <li>Canjes</li>
-            </ol>
-        </section>
-        <section id="fd">
-            <h2>Manejo de FD (freshdesk)</h2>
-            <p>El FD es nuestra via de comunicacion con los pasajeros a traves de su correo electronico. <br>
-            Todos los sectores tienen acceso a esta plataforma ya que tenemos todo el historial de los pasajeros y sus diferentes casos.
-            Al ingresar vamos a entrar a directo al panel central.
-            <img src="../img/fdcentral.png" alt="" width="80%"> <br>
-<h5>
+    </section>
+    <section id="ae">
+        <h2>Manejo de admins pendientes control AE</h2>
+        <p>AE es parte fundamental para el cierre de un pedido ya que es la tarea de verificación y validación de los datos que ingresan por nuestra web. <br>
+                Para poder hacer un trabajo eficiente desde nuestro sector es clave saber cuáles pedidos podemos procesar en base al estado inicial de la reserva <br>
+                En los siguientes casos NO se avanza con la gestión:
+            <ul>
+                <li><strong>Si no hay datos del titular de la tarjeta en admin</strong></li>
+                <li>Estados: <strong> "Forzar compra pendiente" y "Pago seguro" </strong></li>
+            </ul>
+                El resto de casos, si permite nuestra gestión y avance de la siguiente manera:
+            <ul>
+                <li> <strong>
+                    Si el estado es OK AE, se emite y envia confirmación al pasajero
+                </strong>
+                </li>
+                <li>Si esta en <strong>"Alerta"</strong>, se emite, se carga comisión, tickets y servicios, se coloca <strong> TAG PRIORIDAD 1 </strong></li>
+            </ul>  
+                Para ver más detalles de la operatoria de AE dar clik <a href="../sectores/ae.html" target="_blank" class="link"> Acá</a>
+        </p>           
+    </section>
+    <section id="bankias">
+        <h2>Bankias</h2>
+        <p>                                      
+            Se considera bankia a toda aquella reserva que tiene un trabajo de recontacto con el/los pax para avanzar con el cobro y emisión.<br>
+            Estos pueden ser por:
+            <ul> <strong>
 
-    Aca podemos ver la cantidad de fd que tenemos Sin Resolver, ya sea Abiertos o Pendientes de respuesta y las calificaciones que nos ponen los pasajeros.
-</h5>
-
-Tenemos que ingresar a Sin resolver para ver todo lo que tenemos por trabajar.
-
-<img src="../img/fd1.png" alt="" width="80%">
-<img src="../img/fd2.png" alt="" width="80%">
-
-<h3>Recuadro ROJO</h3>
-Nos muestra todos los casos pendientes de respuesta con el detalle del estado actual
-<h3>Recuadro NARANJA</h3>
-El detalle del fd se especifica con lo siguiente:
-<li>Prioridad del caso: BAJA/MEDIA/ALTA/URGENTE</li>
-<li>Grupo y agente al cual esta asignado</li>
-<li>Estado de respuesta</li>
-<h3>Recuadro VERDE</h3>
-Tenemos el filtrador para justamente poder buscar, modificar y cerrar de acuerdo al caso.
-Tambien podemos filtrar por cualquier agente y grupo. <br>
-
-<h2>Tips y puntos a tener en cuenta para trabajar los fd</h2>
-
-<li>Para que nos cuente en nuestra productividad siempre tiene que estar asignado a Grupo OPERACIONES y con el nombre de agente</li>
-<li>Si algun caso aun esta en proceso de resolucion, el estado tiene que quedar en PENDIENTE</li>
-<li>Para trabajar los casos de manera ordenada, vamos a dar importancia y guiarnos por la prioridad del caso</li>
-<li>Para finalizar el caso, se debe pasar a estado Resuelto</li>
-
-
-
-
-
+                <li>TCR</li>
+                <li>Tramos HX</li>
+                <li>Bin no aplica</li>
+                <li>Error de equipaje</li>
+            </strong>
+            </ul>
+            Si se presenta cualquiera de los casos anteriores lo primero que debemos hacer es cargar el tag bankia, anular el cobro (si es posible) y comunicarnos con el pax <br>
             
-               
-            </p>           
-        </section>
-        <section id="ae">
-            <h2>Manejo de admins pendientes de revision AE</h2>
-            <p>Ae es parte fundamental para el cierre de un pedido ya que es la tarea de verificacion y validacion de los datos que ingresan.
-                Para poder hacer un trabajo eficiente es clave saber qué pedidos podemos procesar y cuales no en base al estado inicial de la informacion <br>
-                En los siguientes casos no se avanza con la gestion
-                <ul>
-                    <li>Si no hay datos del titular de la tarjeta en admin</li>
-                    <li>Estado Forzar compra pendiente y Pago seguro</li>
-                </ul>
-                El resto de casos, permite nuestra gestion y avance de la siguiente manera:
-                <ul>
-                    <li>Si el estado es OK AE, se emite y envia confirmacion a pasajero</li>
-                    <li>Si esta en alerta, se emite, se carga comision, tickets y servicios, se coloca TAG PROIRIDAD 1 y se da aviso por chat para que puedan ver el admin con prioridad </li>
-                </ul>  
-                Para ver mas detalles de la operatoria de AE dar clik <a href="../sectores/ae.html" target="_blank">acá</a>
-            </p>           
-        </section>
-        <section id="bankias">
-            <h2>Bankias</h2>
-            <h3>Se considera bankia a toda aquella reserva que tiene un trabajo de recontacto con el pax para avanzar.</h3>
-            <p>
-                Estos pueden ser por:
-                <ul>
-                    <li>TCR</li>
-                    <li>Tramos HX</li>
-                    <li>Bin no aplica</li>
-                    <li>Error de equipaje</li>
-                </ul>
-                Si se presenta cualquiera de los casos anteriores lo primero que debemos hacer es cargar el tag bankia, anular el cobro si es posible y comunicarnos con el pax <br>
-                <strong>El pax tiene que saber el estado de su reserva y nosotros cumplimos con informarle</strong> <br>
-                Teniendo en cuenta que para que la empresa siga creciendo y nosotros por consecuencia (o esa es la idea) debemos intentar convertir esa reserva en venta finalmente
-                Por esta razon y sabiendo que es tiempo que deben invertir en el cierre del pedido se decidió para un incentivo por cada admin que pasen a vendido.
-                
+            <span>
+                El pax tiene que saber el estado de su reserva y nosotros cumplimos con informarle
+            </span>
+             <br>
+            Teniendo en cuenta que para que la empresa siga creciendo y nosotros por consecuencia debemos intentar convertir toda reserva en venta. <br>
+            Por esta razón, y sabiendo el tiempo que deben invertir en el cierre del pedido, se decidió poner un incentivo por cada admin que pasen a vendido.
+        </p>
+            <div class="plus">
                 <h3>Condiciones para que se pague ese plus</h3>
                 <ul>
-                    <li><strong>Contacto telefonico:</strong> si o si tiene que haber un llamado (real jaja) de contacto con el pax o en su defecto 2 intentos de contacto </li>
-                    <li>Tiene que estar cargada la informacion completa del pedido en la planilla de op</li>
+                    <li> <strong>***Contacto telefónico***</strong> <br>Si o si tiene que haber un llamado (real jaja) de contacto con el pax o en su defecto 2 intentos de contacto </li>
+                    <li>Tiene que estar cargada la información completa del pedido en la planilla de operaciones</li>
                 </ul>
                 <a href="https://docs.google.com/spreadsheets/d/1OpdbBQYlEwgebtnjrrr7IpDE2_4DcG1s7OVhZsX-qIQ/edit?gid=814470273#gid=814470273" target="_blank">
-
-                    Verificar comisiones
-                </a>
-            </p>
-        </section>
-   <footer>
-    <p>Sitio creado por CG</p>
+                
+                <button class="link">Ver planilla</button></a>
+            </div>
+      
+    </section>
+    <footer>
+        <a href="/html/guias.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
+        <p>Sitio creado por CG</p>
    </footer>
 </body>
 </html>

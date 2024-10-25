@@ -1,273 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <img src="../img/logo.png" alt="logo">
-        <nav>
-            <ul>
-                <a href="../index.html"><li>Equipo</li></a>
-                <a href="./guias.html"><li>Guias de ayuda y usuarios</li></a> 
-                <a href="./vuelos.html"><li>Vuelos</li></a>
-                <a href="./remisiones.html"><li>Remisiones</li></a>
-                <a href="./devoluciones.html"><li>Devoluciones</li></a>
-                <a href="./colas.html"><li>Colas</li></a>
-                <a href="./form.html"><li>Sugerencias</li></a> 
-            </ul>
-        </nav>
-    </header>
-    <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vuelos Op2025</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="../img/logo.png" alt="logo">
+            <nav class="menu">
+                <ul>
+                    <a href="../index.html"><li>Equipo</li></a>
+                    <a href="../html/guias.html"><li>Guias de ayuda y usuarios</li></a> 
+                    <a href="../html/vuelos.html"><li>Vuelos</li></a>
+                    <a href="../html/remisiones.html"><li>Remisiones</li></a>
+                    <a href="../html/devoluciones.html"><li>Devoluciones</li></a>
+                    <a href="../html/colas.html"><li>Colas</li></a>
+                    <a href="../html/kpis.html"><li>Kpis y productividad</li></a>
+                    <a href="../html/form.html"><li>Sugerencias</li></a> 
+                </ul>
+            </nav>
+        </header>
         <h1>Galileo</h1>
-
-        <li><a href="#logueo">Como loguearse?</a></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </section>
-
-    
-
-    <section id="logueo">
-        <h2>Logueo</h2>
-        <p>Ingreso con usuario y contraseña</p>
-        <img src="../img/logueogds.png" alt="">
-        <p>
-            Ya dentro del gds tenemos que indicar a que ciudad queremos ingresar y recien poder proceder.
-            Nosotros tenemos 4 ciudades que trabajamos:
-            <li>CIUDAD BUE PARA VUELOS SEM/7C08/AG</li>
-            <li>CIUDAD BUE PARA VUELOS+HOTEL SEM/313T/AG</li>
-            <li>CIUDAD PERU PARA VUELOS SEM/55MR/AG</li>
-            <li>CIUDAD MEX PARA VUELOS SEM/825G/AG</li> <br>
-
-            <img src="../img/logueo2.png" alt=""> <br>
-            Si se ingresa por primera vez vamos a tener que asignar la impresora del sistema.
-            Comando : HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
-        </p>
-    </section>
-
-
-    <p>
-        
-        
-       <h2>
-        ¿Cómo tomar una reserva de cero en Galileo?
-       </h2>  <br>
-        <img src="../img/galileopnr.png" alt="">
-        <h3>Status segmentos:</h3>
-        <li>HS Segmento solicitado</li>
-        <li>HK Segmento confirmado una vez que cerraste la reserva, tengo código de reserva
-        </li>
-        <li>HX Segmento cancelado
-        </li>
-        <li>HK / UN Vuelo vendido tuvo una reprogramación
-        </li>
-
-<h2>Otros comandos:</h2>
-
-<li>Docs : SI.P1(NRODEPAX)/SSRDOCSYYHK1/P/AR(PAISDEEMISION)/34810398N(NROPASAPORTE)/AR(NACIONALIDAD)/25DEC89(FECHADENAC)/F(SEXO)/02APR22(FECHADECADUCIDADDEPASAPORTE)/VERA/SILVINA(APELLIDO Y NOMBRE DE PAX)</li>
-<li>Ignorar y despegar : IR</li>
-<li>Borrar Segmento :    X1</li>
-<li>Buscar pnr de Cia Aérea
-    *VL</li>
-<li>Ver toda la reserva desplegada
-    *ALL</li>
-<li>Ingresar ARNK
-    Y</li>
-<li>Borrar nombre de pax
-    N.P2@ borra el nombre</li>
-<li>Historial general de la reserva
-    *H </li>
-<li>Historial solo del itinerario
-    *HI</li>
-<li>Aceptar reprogramación
-    @ALL </li>
-<li>Remark
-    NP.</li>
-<li>Splitear un pax de la reserva
-    DP1</li>
-<li>Abrir una reserva despues de disfrutado
-    PQ + PNR</li>
-<li>Cargar endoso con EXENCIÓN DE PERCEPCIONES AR
-    TMU1EBPAXEE CUIT27350167957</li>
-<li>Cargar ENDOSO CON CUIT/CUIL (Solo inter)
-    TMU1EBCUIL20418866110</li>
-<li>Como cambiar fecha de segmento
-    @2(Segmento)/fechanueva </li>
-<li>Cambiar segmento de clase
-    @A/B</li>
-<li>Cambiar la cantidad de paxs
-    @A/3</li>
-<li>Tirar un Fare display
-    FD25APRBUEMAD/AV</li>
-<li>Desplegar todo lo emitido en el día
-    HMPR</li>
-<li>Comando para eximir impuestos
-    FQTE-Q1-S5
-    </li>
-    <li>COMANDO PAST DATE :PQ/R-PNR</li>
-    <li>PNR PURGADO : Abrir un pnr que ya está volado el Ticket o vencido
-        <ol>
-
-            <li>PQ/R-PNR</li>
-            <li>Tipear CONFIRM</li>
-            <li>Tab y enter en el punto final</li>
-            <li>Te lo pasa a una cola de 24hs</li>
-            <li>Q/1*CPD Categoria past date</li>
-        </ol>
-         </li>
-    <li>Tipo de cambio histórico:        FZSUSD1ARS.13DEC23</li>
-    <li>Mensaje NP
-        np. texto libre</li>
-    
-
-
-<h2>
-    ¿Cómo grabar una cotización en Galileo?
-
-</h2>
-
-<li>Cotizar las clases que tengo
-    FQ</li>
-<li>Recotizar a + barato 
-    FQBB</li>
-<li>Borrar tarifa que está guardada
-    FX1 (Número de PQ)</li>
-<li>Cotizar por pax
-    FQP2</li>
-<li>Cotizar historico
-    FQ.H10OCT22</li>
-<li>FQP1.H10OCT22
-    Separar dos PQ</li>
-
-
-
-<h2>
-
-    ¿Cómo Cotizar un tkt inter en USD sin los impuestos que no se cobran?
-</h2>
-
-<li>FQ:USD </li>
-<li>FQBB:USD
-</li>
-
-<p>
-    Aéreos:  siempre tomamos el cambio BSP
-    Tenemos dos opciones:
-    <ol>
-        <li>Cuando cotizamos aéreos desde GDS:
-            El procedimiento es el siguiente:
-        <ol>
-            <li>Grabamos tarifa en dólares en GDS (Galileo fq:usd / Amadeus fxp/r,fc-usd)</li>
-            <li>sumamos fee en dólares
-                Fee para vuelos de larga distancia internacionales sumamos 12%
-                Fee para vuelos regionales  (internacionales) sumamos 10%
-                </li>
-        </ol>
-        Para realizar el cuadre en Admin utilizamos Tipo de cambio de BSP 
-    </li> <br>
-        <li>Cuando cotizamos aéreos desde web Atrápalo y cobramos en USD
+        <div class="submenu">
+            <ul>
+                <a href="#logueo"><li>Logueo</li></a>
+                <a href="#rva"><li>Cómo crear un pnr de cero</li></a>
+                <a href="#cotizar"><li>Cómo cotizar</li></a>
+                <a href="#emision"><li>Paso a paso de emisión con nro de auth</li></a>
+            </ul>
+        </div>
+        <section id="logueo">
+            <h2>Logueo</h2>
+            <p>
+                Ingreso con usuario y contraseña <br>
+                <img src="../img/logueogds.png" alt=""> <br>
+                Ya dentro del gds tenemos que indicar a que ciudad queremos ingresar y recién poder proceder. <br>
+                Nosotros trabajamos con 4 ciudades: <br>
+                <li>CIUDAD BUE PARA VUELOS <strong>SEM/7C08/AG</strong></li>
+                <li>CIUDAD BUE PARA VUELOS+HOTEL <strong>SEM/313T/AG</strong></li>
+                <li>CIUDAD PERU PARA VUELOS <strong>SEM/55MR/AG</strong></li>
+                <li>CIUDAD MEX PARA VUELOS <strong>SEM/825G/AG</strong></li> <br>
+                <img src="../img/logueo2.png" alt=""> <br>
+                Si se ingresa por primera vez vamos a tener que asignar la impresora del sistema con el comando: <strong>HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA</strong>  <br>
+            </p>
+        </section>
+        <section id="rva">
+            <h2>¿Cómo tomar una reserva de cero en Galileo?</h2>
+            <img src="../img/galileopnr.png" alt="">
+            <div>
+                <h3>Status segmentos:</h3>
+                <p>
+                    <strong>HS</strong> Segmento solicitado <br>
+                    <strong>HK</strong> Segmento confirmado     <br>              <strong>HX</strong> Segmento cancelado <br>
+                    <strong>TK/UN</strong> Vuelo reprogramado/cancelado <br>
+                </p>
+            </div>
+        </section>
+        <section id="cotizar">
+            <div>
+                <h2>¿Cómo grabar una cotización en Galileo?</h2>
+                <p>
+                Cotizar las clases que tengo tomadas: <strong>FQ</strong> <br>
+                Recotizar a las clases más económicas: <strong>FQBB</strong> <br>
+                Borrar tarifa que está guardada: <strong>FX1 (Nro de archivo)</strong> <br>
+                Cotizar por pax: <strong>FQP1 (Nro de pax)</strong> <br>
+                Cotizar historico: <strong>FQ.H10OCT22(fecha de emisión)</strong> <br>
+                </p>
+            </div>
+            <div>
+                <h2>¿Cómo cotizar un ticket Internacional en USD (sin impuestos)?</h2>
+                <p>
+                    <strong>FQ:USD</strong> <br>
+                    <strong>FQBB:USD</strong> <br>
+                    Cuando cotizamos aéreos desde GDS: <br>
+                    Grabamos tarifa en dólares en GDS <br> (Galileo <strong>fq:usd</strong> / Amadeus <strong>fxp/r,fc-usd</strong>) <br>
+                    Sumamos fee en dólares <br>
+                    Fee para vuelos de larga distancia internacionales sumamos 12% <br>
+                    Fee para vuelos regionales  (internacionales) sumamos 10% <br>
+                    <span>Para realizar el cuadre en Admin utilizamos tipo de cambio de BSP</span>  <br>
+                </p>
+            </div>
+        </section>
+        <section id="emision">
+            <h2> Paso a Paso Emisión Aéreos Nro de auth </h2>
             <ol>
-                <li>hacemos la reserva en nuestra web</li>
-                <li>Ajustamos tasas (restamos Impuesto pais y RG, esto lo vemos en el gds)</li>
-                <li>el precio que refleja el admin luego que ajustamos las tasas lo dividimos por el cambio de BSP y el resultado es el monto a cobrar en dólares al pasajero (precio de venta).</li>
+                <li>Abrir en Galileo el localizador proveedor (PNR) y Verificar que los datos del pasajero, ruta y tramos del vuelos esten ok
+                    <h6>En galileo el pnr se abre con *PNR</h6>
+                    <img src="../img/tramos.png" alt=""></li> <br>
+                <li>Verificar que el equipaje y costo de la tarifa esten ok 
+                    <h6>Para desplegar la verificar el estado de la tarifa y sus componentes debemos abrir los archivos tarifarios. (*FF)</h6>
+                    <img src="../img/ff.png" alt="" ></li>
+                <li>Verificar forma de pago cargada en admin y proceder a cobrar el/los tickets de manera UATP (si aplica)
+                    <h6>La forma de pago la vemos en la caja de cobros</h6>
+                    <img src="../img/caja.png" alt="" ></li>
+                <li>Una vez cobrada la reserva procedemos a cargar la forma de pago en gds
+                    <h6>Para decirle a Galileo que vamos a ingresar un comando se inicia con TMU</h6>
+                    <h6>Para el caso de la Forma de pago se indica con F el tipo y nro de tarjeta</h6>
+                    <li>FVI - CARGA VISA</li>
+                    <li>FCA - CARGA MASTER</li>
+                    <li>FAX - CARGA AMEX</li>
+                    <li>FCCTN - CARGA NARANJA</li>
+                    <li>FCCCL - CARGA CABAL</li>
+                    <h6>Seguido al nro de tarjeta se debe indicar el vencimiento (*D), cuotas (*E) y nro de autorización (*A)</h6>
+                    <img src="../img/fop.png" alt=""></li>
             </ol>
-        </li>
-    </ol>
-</p>
-
-<h2>
-    
-    ¿Cómo emitir un ticket en Galileo?
-</h2>
-
-<p>
-    <h5>
-
-        CHECK LIST Ticket Nacional  
-    </h5>
-    <li>    Forma de pago
-    </li>
-    <li>Comisión</li>
-    <li>Over</li>
-    
-    
-    <h5>    CHECK LIST Ticket Internacional
-    </h5>
-    <li>    Forma de pago
-    </li>
-    <li>Comisión</li>
-    <li>Over</li>
-    <li>Cuit</li>
-    <li>    Tarifa solidaria
-
-    </li>
-    
-    */
-    <h4>Comandos</h4>
-
-    Para ver que Over y Comisión   *RI <br>
-    Galileo responde con esto: <br>
-    
-    QP: MATCH COM: 0.0 OVER: 0.0 TCODE:  26SEP 15:02 <br>
-
-
-    
-    Cargar la comisión TMU1Z0 (Varia el último número)
-    Poner Over según ruta  TMU1AI-BUE29/VC-ZA
-    Ingreso forma de pago
-    TMU1FS           (CASH) 
-    TMUFVI             VISA
-    TMU1FCA         MASTER
-    TMU1FAX          AMEX
-                TMU1FCCTN    NARANJA
-                TMU1FCCCL     CABAL
-                
-                Número de Tarjeta
-                *D Vencimiento
-                *A Número de autorización
-                EJ VISA: TMUFVI4585967816441515*D0129*A5455
-                6)   Emitir     TKPDXD.FE60D2.6PI3
-                
-                Tarifas netas no se carga comisión ni over en GALILEO!!! 
-                
-                NETAS IB 
-                
-                
-                
-                
-                            
-                Desglose de comando de forma de pago tarjeta
-                
-                TMUFVI4585967816441515*D0129*A5455
-                
-                TMU1 = Solo emito el FQ1
+            <p>
+                5) Firmar
+                R. (Siglas del agente) 
+                6) Ver Over y comisiones 
+                7) Si es INTER ingresar CUIL
+                8)Emitir
+                TKPDXD.FE60D2.6PI3 
+                9) Cargar los Boletos en ADMIN
+                10) Cargar comisión en ADMIN
+                8) Apretar F5
+                9) Enviar mail al pax
+                10) Asignarse como Owner quien lo emitió
+                11) Marcar como emitido    
+            </p>
+        </section>
+        <section>
+        <h2>¿Cómo emitir un ticket en Galileo?</h2>
+        <p>
+            <h5>CHECK LIST Ticket Nacional</h5>
+            <li>Forma de pago</li>
+            <li>Comisión</li>
+            <li>Over</li>
+            <h5>CHECK LIST Ticket Internacional</h5>
+            <li>Forma de pago</li>
+            <li>Comisión</li>
+            <li>Over</li>
+            <li>Cuit</li>
+            <li>Tarifa solidaria</li>
+        </section>    
+        <section id="comandos">
+        <h2>Comandos útiles:</h2>
+            <li>Docs: <br> SI.P1(Nrodepax)/SSRDOCSYYHK1/P/AR(paisdeemisión)/34810398N(nropasaporte)/AR(nacionalidad)/25DEC89(Fechadenac)/F(sexo)/02APR22(Fechacaducidad)/VERA/SILVINA(apellido/nombre)</li>
+            <li>Ignorar y despegar: <strong>IR</strong></li>
+            <li>Borrar Segmento: <strong>X</strong>1</li>
+            <li>Ver pnr de Cia Aérea:  <strong>*VL</strong></li>
+            <li>Ver toda la reserva desplegada: <strong>*ALL</strong></li>
+            <li>Modificar nombre de pax: <strong>N.Px(nrodepax)@apellido/nombre</strong></li>
+            <li>Historial general de la reserva: <strong>*H</strong></li>
+            <li>Historial solo del itinerario: <strong>*HI</strong></li>
+            <li>Limpiar itinerario: <strong>@ALL</strong></li>
+            <li>Dejar una nota: <strong>NP.</strong></li>
+            <li>Splitear un pax de la reserva: <strong>DPx(nrodepax)</strong></li>
+            <li>Cargar endoso con EXENCIÓN DE PERCEPCIONES AR: <strong>TMU1EBPAXEE CUIT27350167957</strong></li>
+            <li>Cargar ENDOSO CON CUIT/CUIL (Solo inter): <strong>TMUxEBCUILxxxxxxxxxxx</strong></li>
+            <li>Como cambiar fecha de segmento: <strong>@2(Segmento)/fechanueva</strong></li>
+            <li>Cambiar todos los segmentos a otra clase: <strong>@A/CLASE</strong></li>
+            <li>Cambiar la cantidad de paxs: <STRong>@A/CANTPAX</STRong></li>
+            <li>Tirar un Fare display: <strong>FD25APRBUEMAD/AV</strong></li>
+            <li>Desplegar todo lo emitido en el día: <strong>HMPR</strong></li>
+            <li>Comando para eximir impuestos       FQTE-Q1-S5</li>
+            <li>COMANDO PAST DATE :PQ/R-PNR</li>
+            <li>PNR PURGADO : Abrir un pnr que ya está volado el Ticket o vencido</li>
+            <ol>
+                <li>PQ/R-PNR</li>
+                <li>Tipear CONFIRM</li>
+                <li>Tab y enter en el punto final</li>
+                <li>Te lo pasa a una cola de 24hs</li>
+                <li>Q/1*CPD Categoria past date</li>
+            </ol>
+            <li>Tipo de cambio histórico:        FZSUSD1ARS.13DEC23</li>
+            <li>Mensaje NP np. texto libre</li>
+        </ul>
+       
+        <h4>Comandos</h4>
+        <p>
+            Para ver que Over y Comisión   *RI <br>
+            Galileo responde con esto: <br>
+            QP: MATCH COM: 0.0 OVER: 0.0 TCODE:  26SEP 15:02 <br>
+            Cargar la comisión TMU1Z0 (Varia el último número)
+            Poner Over según ruta  TMU1AI-BUE29/VC-ZA
+            Ingreso forma de pago
+            TMU1FS           (CASH) 
+            TMUFVI             VISA
+            TMU1FCA         MASTER
+            TMU1FAX          AMEX
+            TMU1FCCTN    NARANJA
+            TMU1FCCCL     CABAL
+            Número de Tarjeta
+            *D Vencimiento
+            *A Número de autorización
+            EJ VISA: TMUFVI4585967816441515*D0129*A5455
+            6)   Emitir     TKPDXD.FE60D2.6PI3
+            Tarifas netas no se carga comisión ni over en GALILEO!!! 
+            NETAS IB 
+            Desglose de comando de forma de pago tarjeta
+            TMUFVI4585967816441515*D0129*A5455
+            TMU1 = Solo emito el FQ1
                 F: Forma de Pago
                 VI: VISA
                 Número de TC
                 *D = Vencimiento
                 *E = Cuotas
                 *A = Autorización
-                
-</p>
-
-
-/*<h2>
-¿Cómo calcular Comisiónes/ Over para modificar en ADMIN?
-*/  
-</h2>
-            
+        </p>
+        </section>
+        <section>
+        <h2>¿Cómo calcular Comisiónes/ Over para modificar en ADMIN?</h2>
+        <p>
             CUENTA (Over GDS + Comisión GDS) - Comisión RICALE = Resultado cargo en ADMIN
-            
-            
-            
+                        
             Doméstico
             Internacional
             Ejemplo
@@ -283,14 +224,8 @@
             +3
             0
             
-            
-            
-            
-
-            
             5
-            
-            
+                        
             Comisión Ricale
             RESTA
             -0.5
@@ -300,74 +235,13 @@
             -1
             RESULTADO
             
-            
-            
-            
-            4.5
+                        4.5
             1
-        
-            <section>
-                <h3>
-                    Paso a Paso Emisión Aéreos Nro de auth
-
-                </h3>
-
-                <ol>
-                    <li>Abrir en Galileo el localizador proveedor (PNR) y Verificar que los datos del pasajero, ruta y tramos del vuelos esten ok
-                        <h6>En galileo el pnr se abre con *PNR</h6>
-                        <img src="../img/tramos.png" alt="">
-                        
-                    </li> <br>
-                    <li>Verificar que el equipaje y costo de la tarifa esten ok 
-                        <h6>Para desplegar la verificar el estado de la tarifa y sus componentes debemos abrir los archivos tarifarios. (*FF)</h6>
-                        <img src="../img/ff.png" alt="" width="90%">
-
-                    </li>
-                    <li>Verificar forma de pago cargada en admin y proceder a cobrar el/los tickets de manera UATP (si aplica)
-                        <h6>La forma de pago la vemos en la caja de cobros</h6>
-                        <img src="../img/caja.png" alt="" width="35%">
-                        
-                    </li>
-                    <li>Una vez cobrada la reserva procedemos a cargar la forma de pago en gds
-                        <h6>Para decirle a Galileo que vamos a ingresar un comando se inicia con TMU</h6>
-                        <h6>Para el caso de la Forma de pago se indica con F el tipo y nro de tarjeta</h6>
-                        <li>FVI - CARGA VISA</li>
-                        <li>FCA - CARGA MASTER</li>
-                        <li>FAX - CARGA AMEX</li>
-                        <li>FCCTN - CARGA NARANJA</li>
-                        <li>FCCCL - CARGA CABAL</li>
-                        <h6>Seguido al nro de tarjeta se debe indicar el vencimiento (*D), cuotas (*E) y nro de autorización (*A)</h6>
-                        <img src="../img/fop.png" alt="">
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
-
-
-
-
-5) Firmar
-R. (Siglas del agente) 
-6) Ver Over y comisiones 
-7) Si es INTER ingresar CUIL
-8)Emitir
-TKPDXD.FE60D2.6PI3 
-9) Cargar los Boletos en ADMIN
-10) Cargar comisión en ADMIN
-8) Apretar F5
-9) Enviar mail al pax
-10) Asignarse como Owner quien lo emitió
-11) Marcar como emitido
-
-
-            </section>
-            
-            
         </p>
-        </body>
-        </html>
+        </section>
+        <footer>
+            <a href="/gds/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
+            <p>Sitio creado por CG</p>
+       </footer>
+    </body>
+</html>
