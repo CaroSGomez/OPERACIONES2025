@@ -85,5 +85,17 @@ section{
     background-color: rgba(245, 40, 40, 0.070);
     ;
 }
+
+.link{
+    padding: 0.38em;
+    background-color: rgba(245, 40, 40, 0.692);
+    color: aliceblue;
+    font-family: monospace;
+    font-weight: 550;
+    border-radius: 1em;
+    text-decoration: none;
+
+    
+}
         
         
