@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobros</title>
+    <title>GALILEO</title>
     <link rel="icon" href="../img/viajar.png" type="image/png">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -18,24 +18,24 @@
             <ul>
                 <a href="../index.html"><li>Equipo</li></a>
                 <a href="../html/guias.html"><li>Guias de ayuda y usuarios</li></a> 
-                <a href="../html//vuelos.html"><li>Vuelos</li></a>
-                <a href="../html//remisiones.html"><li>Remisiones</li></a>
-                <a href="../html//devoluciones.html"><li>Devoluciones</li></a>
-                <a href="../html//colas.html"><li>Colas</li></a>
-                <a href="../html//form.html"><li>Sugerencias</li></a> 
+                <a href="../html/vuelos.html"><li>Vuelos</li></a>
+                <a href="../html/remisiones.html"><li>Remisiones</li></a>
+                <a href="../html/devoluciones.html"><li>Devoluciones</li></a>
+                <a href="../html/colas.html"><li>Colas</li></a>
+                <a href="../html/form.html"><li>Sugerencias</li></a> 
             </ul>
         </nav>
     </header>
     <h1>Guías de cobros</h1>
     <div class="submenu">
     <ul>
-        <a href="#tcGalileo"><li>Cobro con tarjeta en 1 pago (Galileo)</li></a>
-        <a href="#cuotasGalileo"><li>Cobro en cuotas (Galileo)</li></a>
-        <a href="#tcAmadeus"><li>Cobro con tarjeta en 1 pago (Amadeus)</li></a>
+        <a href="#tcGalileo"><li>Cobro con tarjeta en 1 pago </li></a>
+        <a href="#cuotasGalileo"><li>Cobro con tarjeta en cuotas </li></a>
+        <a href="#transfGalileo"><li>Cobro por transferencia</li></a>
     </ul>
     </div>
     <section id="tcGalileo" class="caja1">
-        <h2>PASO A PASO DE EMISION EN 1 PAGO CON TARJETA DE CREDITO (GALILEO)</h2>
+        <h2>PASO A PASO DE EMISION EN 1 PAGO CON TARJETA DE CREDITO </h2>
         <ol>
             <li>
                 SE VERIFICA ESTADO DE PNR
@@ -129,7 +129,7 @@
         </ol>
     </section>
     <section id="cuotasGalileo" class="caja1">
-        <h2>PASO A PASO DE EMISION EN CUOTAS CON TARJETA DE CREDITO (GALILEO)</h2>
+        <h2>PASO A PASO DE EMISION EN CUOTAS CON TARJETA DE CREDITO </h2>
         <ol>
             <li>
                 SE VERIFICA ESTADO DE PNR
@@ -238,46 +238,7 @@
             </li>
         </ol>
     </section>
-    <section id="tcAmadeus" class="caja1">
-        <h2>PASO A PASO DE EMISION EN 1 PAGO CON TARJETA DE CREDITO (AMADEUS)</h2>
-        <ol>
-            <li>
-                SE VERIFICA ESTADO DE PNR
-                <ul>
-                    <li>Chequeamos nombres e itinerario</li>
-                    <li>Chequeamos tarifa y equipaje
-                        <ul>
-                            <li>Comando para ver el archivo  tarifario actual<strong>TQT</strong></li>
-                            <li>Comando para ver todos los archivos existentes<strong>TTH</strong></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                SE VERIFICA CONDICIONES DE EMISIÓN
-                <ul>
-                    <li>
-                        Chequeamos si la aerolínea nos pasa comisión y over en la planilla de <a href="https://docs.google.com/spreadsheets/d/1yIAIP361Wq6mDnGWNwcEYlGuRoNjzcJWgLn4ZNxTGjs/edit?gid=1880966847#gid=1880966847" target="_blank" class="link">Condiciones de emisión</a>
-                        <ul>
-                            <li>
-                                Se carga comision: <strong>FM</strong>0 (Ej Comision 0)</li>
-                            <li>
-                                Si hay pago de over, se debe cargar la ganancia del mismo en el pnr
-                                <ul>
-                                    <li>
-                                        ***El % de la ganancia se calcula sobre la FARE*** El comando para cargar EL % de ganancia: <strong>RM.OP*3%</strong> (Ej over 3%)
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            
-            
-            
-            </li>
-        </ol>
-    </section>    
+    
     <footer>
             <a href="../gds/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
             <p>Sitio creado por CG</p>
