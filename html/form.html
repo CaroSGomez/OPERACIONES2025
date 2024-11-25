@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Op2025</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +30,17 @@
     <section>
     <h1>Decilo Enzo!</h1>
         <form>
-            <label for="">Nombre</label>
-            <input type="text" name="nombre">
-            <label for="">Email</label>
-            <input type="email" name="mail">
-            <label for="">Mensaje</label>
-            <textarea name="mensaje" id=""></textarea>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="email">Email</label>
+            <input type="email" name="mail" id="email">
+            
+            <label for="texto">Mensaje</label>
+            <select name="tipo" id="tipo">
+                <option value="">Sugerencia</option>
+                <option value="">Queja</option>
+            </select>
+            <textarea name="mensaje" id="texto" placeholder="Expresate!"></textarea>
             <label for="">Archivos adjuntos</label>
             <input type="file" name="archivos" >
             <input type="submit" class="link">

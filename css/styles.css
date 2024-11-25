@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
 body{
     font-family: system-ui;
     text-align: -webkit-center;
@@ -108,7 +109,6 @@ section{
 
 section p{
     padding: 1.3em;
-    text-align: center;
 }
 
 section p a{
@@ -145,6 +145,11 @@ section div{
 #prioridad{
     background-color: rgba(245, 40, 40, 0.070);
     
+}
+
+#cuotasGalileo{
+    background-color: rgba(245, 40, 40, 0.070);
+    ;
 }
 
 #prioridad ol{
@@ -259,8 +264,21 @@ align-items: inherit;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    padding: 1.5em ;
+    margin: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    border-radius: 4px;
+
+}
+
+input, textarea, select{
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-left: 3px solid rgba(245, 40, 40, 0.692);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5em;
+    border-radius: 4px;
+
 }
