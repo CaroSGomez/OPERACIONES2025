@@ -30,15 +30,66 @@
     <h1>Manual de colas</h1>
     <div class="submenu">
         <ul>
-            <a href="#23"><li>Cola 23 (Tramos HX)</li></a>
-            <a href="#30"><li>Cola 30/31 (Aceptados)</li></a>
-            <a href="#74"><li>Cola 74 (Aviso de reprogramación)</li></a>
-            <a href="#61"><li>Cola 61 (Sincronización)</li></a>
-            <a href="#50"><li>Cola 50/72 (Cambios voluntarios/involuntarios)</li></a>
+            <a href="#comandos"><li>Comandos importantes</li></a>
+        <a href="#qw2"><li>Cola 2 - Asientos</li></a>
+        <a href="#qw3"><li>Cola 3 - Sincronizacion</li></a>
+        <a href="#qw10"><li>Cola 10 - Ticket Review</li></a>
+        <a href="#qw16"><li>Cola 16 - Vendor Remark</li></a>
+        <a href="#qw21"><li>Cola 21/22 - Cambios de horario</li></a>
+        <a href="#qw25"><li>Cola 25 - Service info</li></a>
+        <a href="#qw30"><li>Cola 30/31 - Cambio aceptado por pax</li></a>
+        <a href="#qw61"><li>Cola 61 - Cambio aceptado/Actualizar en Admin</li></a>
+        <a href="#qw73"><li>Cola 73 - Cambio no aceptado</li></a>
         </ul>
     </div>
+    <section id="comandos">
+        <h2>Comandos importantes</h2>
+        <p>
+            Cuando se produce un cambio o cancelación en un vuelo o bien la compañía aérea nos realiza alguna notificación sobre un PNR, estas reservas entrarán por colas y deberemos gestionarlas. <br>
+            ¿Cómo accedemos al sistema de colas? <br>
+            <strong>QCA </strong> Para ver las colas y solo aparecen las que tienen alguna reserva dentro. <br>
+            <strong>QPB* </strong> Aquí vemos todas las colas que tenemos y los nombres de cada uno, aquí aparecen todas las colas aunque no tengan ninguna reserva dentro. <br>
+            <strong>Q/número de cola </strong> Para entrar a una cola. Si utilizamos Smartpoint clicamos encima de la cola que vayamos a revisar. <br>
+            <strong>QR </strong> Para eliminar una reserva de la cola. <br>
+            <strong>I </strong> Para salir de una reserva sin eliminarla de la cola. <br>
+            <strong>QEB/número de cola </strong> Para pasar una reserva a otra cola. <br>
+            <strong>QW </strong> Este comando nos muestra en que otras colas esta la reserva sobre la que estamos parados. <br>
+            <strong>QXI </strong> Para salir del sistema de colas. <br>
+    
+        </p>
+    </section>
+    <section id="qw2">
+        <h2>Cola 2 - Asientos</h2>
+        <p>
+            Son aquellas reservas que tiene reserva de asiento. <br>
+            Vemos que  se ha creado el campo SD donde podemos comprobar los números de asiento <br>
+            <img src="../img/sd.png" alt=""> <br>
+            Debemos entrar al campo SD y verificar el estado de los asientos. Nos lo podemos encontrar en KK (confirmado) o en HX/UN (cancelado) <br>
+            <img src="../img/seat.png" alt=""> <br>
+            Si están en KK, como en el ejemplo, los tendremos que pasar a HK. <br>
+            Dos maneras de hacerlo: <br>
+            <li>
+                Si el itinerario está todo en HK: <br>
+                Podemos hacer @all y automáticamente los asientos quedarán confirmados en HK. <br>
+            </li>
+            <li>
+                Si el itinerario tiene algún trayecto en (TK o UN) <strong>OJOOOOO NO PODEMOS HACER LA TRANSACCIÓN ANTERIOR!!! YA QUE CONFIRMAREMOS EL CAMBIO</strong> <br>
+                En este caso hay que confirmar solamente los asientos con  la siguiente transacción S.S1@*HK<br>
+            </li>
+            Una vez confirmados los asientos los quitaremos de la cola QR. <br>
+            Si los asientos están en UN o HX, lo primero que haremos es revisar en la Admin si la petición de asientos está realizada por nosotros. En el caso que veamos que el cliente ha reservado los asientos a través nuestro avisaremos a quién tenga la tarea de asientos para que lo gestione y lo quitaremos de cola sin tocar la reserva. <br>
+            Pero si en la Admin no se muestra la info que el cliente haya contratado asientos, ni hay nota de ningún compañero, significa que la contratación de asientos la ha realizado el cliente directamente con la compañía aérea, por lo que tampoco tocaremos la reserva y lo quitaremos de la cola.    
+        </p>
+    </section>
+    <section id="qw3">
+        <h2>Cola 3 - Sincronizacion</h2>
+        <p>Son actualizaciones que se han realizado con la compañía aérea, es decir, si se han cogido nuevas plazas, o si la compañía aérea le ha reubicado en el mismo aeropuerto (que a veces saltan las plazas en KK) <br>
+        En estos casos hay que revisar el estado del PNR, si lo vemos todo en HK y comprobar en el HTE es decir, en los billetes si el itinerario es el mismo. Una vez revisado  solo hay que quitarlo de cola con QR. <br>
+        Si hay algún trayecto en KK, habrá que actualizar el pedido con @ALL, revisar si hay algún VR de la cia que hayan reubicado a pax o hecho algún cambio y revisar en la Admin que el itinerario esté actualizado, si no lo está actualizado  lo pasamos a la Q/61, y si lo está lo quitamos de colas QR. <br>
+        </p>
+    </section>
     <footer>
-        <a href="/html/colas.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
+        <a href="./colas.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
         <p>Sitio creado por CG</p>
 
    </footer>
