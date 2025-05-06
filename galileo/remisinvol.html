@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galileo</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <img src="../img/logo.png" alt="logo">
+            <ul>
+                <a href="../index.html">
+                    <li>Calidad</li>
+                </a>
+                <a href="./guias.html">
+                    <li>Guias de ayuda</li>
+                </a>
+                <a href="./ae.html">
+                    <li>Antiestafa</li>
+                </a>
+                <a href="./post.html">
+                    <li>Atención al cliente</li>
+                </a>
+                <a href="./galileo.html">
+                    <li>Galileo</li>
+                </a>
+
+                <a href="./amadeus.html">
+                    <li>Amadeus</li>
+                </a>
+                <a href="./gdsNdc.html">
+                    <li>GDS NDC</li>
+                </a>
+
+                <a href="./terrestres.html">
+                    <li>Terrestres</li>
+                </a>
+                <a href="./form.html">
+                    <li>Sugerencias</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <section id="remiinvol">
+        <span>***Llamamos remisiones NO ADC a aquellas que se realizan a costo 0, ya sea por una reprogramación, correct
+            name o cambio con autorización de la aerolínea***</span>
+        <h2>REMISIÓN NO ADC GALILEO</h2>
+        <p>
+            Desplegamos el itinerario y verificamos cambios en el historial
+            <img src="../img/pnrG.png" alt=""> <br>
+            Es muy importante que verifiquen si aplica el cambio involuntario ya que cada aerolínea tiene sus
+            condiciones. <br>
+            Si corresponde el cambio NO ADC, tenemos que confirmar que los tramos estan ok en la cia y avanzar creando
+            la máscara <br>
+            <img src="../img/asterisco.png" alt=""> <br>
+            En Galileo tenemos 3 maneras de crear la máscara: automatica, semiautomatica o manual
+        <h3>Automática</h3>
+        Esta herramienta cumple la función de generar la máscara de forma automática. <br>
+        ***Generalmente si el pnr ya tuvo una remisión o bien cambió la ruta, no suele funcionar*** <br>
+        Debemos ingresar el comando <strong>INVOL/FOP</strong>
+        <img src="../img/INVOL.png" alt="">
+        Una vez que ingresamos el comando les va a arrojar la siguiente pantalla informando que la máscara fue
+        realizada.
+        <img src="../img/involok.png" alt="">
+        <h3>Semiautomática</h3>
+        Cuando el comando de remisión automática no funciona tendremos que realizar la máscara con el siguiente comando.
+        <strong>FQTE.Hxxxxx/Sx@xxxx/Sx@xxxx</strong>
+        <img src="../img/comando.png" alt="">
+        Este comando se debe ingresar por pasajero asi crea cada máscara. <br>
+        Una vez generada la máscara se deben verificar que estén todos los componentes cargados y que sean idénticos al
+        ticket open.
+        <img src="../img/part1.png" alt=""><br>
+        <img src="../img/part2.png" alt=""><br>
+        Verificamos que figure la COMISIÓN, CHAPA, ENDOSO, FEX <br>
+        Ya con la confirmación con todos los componentes cargados en la máscara, pueden ingresar al comando de emisión.
+        <strong>TKPDXD.FE60D2.6PI3</strong>
+        </p>
+    </section>
+</body>
+</html>

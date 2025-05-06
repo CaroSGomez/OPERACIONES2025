@@ -1,37 +1,103 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui;
 }
 
-body{
-    font-family: system-ui;
-    text-align: -webkit-center;
-    background-color: rgba(245, 40, 40, 0.075);
-    line-height: 2em;
-    color: rgba(165, 42, 42, 0.959);
+.menu{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(245, 40, 40);
 }
+
+
+
+.menu img{
+    width: 15em;
+    height: 5em;
+    margin: 1em;
+}
+
+.menu a li{
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 0.5em;
+    font-weight: 600;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color:rgba(228, 158, 158, 0.63);
+    border-radius: 150px;
+  }
 
 h1{
     font-size: 3em;
     color:rgba(245, 40, 40, 0.904);
-    margin: 1em;
+    margin: 0.5em 0.5em 0 0.5em;
+    text-align: center;
 }
 
-header{ 
-    background-color: rgb(245, 40, 40);
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}   
+h5{
+    font-size: 1em;
+    color:rgba(245, 40, 40, 0.904);
+    margin-bottom: 0.5em;
+    text-align: center;
+}
 
-.menu a li{
-    font-size: 1.1em;
-    display: inline-block;
-    font-weight: 550;
-    padding: 0.5em;
+.submenu{
+    background-color: rgba(245, 40, 40, 0.904);
+    font-size: 1.5em;   
+    text-align: center;
+  
+}
+
+.submenu a{
+    list-style-type: none;
+    text-decoration: none;
     color: aliceblue;
+}
+
+.submenu a li{
+    padding: 0.5em;
+}
+
+.submenu a li:hover {
+background-color:aliceblue;
+color: rgba(245, 40, 40, 0.904);
+font-size: 1.2em;
+}
+
+section{
+    padding: 1em;
+    text-align: center;
+    line-height: 2em;
+}
+
+section p img{
+    width: 60%;
+    padding: 1em;
+text-align: center;
+}
+
+h2, h3{
+  color: rgba(245, 40, 40, 0.959);
+  margin: 0.5em;
+  text-align: center;
+  font-size: 2em;
+}
+
+span{
+    font-style: italic;
+    font-weight: 600;
+    margin: 0.5em;
+    font-size: 1.2em;
 }
 
 footer{
@@ -39,6 +105,7 @@ footer{
     color: aliceblue;
     padding: 1em;
     font-style: italic;
+    text-align: center;
 }
 
 footer a img{
@@ -52,215 +119,15 @@ span{
 
 }
 
-.cardAgent{
-    border: rgba(245, 40, 40, 0.562) solid 0.2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgba(245, 40, 40, 0.562);
-    color: aliceblue;
-    margin: 3.5em;
-    width: 60%;
-}
 
-.cardAgent img{
-    border-radius: 50%;
-    width: 40%;
-    margin: 2em;
-}
-
-.cardAgent div{
-    background-color: rgba(216, 9, 9, 0.164);
-    border-radius: 0.5rem;
-    padding: 1em;
-    width: 30%;
-    margin: 1em;
-}
-
-.cardAgent li{
-    list-style-type: none;
-    padding: 0.5em;
-    margin: 0.5em;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: 500;    
-}
-
-.submenu{
-    background-color: rgba(245, 40, 40, 0.904);
-    font-size: 1.5em;
-    padding: 1.3em;
-}
-
-.submenu a{
-    list-style-type: none;
-    text-decoration: none;
-    color: aliceblue;
-}
-
-section{
-    padding: 2em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}  
-
-section p{
-    padding: 1.3em;
-}
-
-section p a{
-    color: rgba(165, 42, 42, 0.959);
-}
-
-section img{
-    width: 80%;
-    margin: 1em;
-}
-
-section ul li {
-    list-style-type: none;
-    text-decoration: none;
-}
-
-section ol li {
-    list-style-type: none;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-section ul li a{
-    color: rgba(165, 42, 42, 0.959);
-
-}
-
-section div{
-    width: 60%;
-    margin: 1em;
-    padding: 1.2em;
-}
-
-#prioridad{
-    background-color: rgba(245, 40, 40, 0.070);
-    
-}
-
-#cuotasGalileo{
-    background-color: rgba(245, 40, 40, 0.070);
-    ;
-}
-
-#prioridad ol{
-    padding-left: 4em;
-    text-align: start;
-    font-weight: 500;
-
-
-}
-
-.red{
-    border: solid 0.3em rgba(255, 0, 0, 0.644) ;
-}
-
-.orange{
-    border: solid 0.3em rgba(255, 145, 0, 0.644) ;
-}
-
-.green{
-    border: solid 0.3em rgba(115, 172, 29, 0.884);
-   
-}
-
-.tips{
-    padding: 4em;
-    border: solid 0.5em;
-}
-
-.tips h3{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-
-#ae{
-
-    background-color: rgba(245, 40, 40, 0.070);
-}
-
-#ae li{
-    margin:1em;
-    margin-bottom: 2em;
-  
-}
-
-#bankias ul{
-    margin-bottom: 2em;
-}
-
-.plus{
-    padding: 2.5em;
-    border: solid 0.5em;
-}
 
 .link{
     padding: 0.38em;
     background-color: rgba(245, 40, 40, 0.692);
     color: aliceblue;
     font-family: monospace;
-    font-weight: 550;
-    border-radius: 1em;
-    text-decoration: none;
-
-    
-}
-
-#cobros{
-    background-color: rgba(245, 40, 40, 0.070);
-}
-
-#gds ul{
-width: 100%;
-display: flex;
-align-items: inherit;
-}
-
-#gds img{
-    width: 85%;
-
-}
-
-
-#rva{
-
-    background-color: rgba(245, 40, 40, 0.070);
-}
-#emision{
-
-    background-color: rgba(245, 40, 40, 0.070);
-}
-
-#logueo img{    
-    width: 30%;
-}
-
-#rva img{    
-    width: 45%;
-}
-
-#rva div{    
-    width: 28%;
-    background-color: rgba(240, 248, 255, 0.432);
-}
-
-#emision img{    
-    width: 45%;
-}
-
-
-#involA{
-    background-color: rgba(245, 40, 40, 0.070);
+    border-radius: 0.8em;
+    text-decoration: none;    
 }
 
 form{
@@ -283,7 +150,153 @@ input, textarea, select{
 
 }
 
-#qw3{
-    background-color: rgba(245, 40, 40, 0.070);
-    
+
+
+.dominiosBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .domBox {
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .domBox img {
+    width: 100%;
+    height: 18em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(35, 105, 133, 0.719);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+  }
+
+
+  .btn:hover {
+    background-color: rgba(35, 105, 133, 0.849);
+  }
+  .tarjetas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .tarjeta {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .tarjeta h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .tarjeta p {
+    margin: 8px 0;
+    color: #555;
+  }
+
+.container{
+    display: flex;
+    padding: 1em;
+    margin: 1em;
+    gap: 2em;
+    justify-content: space-between;
 }
+
+.container h4{
+  text-align: center;
+  font-size: 2em;
+  margin: 0.5em;
+  color:rgba(245, 40, 40, 0.904);
+
+}
+
+.container p{
+  margin: 0.5em;
+  font-weight: bold;
+}
+
+.container div{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px 10px 10px 10px;
+  padding: 1em;
+
+}
+
+
+.container div:hover{
+  box-shadow: 0 0 10px rgba(245, 40, 40, 0.692);
+
+}
+
+.flecha{
+  width: 1.5em;
+  margin-left: 95%;
+}
+
+#reportes img{
+  width: 70%;
+  padding: 1em;
+}
+
+#smart img{
+  width: 85%;
+  padding: 1.2em;
+}
+
+.users{
+  border-left: 3px solid rgba(245, 40, 40, 0.692);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  margin: 2em 30em 2em 30em; 
+ border-radius: 4px;
+  
+}
+
+
+#niubiz img{
+  width: 45%;
+  padding: 1em;
+}
+.fondo{
+  background-color: rgba(245, 40, 40, 0.116);
+}
+#prioridad img{
+  width: 85%;
+  padding: 1.2em;
+}
+#bbva img{
+  width: 80%;
+  padding: 1.2em;
+}
+#pnr img{
+  width: 85%;
+  padding: 1.2em;
+}
+
+#void img{
+  width: 85%;
+  padding: 1.2em;
+}
+

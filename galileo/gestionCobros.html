@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galileo</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <img src="../img/logo.png" alt="logo">
+            <ul>
+                <a href="../index.html"><li>Calidad</li></a>
+                <a href="../html/guias.html"><li>Guias de ayuda</li></a>
+                <a href="../html/ae.html"><li>Antiestafa</li></a>
+                <a href="../html/post.html"><li>Atención al cliente</li></a>
+                <a href="../html/galileo.html"><li>Galileo</li></a>
+    
+                <a href="../html/amadeus.html"><li>Amadeus</li></a>
+                <a href="../html/gdsNdc.html"><li>GDS NDC</li></a>
+    
+                <a href="../html/terrestres.html"><li>Terrestres</li></a>
+                <a href="../html/form.html"><li>Sugerencias</li></a>
+            </ul>
+        </nav>
+    </header>
+    <h1>Atrapalo Argentina</h1>
+    <h5>(Iata Ricale)</h5>
+    <div class="submenu">
+        <ul>
+            <a href="#cobroTC">
+                <li>Cobros con tarjeta de crédito</li>
+            </a>
+            <a href="#cuotasTc">
+                <li>Cobros con tarjeta en cuotas</li>
+            </a>
+            <a href="#cobroEfectivo">
+                <li>Cobros con débito/transferencia/efectivo</li>
+            </a>
+        </ul>
+    </div>
+    <section id="cobroTC">
+        <h2>Paso a paso: 1 Pago con tarjeta</h2>
+        <span>Paso 1: Se verifica el estado del pnr en el gds</span> <br>
+        Chequeamos: <br>
+        Nombres<br>
+        Status de segmentos de itinerario <br>
+        Equipaje <br>
+        Tarifa <br>
+        Comando para ver todos los archivos tarifarios ingresamos comando <strong>*FF</strong> <br>
+        <div class="users">
+            <h3>Status de tarifa:</h3>
+            <p>
+                <strong>A</strong> Tarifa OK para emitir <br>
+                <strong>G</strong> Tarifa Ok para emitir <br> <strong>X</strong> Tarifa cancelada / no se puede emitir <br>
+                <strong>I</strong> Tarifa cancelada / no se puede emitir <br>
+            </p>
+        </div>
+        <span>Paso 2: Se verifica condiciones de emisión</span> <br>
+        Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la web de <a href="https://red.ricaleonline.com/Account/Login
+        " target="_blank" class="link">Ricale - Condiciones</a> <br>
+        
+        Si la comisión no vino cargada en el pnr, vamos a tener que ingresarla manualmente. <br>
+        Con el comando <strong>TMU</strong> le indicamos al sistema que queremos ingresar algun dato <br>
+        Seguido de TMU se indica el archivo tarifario y luego el comando para ingresar el dato que se desea. <br>
+        El indicador de comisión es: <strong>Z</strong> <br>
+        <div class="users">
+            Ejemplo Comision 0 para el archivo 1: <strong>TMU</strong>1<strong>Z</strong>0<br>
+        </div>
+        Por otro lado hay pago de over, se debe cargar el código de over indicado por la aerolinea y la ganancia del mismo en el pnr <br>
+        El indicador de over compuesto es: <strong>AI-</strong> y <strong>VC-</strong> <br>
+        <div class="users">
+            Ejemplo de Over AR para el archivo 1: <br> <strong>TMU</strong>1<strong>AI-</strong> BUE504/ <strong>VC-</strong>ZA<br>
+        </div>
+        <strong>Si hay over, hay DI...</strong> <br>
+        Para que nuestra administración registre la ganancia de ese over es clave dejar el calculo en el pnr <br> 
+        El % de la ganancia se calcula sobre la FARE total del pnr <br>
+        En el pnr vamos a registrar el importe por pax <br>
+        El comando para para cargar la ganancia en el pnr es: <strong>DI.FT-</strong><br>
+        <div class="users">
+            Ejemplo Carga ganancia over 3%: <br>
+            PAX 1 ADT: FARE $25000 <br>
+            PAX 2 CHD: FARE $20000 <br>
+            <strong>DI.FT-</strong>675<br>
+        </div>
+        <span>Paso 3: Se verifica FOP (forma de pago)</span> <br>
+        Es super importante verificar el numero de comercio y via de ejecucion de pago correcto <br>
+        Esto tambien lo podemos verificar en la web de Ricale en el partado de Condiciones <br> <br>
+        <strong>¿Dónde cobrar los vuelos UATP según la Tarjeta?</strong> <br>
+        Visa en 1 pago: Se cobran directo por GDS Galileo. <br>
+        Visa en cuotas: Se cobran por <a href="http://" target="_blank" rel="noopener noreferrer" class="link">Lapos/Payway</a> <br>
+        Master: Se cobra en <a href="http://" target="_blank" rel="noopener noreferrer" class="link">Fiserv</a> <br>
+        Amex en 1 pago: Se cobra directo por GDS Galileo <br>
+        Amex en cuotas: Se cobra telefonicamente <br> 
+        Cabal: Se cobra telefonicamente. <br> 
+        Naranja: Se cobra telefonicamente. <br>
+        </div>
+<br>
+        <strong>Cobros directo en Galileo</strong> <br>
+        Debemos cargar en el archivo tarifario la tarjeta a cobrar <br> 
+        El indicador de forma de pago es: <strong>F</strong> <br>
+        Cuando cargamos una tarjeta como medio de pago debemos informar las siglas de la entidad bancaria, el numero de la tarjeta y el vencimiento <br> 
+        <div class="users">
+            Las siglas indentificadoras de la tarjeta son: <br>
+            -Visa- F<strong>VI</strong> <br>
+            -Master- F<strong>CA</strong> <br>
+            -Amex- F<strong>AX</strong> <br>
+            -Naranja- F<strong>CCTN</strong> <br>
+            -Cabal- F<strong>CCCL</strong> <br>
+        </div>
+        Cuando cobramos directo en Galileo, solo es posible gestionar 1 solo pago. <br>
+        <strong>Recordemos que solo las tarjetas de Visa y Amex pueden ser cobradas directo en Galileo</strong> <br>
+        
+        
+        ***ANTES DE EMITIR SE HACE EL CHECK LIST*** <br>
+        COMISIÓN <br>
+        CHAPA/CIA <br>
+        OVER (cargar DI) <br>
+        FOP <br>
+        Se ingresa el comando de emisión con el nro de CVV de la tc cargada para que el sistema lo cobre y emita -  Comando de EMISIÓN <strong>TKPDXD.FE60D2.6PI3/F*I</strong>123 (Ej Emisión con cvv 123) <br>
+        ***SI EL PAGO NO PASO OK, EL SISTEMA INFORMA EL RECHAZO Y SE TRABAJA COMO BANKIA*** <br>
+        SI SE EMITIÓ CORRECTAMENTE, FINALIZAMOS EL PROCESO EN ADMIN <br>
+        Dejamos comentario del nro de auth del gds <br>
+        Desde OPERACIONES SOBRE EL PEDIDO:  <br>
+        Se MARCA EMITIDO <br>
+        SE OBTIENEN LOS BILLETES (Sino funciona la herramienta se pueden introducir manualmente) <br>
+        SE CARGA COMISIÓN   <br>
+        ***El cálculo de la comisión en admin es: <strong>(COMISION + OVER) – COSTO RICALE  (0.50 para cabotaje / 1 para inter)</strong>= X (Ej de AR cab comisión 0 + over 3 - costo 0.5 = 2.5 importe en admin) ***  <br>
+        SE CONTRATAN SERVICIOS PENDIENTES SI LOS HAY <br>
+        SE ENVIA MAIL DE CONFIRMACION A PAX . <br>
+                
+    </section>
+    <section id="cuotasTc">
+        <h2>PASO A PASO DE EMISION EN CUOTAS CON TARJETA DE CREDITO </h2>
+        <ol>
+            <li>
+                SE VERIFICA ESTADO DE PNR
+                <ul>
+                    <li>Chequeamos nombres e itinerario</li>
+                    <li>Chequeamos tarifa y equipaje
+                        <ul>
+                            <li>Comando para ver todos los archivos tarifarios <strong>*FF</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                SE VERIFICA CONDICIONES DE EMISIÓN
+                <ul>
+                    <li>
+                        Chequeamos si la aerolínea nos paga comisión y over en la planilla de <a href="https://docs.google.com/spreadsheets/d/1yIAIP361Wq6mDnGWNwcEYlGuRoNjzcJWgLn4ZNxTGjs/edit?gid=1880966847#gid=1880966847" target="_blank" class="link">Condiciones de emisión</a>
+                        <ul>
+                            <li>
+                                Se carga comisión indicando nro de archivo tarifario: <strong>TMU</strong>1<strong>Z</strong>0 (Ej Comision 0 para el archivo 1)</li>
+                            <li>
+                                Si hay pago de over, se debe cargar el código de over indicado en la planilla y la ganancia del mismo en el pnr
+                                <ul>
+                                    <li>Ej de código de over AR para el archivo 1 -> <strong>TMU</strong>1<strong>AI-BUE504/VC-ZA</strong></li>
+                                    <li>
+                                        ***El % de la ganancia se calcula sobre la FARE*** El comando para para cargar la ganancia es: <strong>DI.FT-</strong>1000 (Ej ganancia $1000)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+            
+            
+            </li>
+            <li>
+                SE VERIFICA FOP
+                <ul>
+                    <li>
+                        Si tiene linea de sobrecargo debemos verificar el cobro total de la reserva en decidir
+                        <ul>
+                            <li>Si es con VISA/MASTER en 3 cuotas debe estar procesado en 13 cuotas</li>
+                            <li>Si es con VISA/MASTER en 6 cuotas debe estar procesado en 16 cuotas</li>
+                            <li>Si es con VISA/MASTER en 9 cuotas debe estar procesado en 19 cuotas</li>
+                            <li>Si es con VISA/MASTER en 12 cuotas debe estar procesado en 07 cuotas</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Si no tiene sobrecargo debemos si el BIN de la tc aplica cuotas sin interés en el BSP de la cia (tambien podemos ver el agendar que nos mandan por mail).
+                        <ul>
+                            <li>Si aplica, dejamos comentarios en admin</li>
+                            <li>
+                                Si es VISA se cobra el monto uatp por Lapos y se carga en gds con nro de autorizacion y cuotas <br>
+                                Comando: <strong>TMU</strong>1<strong>FVI</strong>4755XXXXXXXXXX25<strong>*D</strong>1129<strong>*E</strong>06<strong>*A</strong>002526 (Ej Visa con vto 11/29 en 6 cuotas con cod auth 002526)
+                            </li>
+                            <li>
+                                Si es MASTER se cobra el monto uatp por Webposnet y se carga en gds con nro de autorizacion y cuotas <br>
+                                Comando: <strong>TMU</strong>1<strong>FCA</strong>5455XXXXXXXXXX55<strong>*D</strong>1129<strong>*E</strong>03<strong>*A</strong>522526 (Ej Master con vto 11/29 en 3 cuotas con cod auth 522526)
+                            </li>
+                            <li>Si es AMEX se cobra el monto uatp por Webposnet y se carga en gds con nro de autorizacion y cuotas <br>
+                                Comando: <strong>TMU</strong>1<strong>FAX</strong>3777XXXXXXXXXXX9<strong>*D</strong>1129<strong>*E</strong>06<strong>*A</strong>000090 (Ej Amex con vto 11/29 en 6 cuotas con cod auth 000090)</li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li>
+                ***ANTES DE EMITIR SE HACE EL CHECK LIST***
+                <ul>
+                    <li>COMISION</li>
+                    <li>CHAPA/CIA</li>
+                    <li>OVER (cargar DI)</li>
+                    <li>FOP</li>
+                </ul>
+                <ul>
+                    <li>Se ingresa el comando de emisión  -  Comando de EMISIÓN <strong>TKPDXD.FE60D2.6PI3</strong></li>
+                </ul>
+                ***SI EL PAGO NO PASO OK, EL SISTEMA INFORMA EL RECHAZO Y SE TRABAJA COMO BANKIA***
+            </li>
+            <li>
+                SI SE EMITIO CORRECTAMENTE, FINALIZAMOS EL PROCESO EN ADMIN
+                <ul>
+                    <li>
+                        Dejamos comentario del nro de auth del gds</li>
+                    <li>
+                        Desde OPERACIONES SOBRE EL PEDIDO:
+                        <ul>
+                            <li>Se MARCA EMITIDO</li>
+                            <li>SE OBTIENEN LOS BILLETES (Sino funciona la herramienta se pueden introducir manualmente)</li>
+                            <li>
+                                SE CARGA COMISIÓN
+                                <ul>
+                                    <li>***El cálculo de la comisión en admin es: <strong>
+                                        (COMISION + OVER) – COSTO RICALE  (0.50 para cabotaje / 1 para inter)  
+                                    </strong>= X (Ej de AR cab comisión 0 + over 3 - costo 0.5 = 2.5 importe en admin)
+                                        *** 
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>SE CONTRATAN SERVICIOS PENDIENTES SI LOS HAY</li>
+                            <li>SE ENVIA MAIL DE CONFIRMACION A PAX.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section id="cobroEfectivo">
+
+    </section>
+    <footer>
+        <a href="../galileo/gestionCobros.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
+        <p>Sitio creado por CaroGomez</p>
+    </footer>
+</body>
+</html>

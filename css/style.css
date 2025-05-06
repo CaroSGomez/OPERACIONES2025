@@ -1,101 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 40px;
+  }
 
-body{
-    font-family: system-ui;
-    text-align: -webkit-center;
-    background-color: rgba(245, 40, 40, 0.075);
-    line-height: 2em;
-    color: rgba(165, 42, 42, 0.959);
-}
-
-h1{
-    font-size: 3em;
-    color:rgba(245, 40, 40, 0.904);
-    margin: 1em;
-}
-
-header{ 
-    background-color: rgb(245, 40, 40);
-    padding: 1em;
+  .menu {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-}   
+    background-color: #007bff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 
-.menu a li{
-    font-size: 1.1em;
-    display: inline-block;
-    font-weight: 550;
-    padding: 0.5em;
-    color: aliceblue;
-}
+  .menu > li {
+    list-style: none;
+    position: relative;
+  }
 
-footer{
-    background-color: rgba(245, 40, 40, 0.959);
-    color: aliceblue;
-    padding: 1em;
-    font-style: italic;
-}
-
-footer a img{
-    width: 3em;
-}
-
-span{
-    font-style: italic;
-    font-weight: 600;
-    margin: 0.5em;
-
-}
-
-.submenu{
-    background-color: rgba(245, 40, 40, 0.904);
-    font-size: 1.5em;
-    padding: 1.3em;
-}
-
-.submenu a{
-    list-style-type: none;
+  .menu > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
     text-decoration: none;
-    color: aliceblue;
-}
+  }
 
-section{
-    padding: 2em;
-    margin: 1rem;
-    text-align: start;
-    color: rgba(165, 42, 42, 0.959);
+  .menu > li:hover {
+    background-color: #0056b3;
+  }
 
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
 
-}
+  .submenu li {
+    list-style: none;
+  }
 
-
-
-
-.caja1{
- 
-    line-height: 40px;
-}
-
-#cuotasGalileo{
-    background-color: rgba(245, 40, 40, 0.070);
-    ;
-}
-
-.link{
-    padding: 0.38em;
-    background-color: rgba(245, 40, 40, 0.692);
-    color: aliceblue;
-    font-family: monospace;
-    font-weight: 550;
-    border-radius: 1em;
+  .submenu li a {
+    display: block;
+    padding: 12px 20px;
     text-decoration: none;
+    color: #333;
+  }
 
-    
-}
-        
-        
+  .submenu li a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .menu > li:hover .submenu {
+    display: block;
+  }

@@ -16,7 +16,7 @@
         <img src="../img/logo.png" alt="logo">
         <nav class="menu">
             <ul>
-                <a href="../index.html"><li>Equipo</li></a>
+                <a href="../index.html"><li>El equipo de calidad</li></a>
                 <a href="../html/guias.html"><li>Guias de ayuda y usuarios</li></a> 
                 <a href="../html/vuelos.html"><li>Vuelos</li></a>
                 <a href="../html/remisiones.html"><li>Remisiones</li></a>
@@ -28,107 +28,8 @@
         </nav>
     </header>
     <h1>Guías de cobros</h1>
-    <div class="submenu">
-    <ul>
-        <a href="#tcGalileo"><li>Cobro con tarjeta en 1 pago </li></a>
-        <a href="#cuotasGalileo"><li>Cobro con tarjeta en cuotas </li></a>
-        <a href="#transfGalileo"><li>Cobro por transferencia</li></a>
-    </ul>
-    </div>
-    <section id="tcGalileo" class="caja1">
-        <h2>PASO A PASO DE EMISION EN 1 PAGO CON TARJETA DE CREDITO </h2>
-        <ol>
-            <li>
-                SE VERIFICA ESTADO DE PNR
-                <ul>
-                    <li>Chequeamos nombres e itinerario</li>
-                    <li>Chequeamos tarifa y equipaje
-                        <ul>
-                            <li>Comando para ver todos los archivos tarifarios <strong>*FF</strong></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                SE VERIFICA CONDICIONES DE EMISIÓN
-                <ul>
-                    <li>
-                        Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la planilla de <a href="https://docs.google.com/spreadsheets/d/1yIAIP361Wq6mDnGWNwcEYlGuRoNjzcJWgLn4ZNxTGjs/edit?gid=1880966847#gid=1880966847" target="_blank" class="link">Condiciones de emisión</a>
-                        <ul>
-                            <li>
-                                Se carga comisión indicando nro de archivo tarifario: <strong>TMU</strong>1<strong>Z</strong>0 (Ej Comision 0 para el archivo 1)</li>
-                            <li>
-                                Si hay pago de over, se debe cargar el código de over indicado en la planilla y la ganancia del mismo en el pnr
-                                <ul>
-                                    <li>Ej de código de over AR para el archivo 1 -> <strong>TMU</strong>1<strong>AI-BUE504/VC-ZA</strong></li>
-                                    <li>
-                                        ***El % de la ganancia se calcula sobre la FARE total del pnr y el importe en el DI es por pax*** El comando para para cargar la ganancia en el pnr es: <strong>DI.FT-</strong>1000 (Ej ganancia $1000)
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            
-            
-            
-            </li>
-            <li>
-                SE VERIFICA FOP
-                <ul>
-                    <li>
-                        Si es VISA se cargan los datos de la tc en gds - Comando <strong>TMU</strong>1<strong>FVI</strong>XXXXXXXXXXX<strong>*D</strong>1128 (Ej Se carga para el archivo 1 el nro de visa con Vto 11/28)
-                    </li>
-                    <li>
-                        Si es AMEX se cargan los datos de la tc en gds - Comando <strong>TMU</strong>1<strong>FAX</strong>XXXXXXXXXXX<strong>*D</strong>1128 (Ej Se carga para el archivo 1 el nro de amex con Vto 11/28)
-                    </li>
-                    <li>Si es MASTER se cobra por WebPosnet/Tel y se emite con nro de auth
-                    </li>
-                    <li>Si es CABAL se cobra por Tel y se emite con nro de auth</li>
-                    <li>Si es NARANJA se cobra por Tel y se emite con nro de auth</li>
-                </ul>
-            </li>
-            <li>
-                ***ANTES DE EMITIR SE HACE EL CHECK LIST***
-                <ul>
-                    <li>COMISIÓN</li>
-                    <li>CHAPA/CIA</li>
-                    <li>OVER (cargar DI)</li>
-                    <li>FOP</li>
-                </ul>
-                <ul>
-                    <li>Se ingresa el comando de emisión con el nro de CVV de la tc cargada para que el sistema lo cobre y emita -  Comando de EMISIÓN <strong>TKPDXD.FE60D2.6PI3/F*I</strong>123 (Ej Emisión con cvv 123)</li>
-                </ul>
-                ***SI EL PAGO NO PASO OK, EL SISTEMA INFORMA EL RECHAZO Y SE TRABAJA COMO BANKIA***
-            </li>
-            <li>
-                SI SE EMITIÓ CORRECTAMENTE, FINALIZAMOS EL PROCESO EN ADMIN
-                <ul>
-                    <li>
-                        Dejamos comentario del nro de auth del gds</li>
-                    <li>
-                        Desde OPERACIONES SOBRE EL PEDIDO:
-                        <ul>
-                            <li>Se MARCA EMITIDO</li>
-                            <li>SE OBTIENEN LOS BILLETES (Sino funciona la herramienta se pueden introducir manualmente)</li>
-                            <li>
-                                SE CARGA COMISIÓN
-                                <ul>
-                                    <li>***El cálculo de la comisión en admin es: <strong>
-                                        (COMISION + OVER) – COSTO RICALE  (0.50 para cabotaje / 1 para inter)  
-                                    </strong>= X (Ej de AR cab comisión 0 + over 3 - costo 0.5 = 2.5 importe en admin)
-                                        *** 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>SE CONTRATAN SERVICIOS PENDIENTES SI LOS HAY</li>
-                            <li>SE ENVIA MAIL DE CONFIRMACION A PAX.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-    </section>
+   
+    
     <section id="cuotasGalileo" class="caja1">
         <h2>PASO A PASO DE EMISION EN CUOTAS CON TARJETA DE CREDITO </h2>
         <ol>

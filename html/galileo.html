@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galileo</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <img src="../img/logo.png" alt="logo">
+            <ul>
+                <a href="../index.html"><li>Calidad</li></a>
+                <a href="./guias.html"><li>Guias de ayuda</li></a>
+                <a href="./ae.html"><li>Antiestafa</li></a>
+                <a href="./post.html"><li>Atención al cliente</li></a>
+                <a href="./galileo.html"><li>Galileo</li></a>
+    
+                <a href="./amadeus.html"><li>Amadeus</li></a>
+                <a href="./gdsNdc.html"><li>GDS NDC</li></a>
+    
+                <a href="./terrestres.html"><li>Terrestres</li></a>
+                <a href="./form.html"><li>Sugerencias</li></a>
+            </ul>
+        </nav>
+    </header>
+    <h1>Manual de Galileo</h1>
+    <div class="submenu">
+        <ul>
+            <a href="#logueo">
+                <li>Logueo</li>
+            </a>
+            <a href="#pnr">
+                <li>Creación y tarifación de PNR</li>
+            </a>
+            <a href="#void">
+                <li>Anulación de PNR (Void)</li>
+            </a>
+            <a href="#comandos">
+                <li>Comandos importantes</li>
+            </a>
+            <a href="#cobros">
+                <li>Gestión de cobros</li>
+            </a>
+            <a href="#dominios">
+                <li>Dominios</li><a>
+            <a href="../html/colas.html">
+                        <li>Colas</li><a>
+        </ul>
+    </div>
+    <section id="logueo">
+        <h2>Logueo inicial</h2>
+        <p>
+            Al abrir el programa, nos pedirá el SON/ID y el password. <br>
+            <img src="../img/logueoga.png" alt=""> <br>
+            El siguiente paso va a ser emularnos en el pseudo/dominio que queremos gestionar. <br>
+            <img src="../img/logueoga-1.png" alt=""> <br>
+            Al ingresar el comando de logueo, la pantalla da el ok al acceso y muestra en el dominio que estamos listos
+            para trabajar. <br>
+            <img src="../img/pseudo.png" alt=""> <br>
+        </p>
+        <h3>Dominios LATAM</h3>
+        <div class="container">
+            <div class="iataArg">
+                <h4>Argentina</h4>
+                <p>
+                    Iata Ricale: 55507491 <br>
+                    Pseudo/OID: 7C08 <br>
+                    Reservas: Vuelos generales <br>
+                    Comando de logueo: SEM/7C08/AG <br>
+                    Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
+                </p>
+                <p>
+                    Iata Ricale: 55507491 <br>
+                    Pseudo/OID: 313T <br>
+                    Reservas: VMH / Tarifas netas <br>
+                    Comando de logueo: SEM/313T/AG <br>
+                    Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
+                </p>
+                <p>
+                    Iata Propio: 55547925 <br>
+                    Pseudo/OID: 88M <br>
+                    Reservas: Vuelos generales <br>
+                    Comando de logueo: SEM/88M/AG <br>
+                    Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
+                </p>
+                <p>
+                    Iata Propio: 55547925 <br>
+                    Pseudo/OID: 8RV <br>
+                    Reservas: Vuelos generales <br>
+                    Comando de logueo: SEM/8RV/AG <br>
+                    Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
+                </p>
+            </div>
+            <div>
+                <h4>Peru</h4>
+                <p>
+                    Iata Propio: 91503031 <br>
+                    Pseudo/OID: 55MR <br>
+                    Reservas: Vuelos generales <br>
+                    Comando de logueo: SEM/55MR/AG <br>
+                    Logueo inicial de impresoras: <br>HMLMFE0D86DI / HMLMFE0CC1DA <br>
+                </p>
+            </div>
+            <div class="iataCl">
+                <h4>Chile</h4>
+                <p>
+                    Iata Propio: 75502770 <br>
+                    Pseudo/OID: 668Q <br>
+                    Reservas: Vuelos generales <br>
+                    Comando de logueo: SEM/668Q/AG <br>
+                </p>
+                <p>
+                    Iata Propio: 75502770 <br>
+                    Pseudo/OID: 31LT <br>
+                    Reservas: VMH / Tarifas netas <br>
+                    Comando de logueo: SEM/31LT/AG <br>
+                </p>    
+            </div>
+        </div>
+        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+    </section>
+    <section id="pnr" class="fondo">
+        <h2>¿Como tomar una reserva de cero en Galileo?</h2>
+        <p>
+            <img src="../img/galileopnr.png" alt="" style="width: 50%;">
+            <img src="../img/pnrcero.png" alt="" >
+            <div class="users">
+                <h3>Status segmentos:</h3>
+                <p>
+                    <strong>HS</strong> Segmento solicitado <br>
+                    <strong>HK</strong> Segmento confirmado <br> <strong>HX</strong> Segmento cancelado <br>
+                    <strong>TK/UN</strong> Vuelo reprogramado/cancelado <br>
+                </p>
+            </div>
+        </p>
+    </section>
+    <section id="void">
+        <h2>Void</h2>
+        <p>
+            <span>
+                Para poder voidear una reserva, tenemos que chequear el estatus del ticket <br>
+            </span>
+                El unico estatus que permite voidear es: <strong>OPEN</strong> <br>
+                <div class="users">
+                    <h3>Status de Ticket:</h3>
+                    <p>
+                        <strong>OPEN</strong> Ticket abierto para gestión <br> - Permite voidear<br>
+                        <strong>CHKIN</strong> Ticket con check-in hecho <br> - No permite voidear <br> <strong>ARTP</strong> Ticket en control de aeropuerto <br> - No permite voidear <br> <strong>EXCH</strong> Ticket cambiado <br> - No permite voidear <br>
+                    </p>
+                </div>
+            El comando de void es: <strong>TRV/(nrodetkt)</strong> <br>
+            <img src="../img/voidgali.png" alt="">
+        </p>
+
+    </section>
+    <section id="cobros">
+        <div>
+            <h2>Gestión de aéreos</h2>
+            <p>
+                Para poder tener una mayor rentabilitad en cada pedido es importante conocer el proceso correcto de las
+                herramientas de cobro<br>
+                Cuando procesamos un cobro por nuestro carrito de admin, estamos pagando un costo por el uso de la
+                plataforma bajo nuestro numero de comercio. <br>
+                Este importe es porcentual, es decir cuanto mayor sea el importe que procesemos en el carrito, mayor es
+                el costo. O sea, menos ganancia de esa reserva <br>
+                La gestión entonces se debe realizar de la siguiente manera: <br>
+                Se cobra por separado: <br>
+                <span>Monto aéreo ↠</span> con el comercio de la aerolínea <br>
+                <span>Cargos de gestión Atrápalo + Seguros/Asientos ↠</span> con el comercio de Atrápalo<br>
+            </p>
+        </div>
+        <div>
+            <h2>¿Qué significa UATP?</h2>
+            <p>
+                Son los cobros que se realizan con el comercio de la compañía aérea <br>
+                Se pueden cobrar directamente desde el GDS (solo por Galileo), o bien por Payway (Lapos), Webpostnet,
+                según que tarjeta se este usando. <br>
+                Es súper importante verificar el número de comercio por donde se va a cobrar; esto lo podemos hacer
+                desde la web de <br><a
+                    href="https://red.ricaleonline.com/Account/Login
+                    "
+                    target="_blank" class="link">Ricale</a> <br>
+                    <div class="users">
+                        Usuario: tomas.devescovi@atrapalo.com.ar
+                        <br>
+                        Contraseña: B85PNCHN
+                        <br>
+                    </div>
+                Al cobrar de manera UATP, en admin quedará registrado en la caja de cobros sólo lo cobrado con comercio
+                Atrápalo, es decir el fee de gestión Atrápalo, seguros, Asistencia web, asientos, servicios, etc. <br>
+                Si no es posible avanzar UATP, vamos a cobrar por admin y emitir cash. <br>
+                Para poder cambiar la forma de pago en el admin, debemos ir a <br>
+                <span>***Operaciones sobre el pedido - Cobramos todo por atrapalo***.<br></span>
+                En la caja de cobros va a figurar el total de la reserva a pagar por el pasajero. <br>
+                Estos casos pueden ser porque el pasajero paga en efectivo, con tc Débito, si quisiera abonar con más de
+                una tarjeta de crédito, si son cuotas con interés y en caso que sea la misma aerolínea que no permita
+                UATP. <br>
+            </p>
+        </div>
+
+        
+      
+        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+        
+
+        
+    </section>
+    <section id="dominios" class="fondo">
+        <h2>DOMINIOS</h2>
+        <div class="dominiosBox">
+            <div class="domBox">
+                <img src="../img/banderaargentina.png" alt="">
+                <ul>
+                    <a href="../galileo/gestionCobros.html" class="btn">
+                        <li>Diferentes procesos de cobros</li>
+                    </a>
+                    
+                    <a href="#" class="btn">
+                        <li>Remisiones voluntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Remisiones involuntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Devoluciones</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="domBox">
+                <img src="../img/banderaPeru_(1825–1884).svg" alt="">
+                <ul>
+                    <a href="../galileo/galileoPe.html" class="btn">
+                        <li>Cobros con tarjeta</li>
+                    </a>
+                    
+                    <a href="#" class="btn">
+                        <li>Cobros con otros medios de pago</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Remisiones voluntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Remisiones involuntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Devoluciones</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="domBox">
+                <img src="../img/Flag_of_Chile.svg.png" alt="">
+                <ul>
+                    <a href="#" class="btn">
+                        <li>Cobros con tarjeta en 1 pago</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Cobros con tarjeta en cuotas</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Cobros con otros medios de pago</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Remisiones voluntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Remisiones involuntarias</li>
+                    </a>
+                    <a href="#" class="btn">
+                        <li>Devoluciones</li>
+                    </a>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
+        <p>Sitio creado por CG</p>
+    </footer>
+</body>
+
+</html>
