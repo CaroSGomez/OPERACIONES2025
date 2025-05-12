@@ -52,6 +52,14 @@
         Chequeamos: <br>
         Nombres<br>
         Status de segmentos de itinerario <br>
+        <div class="users">
+                <h3>Status segmentos:</h3>
+                <p>
+                    <strong>HS</strong> Segmento solicitado <br>
+                    <strong>HK</strong> Segmento confirmado <br> <strong>HX</strong> Segmento cancelado <br>
+                    <strong>TK/UN</strong> Vuelo reprogramado/cancelado <br>
+                </p>
+            </div>
         Equipaje <br>
         Tarifa <br>
         Comando para ver todos los archivos tarifarios ingresamos comando <strong>*FF</strong> <br>
@@ -74,7 +82,7 @@
         <div class="users">
             Ejemplo Comision 0 para el archivo 1: <strong>TMU</strong>1<strong>Z</strong>0<br>
         </div>
-        Por otro lado hay pago de over, se debe cargar el código de over indicado por la aerolinea y la ganancia del mismo en el pnr <br>
+        Por otro lado cuando hay pago de over, se debe cargar el código del over indicado por la aerolinea y la ganancia del mismo en el pnr <br>
         El indicador de over compuesto es: <strong>AI-</strong> y <strong>VC-</strong> <br>
         <div class="users">
             Ejemplo de Over AR para el archivo 1: <br> <strong>TMU</strong>1<strong>AI-</strong> BUE504/ <strong>VC-</strong>ZA<br>
@@ -118,13 +126,25 @@
         Cuando cobramos directo en Galileo, solo es posible gestionar 1 solo pago. <br>
         <strong>Recordemos que solo las tarjetas de Visa y Amex pueden ser cobradas directo en Galileo</strong> <br>
         
-        
-        ***ANTES DE EMITIR SE HACE EL CHECK LIST*** <br>
-        COMISIÓN <br>
-        CHAPA/CIA <br>
-        OVER (cargar DI) <br>
-        FOP <br>
-        Se ingresa el comando de emisión con el nro de CVV de la tc cargada para que el sistema lo cobre y emita -  Comando de EMISIÓN <strong>TKPDXD.FE60D2.6PI3/F*I</strong>123 (Ej Emisión con cvv 123) <br>
+        <div class="users">
+                <h3>Check List: <br> Antes de emitir</h3>
+                <p>
+                    <strong>Comisión</strong><br>
+                    <strong>Chapa/Placa</strong><br>
+                    <strong>Over</strong> (DI cargado)<br>
+                    <strong>FOP</strong><br>        
+                </p>
+            </div>
+        Una vez revisado el check list, debemos tirar el comendo de emisión indicando el CVV de la tarjeta. <br>
+        El comando de emisión es: <strong>TKPDXD.FE60D2.6PI3/F*I</strong>XXX<br>
+        <div    class="users">
+            Ejemplo de emisión : <br>
+            Visa: 4546XXXXXXXXX4846 <br>
+            Vto: 11/29 <br>
+            Cvv: 123 <br>
+            <strong>TMU1FVI</strong>4546XXXXXXXXX4846<strong>*D</strong>1129 <br>
+            <strong>TKPDXD.FE60D2.6PI3/F*I</strong>123 <br>
+                </div>
         ***SI EL PAGO NO PASO OK, EL SISTEMA INFORMA EL RECHAZO Y SE TRABAJA COMO BANKIA*** <br>
         SI SE EMITIÓ CORRECTAMENTE, FINALIZAMOS EL PROCESO EN ADMIN <br>
         Dejamos comentario del nro de auth del gds <br>

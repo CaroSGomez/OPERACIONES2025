@@ -34,25 +34,14 @@
     <h1>Manual de Galileo</h1>
     <div class="submenu">
         <ul>
-            <a href="#logueo">
-                <li>Logueo</li>
-            </a>
-            <a href="#pnr">
-                <li>Creación y tarifación de PNR</li>
-            </a>
-            <a href="#void">
-                <li>Anulación de PNR (Void)</li>
-            </a>
-            <a href="#comandos">
-                <li>Comandos importantes</li>
-            </a>
-            <a href="#cobros">
-                <li>Gestión de cobros</li>
-            </a>
-            <a href="#dominios">
-                <li>Dominios</li><a>
-            <a href="../html/colas.html">
-                        <li>Colas</li><a>
+            <a href="#logueo">               <li>Logueo</li>            </a>
+            <a href="#iatas">                <li>Iatas/Pseudos</li>            </a>
+            <a href="#pnr">                <li>Creación y tarifación de PNR</li>            </a>
+            <a href="#void">                <li>Anulación de PNR (Void)</li>            </a>
+            <a href="#comandos">                <li>Comandos importantes</li>            </a>
+            <a href="#cobros">                <li>Gestión de cobros</li>            </a>
+            <a href="#dominios">                <li>Dominios</li> </a>
+            <a href="../html/colas.html">                     <li>Colas</li><a>
         </ul>
     </div>
     <section id="logueo">
@@ -66,7 +55,11 @@
             para trabajar. <br>
             <img src="../img/pseudo.png" alt=""> <br>
         </p>
-        <h3>Dominios LATAM</h3>
+        
+        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+    </section>
+    <section id="iatas" class="fondo">
+        <h2>Iatas LATAM</h2>
         <div class="container">
             <div class="iataArg">
                 <h4>Argentina</h4>
@@ -84,6 +77,9 @@
                     Comando de logueo: SEM/313T/AG <br>
                     Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
                 </p>
+            </div>
+                <!--Iatas Propios
+
                 <p>
                     Iata Propio: 55547925 <br>
                     Pseudo/OID: 88M <br>
@@ -98,7 +94,7 @@
                     Comando de logueo: SEM/8RV/AG <br>
                     Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
                 </p>
-            </div>
+                -->
             <div>
                 <h4>Peru</h4>
                 <p>
@@ -106,7 +102,7 @@
                     Pseudo/OID: 55MR <br>
                     Reservas: Vuelos generales <br>
                     Comando de logueo: SEM/55MR/AG <br>
-                    Logueo inicial de impresoras: <br>HMLMFE0D86DI / HMLMFE0CC1DA <br>
+                    Logueo inicial de impresoras: HMLMFE0D86DI/FE0CC1DA <br>
                 </p>
             </div>
             <div class="iataCl">
@@ -116,33 +112,28 @@
                     Pseudo/OID: 668Q <br>
                     Reservas: Vuelos generales <br>
                     Comando de logueo: SEM/668Q/AG <br>
+                    Logueo inicial de impresoras: HMLME707BEDA/BCA91DDI <br>
                 </p>
                 <p>
                     Iata Propio: 75502770 <br>
                     Pseudo/OID: 31LT <br>
                     Reservas: VMH / Tarifas netas <br>
                     Comando de logueo: SEM/31LT/AG <br>
+                    Logueo inicial de impresoras: HMLME707BEDA/BCA91DDI <br>
                 </p>    
             </div>
         </div>
-        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+
     </section>
-    <section id="pnr" class="fondo">
+    <section id="pnr" >
         <h2>¿Como tomar una reserva de cero en Galileo?</h2>
         <p>
             <img src="../img/galileopnr.png" alt="" style="width: 50%;">
-            <img src="../img/pnrcero.png" alt="" >
-            <div class="users">
-                <h3>Status segmentos:</h3>
-                <p>
-                    <strong>HS</strong> Segmento solicitado <br>
-                    <strong>HK</strong> Segmento confirmado <br> <strong>HX</strong> Segmento cancelado <br>
-                    <strong>TK/UN</strong> Vuelo reprogramado/cancelado <br>
-                </p>
-            </div>
+            <img src="../img/pnrcero.png" alt="" style="width: 88%;">
+            
         </p>
     </section>
-    <section id="void">
+    <section id="void" class="fondo">
         <h2>Void</h2>
         <p>
             <span>
@@ -157,16 +148,35 @@
                     </p>
                 </div>
             El comando de void es: <strong>TRV/(nrodetkt)</strong> <br>
-            <img src="../img/voidgali.png" alt="">
+            <img src="../img/voidgali.png" alt=""> <br>
+            Luego de voidear, el sistema nos devolverá las siguientes respuestas: <br>
+            <img src="../img/void2.png" alt=""> <br>
+            Vamos a ignorar y volver a desplegar el ticket para chequear el estatus: <br>
+            El comando para ignorar es: <strong>IR</strong> <br>
+            Es importante destacar que el comando SOLO void el ticket, no elimina los segmentos. <br>
+            <span>Es mala práctica dejar segmentos/tramos inactivos.</span>    <br>
+            <strong>Siempre</strong> vamos a limpiar el itinerario si no vamos a emitir un ticket. <br>
+            El comando para limpiar el pnr es: <strong>XI</strong> <br>
+            <img src="../img/void3.png" alt=""> <br>
+            El gds nos informa que el itinerario ha sido limpiado, y el ticket ha sido voideado. <br>
+            Veremos solo el nombre en el pnr. <br>
+            <img src="../img/void4.png" alt="">
         </p>
+    </section>
+    <section id="comandos">
+        <h2>Datos y Comandos importantes</h2>
+       
+        
 
     </section>
-    <section id="cobros">
+    <section id="cobros"class="fondo">
         <div>
             <h2>Gestión de aéreos</h2>
             <p>
-                Para poder tener una mayor rentabilitad en cada pedido es importante conocer el proceso correcto de las
-                herramientas de cobro<br>
+                <span>
+                    Para poder tener una mayor rentabilitad en cada pedido es importante conocer el proceso correcto de las
+                    herramientas de cobro<br>
+                </span>
                 Cuando procesamos un cobro por nuestro carrito de admin, estamos pagando un costo por el uso de la
                 plataforma bajo nuestro numero de comercio. <br>
                 Este importe es porcentual, es decir cuanto mayor sea el importe que procesemos en el carrito, mayor es
@@ -181,10 +191,16 @@
             <h2>¿Qué significa UATP?</h2>
             <p>
                 Son los cobros que se realizan con el comercio de la compañía aérea <br>
-                Se pueden cobrar directamente desde el GDS (solo por Galileo), o bien por Payway (Lapos), Webpostnet,
-                según que tarjeta se este usando. <br>
-                Es súper importante verificar el número de comercio por donde se va a cobrar; esto lo podemos hacer
-                desde la web de <br><a
+                Dependiendo del tipo de tarjeta, se pueden: <br>
+                Se pueden cobrar directamente desde el GDS <br>
+                Se pueden cobrar por <strong>Lapos (Payway)</strong>. Dar click <a href="#payway" class="link">acá</a> para ver el proceso <br>
+                Se pueden cobrar por <strong>Fiserv (Master)</strong>. Dar click <a href="#fiserv" class="link">acá</a> para ver el proceso <br>
+                <span>
+
+                    Al momento de procesar un cobro UATP, es súper importante verificar el número de comercio por donde se va a cobrar <br>
+                </span>
+                    Esto lo podemos hacer
+                    desde la web de <br><a
                     href="https://red.ricaleonline.com/Account/Login
                     "
                     target="_blank" class="link">Ricale</a> <br>
@@ -194,15 +210,17 @@
                         Contraseña: B85PNCHN
                         <br>
                     </div>
-                Al cobrar de manera UATP, en admin quedará registrado en la caja de cobros sólo lo cobrado con comercio
+                
+                En admin quedará registrado en la caja de cobros sólo lo cobrado con comercio
                 Atrápalo, es decir el fee de gestión Atrápalo, seguros, Asistencia web, asientos, servicios, etc. <br>
-                Si no es posible avanzar UATP, vamos a cobrar por admin y emitir cash. <br>
+                <h4>No es posible avanzar con UATP</h4>
+                En algunas ocasiones podemos encontrarnos con compañias aereas que no tienen numero de comercio para procesar ciertos tipos de tarjetas. <br>
+                O bien que solo permitan la emisión de tickets CASH. <br>
+                Si este escenario se presenta vamos a cobrar por admin (con nuestro numero de comercio) y emitir cash. <br>
                 Para poder cambiar la forma de pago en el admin, debemos ir a <br>
                 <span>***Operaciones sobre el pedido - Cobramos todo por atrapalo***.<br></span>
                 En la caja de cobros va a figurar el total de la reserva a pagar por el pasajero. <br>
-                Estos casos pueden ser porque el pasajero paga en efectivo, con tc Débito, si quisiera abonar con más de
-                una tarjeta de crédito, si son cuotas con interés y en caso que sea la misma aerolínea que no permita
-                UATP. <br>
+                
             </p>
         </div>
 
@@ -213,7 +231,7 @@
 
         
     </section>
-    <section id="dominios" class="fondo">
+    <section id="dominios" >
         <h2>DOMINIOS</h2>
         <div class="dominiosBox">
             <div class="domBox">

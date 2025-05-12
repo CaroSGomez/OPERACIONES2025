@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galileo</title>
+    <title>Amadeus</title>
     <link rel="icon" href="../img/viajar.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,8 @@
             <a href="#logueo">
                 <li>Logueo</li>
             </a>
+                        <a href="#iatas">                <li>Iatas/Pseudos</li>            </a>
+
             <a href="#pnr">
                 <li>Creación y tarifación de PNR</li>
             </a>
@@ -51,10 +53,92 @@
                 <li>Dominios</li><a>
         </ul>
     </div>
+        <section id="logueo">
+        <h2>Logueo inicial</h2>
+        <p>
+            Ingresamos al sistema desde su web en <a class="link" href="https://www.sellingplatformconnect.amadeus.com/login/?SITE=LOGINURL&LANGUAGE=GB&refreshOnError=true" target="_blank" rel="noopener noreferrer">Amadeus</a> <br>
+            Al abrir el programa, nos pedirá el USER, ID de Oficina y el password. <br>
+            <img src="../img/ama1.png" alt=""> <br>
+            El ID de Oficina es lo que indica el pseudo/dominio donde vamos a gestionar. <br>
+            
+        </p>
+        
+        <a href="/html/galileo.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+    </section>
+    <section id="iatas">
+        <h2>Iatas LATAM</h2>
+        <div class="container">
+            <div class="iataArg">
+                <h4>Argentina</h4>
+                <p>
+                    Iata Ricale: 55507491 <br>
+                    Pseudo/OID: BUEZO2107 <br>
+                    Reservas: Vuelos generales <br>                    
+                </p>
+                <p>
+                    Iata Propio: 55547925 <br>
+                    Pseudo/OID: BUEZO210D <br>
+                    Pseudo/OID: BUEZO28AF <br>
+                    Reservas: Vuelos generales <br>
+                </p>
+              
+            </div>
+            <div>
+                <h4>Peru</h4>
+                <p>
+                    Iata Propio: 91503031 <br>
+                    Pseudo/OID: LIMZO2107 <br>
+                    Reservas: Vuelos generales <br>
+                   
+                </p>
+            </div>
+            <div class="iataCl">
+                <h4>Chile</h4>
+                <p>
+                    Iata Propio: 75502770 <br>
+                    Pseudo/OID: SCLZO2107 <br>
+                    Reservas: Vuelos generales <br>
+                    
+                </p>
+                  
+            </div>
+        </div>
+
+    </section>
     <section id="pnr">
-        <h2></h2>
+        <h2>¿Como tomar una reserva de cero en Galileo?</h2>
         <p>
          <img src="../img/pnrama.png" alt="" style="width: 50%;">
+        </p>
+    </section>
+     <section id="void">
+        <h2>Void</h2>
+        <p>
+            <span>
+                Para poder voidear una reserva, tenemos que chequear el estatus del ticket <br>
+            </span>
+                El unico estatus que permite voidear es: <strong>OPEN</strong> <br>
+                <div class="users">
+                    <h3>Status de Ticket:</h3>
+                    <p>
+                        <strong>OPEN</strong> Ticket abierto para gestión <br> - Permite voidear<br>
+                        <strong>CHKIN</strong> Ticket con check-in hecho <br> - No permite voidear <br> <strong>ARTP</strong> Ticket en control de aeropuerto <br> - No permite voidear <br> <strong>EXCH</strong> Ticket cambiado <br> - No permite voidear <br>
+                    </p>
+                </div>
+            El comando de void es: <strong>TRDC/L(nrodelinea)</strong> <br>
+            <img src="../img/voidgali.png" alt=""> <br>
+            Luego de voidear, el sistema nos devolverá las siguientes respuestas: <br>
+            <img src="../img/void2.png" alt=""> <br>
+            Vamos a ignorar y volver a desplegar el ticket para chequear el estatus: <br>
+            El comando para ignorar es: <strong>IR</strong> <br>
+            Es importante destacar que el comando SOLO void el ticket, no elimina los segmentos. <br>
+            <span>Es mala práctica dejar segmentos/tramos inactivos.</span>    <br>
+            <strong>Siempre</strong> vamos a limpiar el itinerario si no vamos a emitir un ticket. <br>
+            El comando para limpiar el pnr es: <strong>XI</strong> <br>
+            <img src="../img/void3.png" alt=""> <br>
+            El gds nos informa que el itinerario ha sido limpiado, y el ticket ha sido voideado. <br>
+            Veremos solo el nombre en el pnr. <br>
+            <img src="../img/void4.png" alt="">
         </p>
     </section>
     <section id="dominios">

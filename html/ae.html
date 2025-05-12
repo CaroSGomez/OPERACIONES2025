@@ -30,45 +30,84 @@
         </nav>
     </header>
     <h1>Manual de Antiestafa</h1>
-    <p>DETALLE:
-        Introducción:
-        El objetivo principal de la validación es asegurarnos de que la persona que está realizando el pago sea conocedor de la compra/reserva o tiene vínculos con ella, opera con bancos, así como verificar diversos datos de contacto y los vínculos entre el que paga y los pasajeros. A continuación, se detallan los puntos clave a validar durante este proceso:
-          
-        Información crediticia del pagador:
-         Es esencial corroborar que la persona que está pagando tiene información crediticia, lo cual se puede verificar a través de diferentes herramientas de validación.
-        Correo electrónico:
-         Debemos confirmar que el correo electrónico proporcionado existe, tiene antigüedad y corresponde a la persona que realiza el pago. Este dato es clave para validar quien está realizando la compra.
-        Vínculos entre el pagador y los pasajeros:
-         Es importante verificar las relaciones entre el pagador y los pasajeros, la persona que realiza el pago debe estar vinculada a los demás mediante domicilio, familia, amigos u otros factores fehacientes.
-        Número de teléfono:
-         El número de teléfono proporcionado debe ser válido y corresponder al pagador. Si hay dudas sobre su veracidad, se deben realizar validaciones adicionales.
-        Tarjetas de débito y BIN de tarjeta:
-         Si la persona no tiene información crediticia, se puede validar el BIN (Bank Identification Number) de la tarjeta. Si la tarjeta es de débito, es posible que no aparezca información en sistemas como Nosis, ya que esta herramienta solo muestra información crediticia vinculada a tarjetas de crédito, billeteras virtuales, préstamos personales, etc.
-         Itinerario: A continuación, se detallan los aspectos clave que deben ser verificados.
-        -        Fechas: Puede ser una señal de un intento de fraude, una fecha cercana.
-        -        Rutas y destinos:  Confirmar que los destinos y rutas coincidan o tengan lógica con el origen de la compra y el resto de la información, tener presente la fecha, el destino, conexiones y si cuenta con regreso o no.
-        Acciones cuando no se logran verificar los puntos anteriores:
-         Si no logramos validar la información del pagador mediante los pasos mencionados, debemos considerar la opción de enviar un FD, Kommo, o ambos. Para ello, contamos con plantillas específicas para facilitar este proceso.
-        Reservas Relacionadas:
-         Es crucial revisar las reservas relacionadas al momento de la validación. Estas pueden estar vinculadas por correo electrónico, teléfono o nombre. Aunque el nombre no siempre es relevante, salvo en casos de intentos recientes, los vínculos por correo electrónico o teléfono son más significativos, si éstas reservas que se asocian a correos y/o teléfono y sus estados están en alerta o marcados como estafas, chequearemos para reafirmar y marcaremos el pedido como estafa evitada, cancelaremos o voidearemos según la instancia.
-        Para consultar las reservas vinculadas a una tarjeta de crédito, debemos hacer clic en el número de tarjeta que aparece en el margen superior izquierdo, debajo del correo electrónico, acá podemos visualizar la cantidad de pedidos bajo esa TC y los nombres de los titulares ingresados, Si solo parase un número de tarjeta y esta arroja distintos titulares, esta será una señal de alerta, ya que para una misma TC no se puede tener mas de un titular.
-         Páginas Útiles:
-         A continuación, se presentan diversas herramientas y plataformas útiles para realizar las validaciones en distintas regiones:
-        Argentina:
-        Nosis: Herramienta para consultar información de Identidad, crediticia, vínculos laborales familiares, sociedades, empresariales, etc.
-        Mercado Pago: Aunque es una app personal, se puede usar para validar la titularidad del correo electrónico o número de teléfono mediante una simulación de transferencia.
-        Redes Sociales: Consultar redes sociales puede ayudar a verificar la información proporcionada respecto a vínculos, ciudad de residencia, ambiente social y otros.
-        Truecaller: Herramienta para identificar la titularidad de números de teléfono.
-        BIN Check: Verificar la información de la tarjeta mediante el BIN.
-        EmailAge: Validar veracidad, antigüedad y titularidad del correo electrónico.
-        Perú y Chile:
-        Truecaller: Utilizado también en estos países para verificar números de teléfono.
-        Redes Sociales: Buscar información adicional sobre la persona a través de sus perfiles en redes sociales.
-        EmailAge: Al igual que en Argentina, es útil para validar la titularidad del correo electrónico.
-        Páginas públicas: Para consultas de RUC (Perú), RUT (Chile), DNI o nombre, existen varias plataformas públicas que permiten obtener esta información.
-        Con estas herramientas y procesos de validación, podremos garantizar la autenticidad de la información proporcionada por el pagador y los pasajeros.
-        
-    </p>
+    <div class="submenu">
+        <ul>
+            <a href="#intro"><li>Introducción</li></a>
+            <a href="#pasos"><li>Puntos clave a validar</li></a>
+            <a href="#sitios"><li>Paginas útiles</li></a>
+            <a href="#resumen"><li>Resumen ¿Cómo hacer AntiEstafa?</li></a>
+        </ul>
+    </div>
+    <section id="intro">
+        <h2 >Introducción</h2>
+        <p>
+            El objetivo principal de la validación es asegurarnos de que la persona que está realizando el pago sea conocedor de la compra/reserva o tiene vínculos con ella, opera con bancos, así como verificar diversos datos de contacto y los vínculos entre el que paga y los pasajeros. <br>
+        </p>
+    </section>
+    <section id="pasos">
+        <h2 >Puntos clave a validar</h2>
+        <p>
+            <h4>Información crediticia del pagador:</h4>
+            Es esencial corroborar que la persona que está pagando tiene información crediticia, lo cual se puede verificar a través de diferentes herramientas de validación. <br>
+            <h4>Correo electrónico:</h4>
+            Debemos confirmar que el correo electrónico proporcionado existe, tiene antigüedad y corresponde a la persona que realiza el pago. Este dato es clave para validar quien está realizando la compra. <br>
+            <h4>Vinculos entre el pagador y los pasajeros:</h4>
+            Es importante verificar las relaciones entre el pagador y los pasajeros, la persona que realiza el pago debe estar vinculada a los demás mediante domicilio, familia, amigos u otros factores fehacientes. <br>
+            <h4>Numero de teléfono:</h4>
+            El número de teléfono proporcionado debe ser válido y corresponder al pagador. Si hay dudas sobre su veracidad, se deben realizar validaciones adicionales. <br>
+            <h4>Tarjetas de Débito  y BIN de tarjeta </h4>
+            Si la persona no tiene información crediticia, se puede validar el BIN (Bank Identification Number) de la tarjeta. Si la tarjeta es de débito, es posible que no aparezca información en sistemas como Nosis, ya que esta herramienta solo muestra información crediticia vinculada a tarjetas de crédito, billeteras virtuales, préstamos personales, etc. <br>
+            <h4>Itinerario:</h4>
+                Los aspectos que deben ser verificados son: <br>
+                Fechas: Puede ser una señal de un intento de fraude, una fecha cercana. <br>
+                Rutas y destinos:  Confirmar que los destinos y rutas coincidan o tengan lógica con el origen de la compra y el resto de la información, tener presente la fecha, el destino, conexiones y si cuenta con regreso o no. <br>
+            <div class="users">
+                <span>
+                    Si no logramos validar la información del pagador mediante los pasos mencionados, debemos considerar la opción de enviar un FD, Kommo, o ambos. <br>
+                    Para ello, contamos con plantillas específicas para facilitar este proceso.
+                </span>
+            </div>
+            <h4>Reservas relacionadas</h4>
+            Es crucial revisar las reservas relacionadas al momento de la validación. Estas pueden estar vinculadas por correo electrónico, teléfono o nombre. Aunque el nombre no siempre es relevante, salvo en casos de intentos recientes, los vínculos por correo electrónico o teléfono son más significativos, si éstas reservas que se asocian a correos y/o teléfono y sus estados están en alerta o marcados como estafas, chequearemos para reafirmar y marcaremos el pedido como estafa evitada, cancelaremos o voidearemos según la instancia. <br>
+            Para consultar las reservas vinculadas a una tarjeta de crédito, debemos hacer clic en el número de tarjeta que aparece en el margen superior izquierdo, debajo del correo electrónico, acá podemos visualizar la cantidad de pedidos bajo esa TC y los nombres de los titulares ingresados, Si solo parase un número de tarjeta y esta arroja distintos titulares, esta será una señal de alerta, ya que para una misma TC no se puede tener mas de un titular. <br>
+        </p>
+        </section>
+    <section id="sitios">
+        <h2 >Páginas útiles</h2>    
+        <p>
+            <h4>Recomendaciones: Argentina</h4>
+            <strong>Nosis</strong>: Herramienta para consultar información de Identidad, crediticia, vínculos laborales familiares, sociedades, empresariales, etc. <br>
+            <strong>Mercado Pago</strong>: Aunque es una app personal, se puede usar para validar la titularidad del correo electrónico o número de teléfono mediante una simulación de transferencia. <br>
+            <strong>Redes Sociales</strong>: Consultar redes sociales puede ayudar a verificar la información proporcionada respecto a vínculos, ciudad de residencia, ambiente social y otros. <br>
+            <strong>Truecaller</strong>: Herramienta para identificar la titularidad de números de teléfono. <br>
+            <strong>BIN Check</strong>: Verificar la información de la tarjeta mediante el BIN. <br>
+            <strong>EmailAge</strong>: Validar veracidad, antigüedad y titularidad del correo electrónico. <br> <br>
+            <h4>Recomendaciones: Perú y Chile</h4>
+            <strong>Truecaller</strong>: Utilizado también en estos países para verificar números de teléfono. <br>
+            <strong>Redes Sociales</strong>: Buscar información adicional sobre la persona a través de sus perfiles en redes sociales. <br>
+            <strong>EmailAge</strong>: Al igual que en Argentina, es útil para validar la titularidad del correo electrónico. <br>
+            <strong>Páginas públicas</strong>: Para consultas de RUC (Perú), RUT (Chile), DNI o nombre, existen varias plataformas públicas que permiten obtener esta información. <br>
+            Con estas herramientas y procesos de validación, podremos garantizar la autenticidad de la información proporcionada por el pagador y los pasajeros. 
+        </p>
+    </section>
+            
+<section id="resumen">
+    <h2>Resumen ¿Como hacer AntiEstafa?</h2>
+    <p>
+        <ol>
+            <li>Ver antiguedad del mail</li>
+            <li>Ver el IP de donde está comprando</li>
+            <li>¿El titular de la tarjeta es el mismo de quien viaja?</li>
+                <li>¿Los datos de facturación son del pax que viaja?</li>
+                <li>Ver si el Bin corresponde al banco y si es Debito o credito  BIN: 451757 Detalles</li>
+                <li>Ver Nosis: Nosis | SAC</li>
+                <li>Verificar titularidad de Teléfono</li>
+                <li>ITINERARIO</li>
+                <li>Compras relacionadas</li>
+            </ol>
+       
+        </p>
+    </section>
     <footer>
         <a href="/html/ae.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
         <p>Sitio creado por CaroGomez</p>

@@ -163,7 +163,7 @@ input, textarea, select{
     padding: 1em;
     margin: 0.5em;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
     text-align: center;
   }
 
@@ -179,7 +179,7 @@ input, textarea, select{
     width: 100%;
     margin: 5px 0;
     padding: 10px;
-    background-color: rgba(35, 105, 133, 0.719);
+    background-color: rgba(189, 60, 77, 0.719);
     color: white;
     border: none;
     border-radius: 5px;
@@ -190,7 +190,7 @@ input, textarea, select{
 
 
   .btn:hover {
-    background-color: rgba(35, 105, 133, 0.849);
+    background-color: rgba(189, 60, 77, 0.842);
   }
   .tarjetas {
     display: flex;
@@ -199,7 +199,6 @@ input, textarea, select{
   }
 
   .tarjeta {
-    background-color: white;
     padding: 20px;
     width: 30%;
     border-radius: 10px;
@@ -248,6 +247,8 @@ input, textarea, select{
 
 .container div:hover{
   box-shadow: 0 0 10px rgba(245, 40, 40, 0.692);
+      background-color: rgba(255, 255, 255, 0.719);
+
 
 }
 
