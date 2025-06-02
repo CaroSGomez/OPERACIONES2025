@@ -39,7 +39,7 @@
             <a href="#pnr">                <li>Creación y tarifación de PNR</li>            </a>
             <a href="#void">                <li>Anulación de PNR (Void)</li>            </a>
             <a href="#comandos">                <li>Comandos importantes</li>            </a>
-            <a href="#cobros">                <li>Gestión de cobros</li>            </a>
+            <a href="#cobros">                <li>Prioridades en la gestión de cobros</li>            </a>
             <a href="#dominios">                <li>Dominios</li> </a>
             <a href="../html/colas.html">                     <li>Colas</li><a>
         </ul>
@@ -77,9 +77,8 @@
                     Comando de logueo: SEM/313T/AG <br>
                     Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
                 </p>
-            </div>
-                <!--Iatas Propios
-
+                
+                
                 <p>
                     Iata Propio: 55547925 <br>
                     Pseudo/OID: 88M <br>
@@ -94,7 +93,8 @@
                     Comando de logueo: SEM/8RV/AG <br>
                     Logueo inicial de impresoras: HMLMB8C3E5DT/B8C3E6DI/B8C3E7DA <br>
                 </p>
-                -->
+                
+            </div>
             <div>
                 <h4>Peru</h4>
                 <p>
@@ -128,9 +128,66 @@
     <section id="pnr" >
         <h2>¿Como tomar una reserva de cero en Galileo?</h2>
         <p>
-            <img src="../img/galileopnr.png" alt="" style="width: 50%;">
-            <img src="../img/pnrcero.png" alt="" style="width: 88%;">
-            
+            <span>Paso 1: Agregar nombres a la reserva</span> <br>
+            El indicador de nombre es: <strong>N.</strong> <br>
+            El orden siempre debe ser Apellido/nombre <br>
+            El agregar los nombres de los pasajeros en primer lugar facilita el proceso de guardar lugares en la reserva <br>
+            <div class="users">
+            Ejemplo de nombre: <strong>N.</strong>GOMEZ/CAROLINA<br>
+            </div>
+            <span>Paso 2: Buscar la disponibilidad deseada</span> <br>
+            El indicador de busqueda es: <strong>A</strong> <br>
+            El orden siempre debe ser FECHA/RUTA/CIA <br>
+            <div class="users">
+            Ejemplo de busqueda para el 26/09 <br> Saliendo de Aeroparque a Jujuy por Aerolineas Argentinas: <strong>A</strong>26SEPAEPJUJ/AR<br>
+            </div>
+            <span>Paso 3: Guardar lugares</span> <br>
+            En el smart podemos tomar los segmentos dando click sobre la clase que queremos <br>
+            <div class="users">
+                El proceso con comandos seria el siguiente: 01Y3 <br>
+                <strong>0</strong>: Vender <br>
+                <strong>1</strong>: Cantidad de pasajeros <br>
+                <strong>Y</strong>: Clase <br>
+                <strong>3</strong>: Segmento de vuelo <br>
+                
+            </div>
+            <span>Paso 4: Guardar datos basicos de reserva</span> <br>
+            Lo primero que debemos grabar en el pnr para poder cerrarlo es la informacion de la empresa. <br> 
+            El comando que guarda el telefono de la empresa es: <strong>CM/</strong> <br>
+            El segundo dato obligatorio es el tiempo limite. <br>
+            El comando que guarda el plazo es: <strong>T.T/</strong> <br> <br>
+            <span>Paso 5: Guardar datos de pasajeros</span> <br>
+            Para guardar el telefono del pasajero debemos usar el comando: <strong>SI.P</strong>x<strong>/SSRCTCMYYHK1/</strong>xxxxxxxx <br>
+            <div class="users">
+            Ejemplo de telefono para el pax 1: <strong>SI.P</strong>1<strong>/SSRCTCMYYHK1/</strong>541168554866 <br>
+            </div>
+            Para guardar el mail del pasajero debemos usar el comando: <strong>SI.P</strong>x<strong>/SSRCTCEYYHK1/</strong>xxxxxxxx<br>
+            El @ se carga con <strong>//</strong> <br>
+            El _ se carga con <strong>..</strong> <br>
+            <div class="users">
+            Ejemplo de mail para el pax 1: <strong>SI.P</strong>1<strong>/SSRCTCEYYHK1/</strong>gomez//atrapalo.com.ar <br>
+            </div>
+
+           
+            Si bien ya pudimos generar el pnr correspondiente a la reserva de cero, ahora falta la cotizacion y guardado de tarifa. <br>
+
+            <span>Paso 6: Cotizar y guardar tarifa</span> <br>
+            Tenemos diferentes maneras de cotizar de acuerdo a lo que deseamos. <br>
+            <div class="users">
+            <strong>FQ</strong>: El comando para cotizar la clase tomada:  <br> 
+            <strong>FQBB</strong>: Se usa para que el sistema nos muestre la opcion más economica disponible <br> 
+            <strong>FQ/BAG</strong>: Este comando cotiza con equipaje para despachar en bodega <br>
+            <strong>FQBB++-BUSNS</strong>: Este comando muestra tarifas Business <br>
+            </div>
+
+             <span>Paso 7: Cerrar la reserva</span> <br>
+            Una vez completos los datos de pasajeros, itinerario, datos basicos y plazo, debemos firmar todo el proceso y finalmente cerrarlo para guardarlo. <br>
+            El comando para firmar es: <strong>R.</strong>Iniciales <br>
+            El comando para cerrar es: <strong>ER</strong> <br>
+            <br>
+                
+
+            <img src="../img/pnrcero.png" alt="" >
         </p>
     </section>
     <section id="void" class="fondo">
@@ -191,35 +248,17 @@
             <h2>¿Qué significa UATP?</h2>
             <p>
                 Son los cobros que se realizan con el comercio de la compañía aérea <br>
-                Dependiendo del tipo de tarjeta, se pueden: <br>
-                Se pueden cobrar directamente desde el GDS <br>
-                Se pueden cobrar por <strong>Lapos (Payway)</strong>. Dar click <a href="#payway" class="link">acá</a> para ver el proceso <br>
-                Se pueden cobrar por <strong>Fiserv (Master)</strong>. Dar click <a href="#fiserv" class="link">acá</a> para ver el proceso <br>
-                <span>
-
-                    Al momento de procesar un cobro UATP, es súper importante verificar el número de comercio por donde se va a cobrar <br>
-                </span>
-                    Esto lo podemos hacer
-                    desde la web de <br><a
-                    href="https://red.ricaleonline.com/Account/Login
-                    "
-                    target="_blank" class="link">Ricale</a> <br>
-                    <div class="users">
-                        Usuario: tomas.devescovi@atrapalo.com.ar
-                        <br>
-                        Contraseña: B85PNCHN
-                        <br>
-                    </div>
-                
-                En admin quedará registrado en la caja de cobros sólo lo cobrado con comercio
-                Atrápalo, es decir el fee de gestión Atrápalo, seguros, Asistencia web, asientos, servicios, etc. <br>
-                <h4>No es posible avanzar con UATP</h4>
+                Dependiendo del tipo de tarjeta, se pueden cobrar directamente desde el GDS o mediante la pasarela de cobros habilitada por la companía aérea. <br>
+                Al momento de procesar un cobro UATP, es súper importante verificar el número de comercio por donde se va a cobrar <br>
+            </div>
+                La caja del admin siempre registrará lo cobrado con comercio
+                Atrápalo, es decir el fee de gestión Atrápalo, seguros, Asistencia web, asientos, servicios, etc. <br> <br>
+                <span>No es posible avanzar con UATP</span> <br>
                 En algunas ocasiones podemos encontrarnos con compañias aereas que no tienen numero de comercio para procesar ciertos tipos de tarjetas. <br>
                 O bien que solo permitan la emisión de tickets CASH. <br>
-                Si este escenario se presenta vamos a cobrar por admin (con nuestro numero de comercio) y emitir cash. <br>
-                Para poder cambiar la forma de pago en el admin, debemos ir a <br>
-                <span>***Operaciones sobre el pedido - Cobramos todo por atrapalo***.<br></span>
-                En la caja de cobros va a figurar el total de la reserva a pagar por el pasajero. <br>
+                Si este escenario se presenta vamos a cobrar por nuestra comercio a traves de la caja del admin y procederemos a pagar CASH el importe de los tickets . <br>
+            
+                            En la caja de cobros va a figurar el total de la reserva a pagar por el pasajero. <br>
                 
             </p>
         </div>

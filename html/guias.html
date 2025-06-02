@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -36,7 +37,8 @@
             <a href="#impresoras"><li>Impresoras</li></a>
             <a href="#prioridad"><li>Tareas y Prioridades</li></a>
             <a href="#bankias"><li>Manejo de bankias</li></a>
-            <a href="#reportes"><li>Cierre de día</li></a>
+            <a href="#distribucion"><li>Organización y distribución de tareas </li></a>
+            <a href="#reportes"><li>Reportes</li></a>
         </ul>
     </div>
     <section id="inicio">
@@ -121,11 +123,110 @@
     </section>
     <section id="bankias" class="fondo">
         <h2>Manejo de Bankias</h2>
-        <p>
-            <h3>¿A qué consideramos una Bankia?</h3>
-            *******************
+                El tag Bankia tiene diferentes significados dependiendo de la perspectiva de la que se está revisando. <br>
+                 <div class="users">
+<span>Notas importantes:</span> <br> El pedido Emitido/Confirmado siempre debe quedar con el owner del agente que lo cierra.
+    </div>
+
+  <details>
+    <summary>¿Qué significa el Tag Bankia?</summary>
+    <p>
+        Para los reportes en el admin, el tag Bankia cargado en algún pedido indica que dicho pedido fue revisado pero por algún motivo quedó pendiente de cierre. <br>
+        Los motivos pueden ser un rechazo de pago (TCR), error en la forma de pago (Bin no aplica cuotas), error en el equipaje, reprogramación en el itinerario (cambios en los vuelos antes de la emisión) y diferencias de precio (tarifas caídas y retomadas más caras). <br>
+        Ante cualquier traba o impedimento para cerrar la gestión, ya sea para pasarlo a Vendido o a Cancelado, vamos a cargar este tag y asi tendremos un panel limpio de lo ya trabajado y lo que aún no tiene gestión. <br>
+        Cuando se hace el chequeo de cuantos pedidos trabajó cada agente el tag Bankia nos permite distinguir si fue por una cuestión ajena al agente. <br>
+        Por otro lado, si un pedido pasa a Vendido con tag Bankia, y el motivo del rechazo fue por pago, vamos a poder comisionar por cerrar esa venta. <br>
+        Estas reservas las cargaremos en la planilla de SAC informando la fecha de compra, nro de admin, importe venta total, importe GP y nombre del agente que lo proceso. <br>
+    </p>
+  </details>
+
+ 
+
+  <details>
+    <summary>¿Cómo se trabaja una Bankia?</summary>
+    <p>Como ya les comenté, cuando nos encontremos con un impedimento para cerrar la gestión, vamos a cargar el tag Bankia. <br>
+        <span>Paso 1: Se anula cualquier cobro parcial que haya sobre nuestro comercio</span>
+        <br>
+        La idea es entender que si hay un motivo por el cual no podemos cerrar el pedido del pax, no debemos cobrarle ni retenerle nada. <br>
+        Vamos a tener casos que de acuerdo al dominio y la fecha de ingreso en que se este gestionando ese pedido no se pueda anular el cobro parcial. En estos casos pasaremos al siguiente paso. <br>
+        <span>Paso 2: Se avisa al pax sobre el rechazo</span> <br>
+        El contacto puede ser telefonico (opcion sugerida) o bien por correo (FD). Lo importante es que el pax sepa que hubo un rechazo y no se pude avanzar. <br>
+        El envio de FD es obligatorio si no hay llamada. <br>
+        Además, van a poder contar la herramienta <a href="http:/" target="_blank" rel="noopener noreferrer">Kommo</a>
+        <br>
+        En este aviso indicaremos el motivo del rechazo de reserva, ofreciendo medios de pago alternativos y plazo de vencimiento. <br>
+        <span>¿Cuánto dura un pedido con Tag Bankia?</span> <br>
+        El vencimiento es en el dia y puede depender de 3 factores. <br>
+        <strong>
+            Validez de la tarifa.
+        </strong>        <br>
+        <strong>Fin de turno del agente</strong> <br>
+        Podemos tener pax que soliciten extender el plazo o bien son importes altos. <br>
+        
+        <span>Paso 4: Cierre de pedido</span> <br>
+        Si el pax no paga, cancelaremos el pedido de acuerdo al plazo indicado en el FD enviado. <br>
+        Si el pax finalmente concreta el pago, emitiremos el pedido y el agente lo podra cargar en la planilla SAC en caso de corresponder. <br>
+        <div class="users">El owner siempre tiene que estar a nombre del agente que esta haciendo el seguimiento del pedido</div>
+        
+        <span>Excepciones</span> <br>
+        La premisa principal es que si libero el pedido, libero la bankia para que lo trabaje otro agente. Por ende, no hay reclamo a comisión posible <br>
+        Entendiendo esto, nosotros podemos elegir si queremos comisionar o no. <br>
+        Cuando nos encontremos con un pedido con monto mayor a USD2000, y evaluemos que es posible que el turno siguiente pueda hacer un seguimiento y cierre del pedido, lo dejaremos libre para que otro agente lo trabaje. <br>
+        </p>
+  </details>
+
+  <details>
+    <summary>¿Cuándo aplica a un agente?</summary>
+    <p>Se considera bankia a un agente, cuando hace el seguimiento en el día y logra convertirlo a Vendido. <br>
+        <span>Pagos fuera de mi horario laboral</span> <br>
+        Podemos tener casos donde estemos haciendo un seguimiento del pedido durante nuestro turno y el pax desee extender el pago. <br>
+        En este caso, habiendo analizado que la tarifa esta garantizada y notando interés del pax, podemos dejarlo libre para que lo cierre la <strong>capitana</strong> del turno siguiente. <br>
+        Avisaremos tanto al pax como a la capitana el plazo de vencimiento del pedido. <br>
+        Dejaremos nuestro owner. <br>
+        La capitana hara el seguimiento del pedido hasta el horario informado, si el paso se efectuó emitirá la reserva. De lo contrario cancelara el pedido. <br>
+        <span>¿Qué pasa si el pax llama para cerrar el pedido?</span> <br>
+        Al igual que pasa en el sector de ventas, cuando es el cliente quien termina cerrando el pedido, el agente pierde su comisión de Bankia. <br>
+        En la gestión diaria, es responsabilidad del agente que atiende el llamado cerrar el pedido como lo esta solicitando el pax. <br>
+        En este sentido el agente que termina emitiendo y cerrando el pedido, no suma bankia. Suma una emisión con su owner propio. <br>
+    </p>
+  </details>
+   <details>
+    <summary>¿Qué pasa si el GP es negativo?</summary>
+    <p>
+        Podemos tener casos así debido a una estrategia comercial que toma la empresa. <br>
+        Acá no tenemos ganancia, pero ganamos un cliente. <br>
+        Por eso la gestión desde SAC es importante, mejora nuestra calidad. <br>
+    </p>
+  </details>
+
+   
         </p>
         <a href="/html/guias.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" / class="flecha"></a>
+    </section>
+    <section id="distribucion">
+        <h2>Organización de SAC y distribución de tareas</h2>
+        <p>
+            
+Lo ideal es mantener un excel donde se vaya reflejando lo que se va a asignando y una comunicación constante entre las capitanas de los diferentes turnos. <br>
+Ambas con ideal de trabajar en equipo y con el mismo nivel de compromiso seguramente tengan mejores resultados <br> <br>
+
+<h2>Gestión turno dia</h2> 
+Como punto principal debo verificar los FD guardia abiertos, los casos urgentes por mail y el excel con la anotación de los pedidos ya asignados. (importante gestión que la deja el turno noche) <br>
+Una vez resuelto esto, voy a verificar el cronograma con agentes activos en el día. Es importante también saber que la planilla de horarios tiene que estar siempre actualizada <br>
+Como tercer instancia, abro el admin y verifico en todas las verticales de productos los pedidos que están por trabajar. <br>
+Siempre está bueno comparar si lo anotado en el excel y en la planilla de tareas cargado por la capitana de la noche coincide con lo que refleja admin. <br>
+Luego de este paso, nos enfocamos en asignar de acuerdo a prioridades los pedidos nuevos, los casos sin asignar, ya sean FDs, Vuelos, Htls, Vj/Cr, casos urgentes. <br>
+El turno del dia tiene la responsabilidad de dejar la tarea de reemisiones voluntarias limpias, ya que lo ideal es resolver estos casos antes de cerrar la atención telefónica. <br> <br>
+
+<h2>Gestión turno noche</h2> 
+Debe recibir el panel limpio y la planilla de tareas asignadas al dia. <br> Es responsabilidad de la capitana de la mañana haber trabajado los casos por urgencias y prioridades correctas asegurándose de no dejar un caso sin resolver pendiente desde el inicio de su gestión <br>
+La gestión de la noche va a ser continuar la cadena de prioridades y verificar si aparece un caso que requiera revisión urgente. Esto en todas las verticales de productos <br>
+El chequeo del tag transferencia va a ser exclusivo de esta gestión por una cuestión de plazos informados en nuestra web. <br>
+Es importante verificar los casos de FD Guardia que pueden aparecer después de las 19 hs y distinguir en un correo aquellos que necesiten seguimiento urgente al día siguiente. Esta información tiene que estar en un mail para que la capitana de la mañana pueda tenerlo como prioridad <br>
+Al cierre del dia, dejara asignado solo los vuelos asignando el owner a las agentes que se indican como primeras en el cronograma de horarios. <br>
+Para una mayor organización es clave que se lleve la anotación real de lo asignado durante la noche en la planilla de tareas, tanto la cantidad de pedidos como las hs en la tarea asignada. Esto para que la capitana a la mañana ya tenga organizada la primer parte del dia de acuerdo a prioridad <br>
+        </p>
+
     </section>
     <section id="reportes">
         <h2>Cierre de dia</h2>
@@ -170,12 +271,13 @@
             tomas.devescovi@atrapalo.com.ar,  <br>
             barbara.diaz@atrapalo.com.ar, <br>
             walter.pucci@atrapalo.com.ar, <br>
-            julieta.martinez@atrapalo.com.ar. <br>
+            
             Recuerden enviar reporte de todas las ciudades/pseudos que tenemos. Tanto en ARS como en USD. <br>
             En los reportes de Arg debemos copiar además a:  <br>
             <span>hcerda@ricale.com, agirotto@ricale.com, spalumbo@ricale.com </span>
         </p>
     </section>
+    
     <footer>
         <a href="/html/guias.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
         <p>Sitio creado por CaroGomez</p>

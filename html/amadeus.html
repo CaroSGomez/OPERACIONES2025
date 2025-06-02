@@ -108,6 +108,67 @@
     <section id="pnr">
         <h2>¿Como tomar una reserva de cero en Galileo?</h2>
         <p>
+            <span>Paso 1: Agregar nombres a la reserva</span> <br>
+            El indicador de nombre es: <strong>NM1</strong> <br>
+            El orden siempre debe ser Apellido/nombre <br>
+            El agregar los nombres de los pasajeros en primer lugar facilita el proceso de guardar lugares en la reserva <br>
+            <div class="users">
+            Ejemplo de nombre: <strong>NM1</strong>GOMEZ/CAROLINA<br>
+            </div>
+            <span>Paso 2: Buscar la disponibilidad deseada</span> <br>
+            El indicador de busqueda es: <strong>AN</strong> <br>
+            El orden siempre debe ser FECHA/RUTA/CIA <br>
+            <div class="users">
+            Ejemplo de busqueda para el 26/09 <br> Saliendo de Aeroparque a Jujuy por Jetsmart: <strong>AN</strong>26SEPAEPJUJ/<strong>A</strong>JA<br>
+            </div>
+            <span>Paso 3: Guardar lugares</span> <br>
+            En el smart podemos tomar los segmentos dando click sobre la clase que queremos <br>
+            <div class="users">
+                El proceso con comandos seria el siguiente: SS1L1 <br>
+                <strong>SS</strong>: Vender <br>
+                <strong>1</strong>: Cantidad de pasajeros <br>
+                <strong>L</strong>: Clase <br>
+                <strong>1</strong>: Segmento de vuelo <br>
+                
+            </div>
+            <span>Paso 4: Guardar datos basicos de reserva</span> <br>
+            Lo primero que debemos grabar en el pnr para poder cerrarlo es la informacion de la empresa. <br> 
+            El comando que guarda el telefono de la empresa es: <strong>APE</strong> <br>
+            El segundo dato obligatorio es el tiempo limite. <br>
+            El comando que guarda el plazo es: <strong>TKTL</strong> <br> <br>
+            <span>Paso 5: Guardar datos de pasajeros</span> <br>
+            Para guardar el telefono del pasajero debemos usar el comando: <strong>SRCTCMYYHK1-</strong>xxxxxxxx <br>
+            <div class="users">
+            Ejemplo de telefono para el pax 1: <strong>SRCTCMYYHK1-</strong>541168554866 <br>
+            </div>
+            Para guardar el mail del pasajero debemos usar el comando: <strong>SRCTCMYYHK1-</strong>xxxxxxxx <br>
+
+            <div class="users">
+            Ejemplo de mail para el pax 1: <strong>SI.P</strong>1<strong>/SSRCTCEYYHK1/</strong>gomez//atrapalo.com.ar <br>
+            </div>
+
+           
+            Si bien ya pudimos generar el pnr correspondiente a la reserva de cero, ahora falta la cotizacion y guardado de tarifa. <br>
+
+            <span>Paso 6: Cotizar y guardar tarifa</span> <br>
+            Tenemos diferentes maneras de cotizar de acuerdo a lo que deseamos. <br>
+            <div class="users">
+            <strong>FQ</strong>: El comando para cotizar la clase tomada:  <br> 
+            <strong>FQBB</strong>: Se usa para que el sistema nos muestre la opcion más economica disponible <br> 
+            <strong>FQ/BAG</strong>: Este comando cotiza con equipaje para despachar en bodega <br>
+            <strong>FQBB++-BUSNS</strong>: Este comando muestra tarifas Business <br>
+            </div>
+
+             <span>Paso 7: Cerrar la reserva</span> <br>
+            Una vez completos los datos de pasajeros, itinerario, datos basicos y plazo, debemos firmar todo el proceso y finalmente cerrarlo para guardarlo. <br>
+            El comando para firmar es: <strong>R.</strong>Iniciales <br>
+            El comando para cerrar es: <strong>ER</strong> <br>
+            <br>
+                
+
+            <img src="../img/pnrcero.png" alt="" >
+        </p>
+        <p>
          <img src="../img/pnrama.png" alt="" style="width: 50%;">
         </p>
     </section>

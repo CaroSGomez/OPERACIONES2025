@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atrapalo 2025</title>
+  <link rel="icon" href="../img/viajar.png" type="image/png" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet" />
+ </head>
+<body>
+    <header>
+        <nav class="menu">
+            <img src="../img/logo.png" alt="logo">
+            <ul>
+                <a href="../index.html"><li>Calidad</li></a>
+                <a href="./guias.html"><li>Guias de ayuda</li></a>
+                <a href="./ae.html"><li>Antiestafa</li></a>
+                <a href="./post.html"><li>Atención al cliente</li></a>
+                <a href="./galileo.html"><li>Galileo</li></a>
+
+                <a href="./amadeus.html"><li>Amadeus</li></a>
+                <a href="./gdsNdc.html"><li>GDS NDC</li></a>
+
+                <a href="./terrestres.html"><li>Terrestres</li></a>
+                <a href="./form.html"><li>Sugerencias</li></a>
+            </ul>
+        </nav>
+    </header>
+    <h1>Payway - LaposWeb</h1>
+    <div class="submenu">
+        <ul>
+            <a href="#cobroTC">
+                <li>Autorización con botón Split</li>
+            </a>
+            <a href="#cuotasTc">
+                <li>Autorización en plataforma LaposWeb</li>
+            </a>
+           
+        </ul>
+    </div>
+      <section id="splitArg">
+        <h2>Pago Split</h2>
+       
+       Luego de verificar que el pnr esta óptimo para la emisión<br>
+        
+        <span>Paso 1: Cuadre de importe</span> <br>
+        Es importante asegurarnos que el importe mostrado en el GDS es el mismo al desglosado en las lineas del admin. <br>
+        Este chequeo previo de cuadre nos va a permitir evitar errores en los montos a cobrar. <br> <br>
+        <span>Paso 2: Captura de operación</span> <br>
+        En <strong>Operaciones sobre el pedido</strong> tenemos la opción de <strong>Pago Split Argentina</strong> <br>
+        <img src="../img/splitarg.jpg" alt=""> 
+        <div class="users">
+            <strong>Nota importante:</strong> El sistema aún no reconoce Bines, por ende debemos asegurarnos que la tarjeta aplica la promoción seleccionada por el pax antes de dar click</div>
+            Ese botón nos va a mostrar la siguiente pantalla con los <strong>datos de la tarjeta cargada en admin</strong> <br>
+        
+        <img src="../img/splitarg1.jpg" alt=""> <br> <br>
+
+        <span>Paso 3: Confirmar operación</span> <br>
+        Luego de dar <strong>Enviar</strong>, como es una gestión de cobros, el sistema va a repreguntar antes de ejecutar <br>
+        <img src="../img/splitarg2.jpg" alt=""> <br>
+        Si la operacion pasa correctamente el sistema arroja el mensaje de confirmación <br>
+        <img src="../img/splitarg3.jpg" alt=""> <br>
+        
+        Notemos que no hizo falta ninguna gestión en la caja del admin, simplemente ahora el sistema nos muestra la autorización <strong>UATP</strong> que obtuvo desde LaposWeb <br>
+        <img src="../img/splitarg4.jpg" alt=""> <br> <br>
+        Si vamos a la plataforma de Payway, encontraremos el cobro ejecutado correctamente con el comercio de la aerolinea <br> 
+
+        <span>Paso 4: Emitir tickets</span> <br>
+        <img src="../img/splitarg5.jpg" alt=""> <br>
+        Ahora solo debemos avanzar con la emisión manual en GDS utilizando el codigo UATP que muestra la caja <br>
+        Procederemos a cargar la FOP y preautorización correcta en el archivo tarifario <br>
+        <div class="users">
+            Ejemplo de carga de FOP y preautorización en tarifa: <br>
+            Comando: <strong>TMU</strong>1<strong>FVI</strong>469700XXX9034<strong>*D</strong>1229<strong>*E</strong>03<strong>*A</strong>006059
+
+        </div>
+
+                               
+        <img src="../img/splitarg6.jpg" alt="" style="width: 80%;"> <br>
+
+        <span>Paso 5: Cierre de pedido</span> <br>
+        Una vez emitidos los tickets, finalizaremos el procedimiento en Admin como lo hacemos usualmente. <br>
+        Para ver el proceso en <strong>Admin</strong> dar click <a href="../html/admin.html" target="_blank" rel="noopener noreferrer" class="link">acá</a> <br>
+        
+        Admin de ejemplo <a href="https://admin.atrapalo.com.ar/vuelos/?pg=compra&id_compra=73708119">V76917790</a>
+
+        <br>
+        <br>
+
+       
+    </section>
+
+  
+</body>
+</html>

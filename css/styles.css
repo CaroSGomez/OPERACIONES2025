@@ -301,3 +301,59 @@ input, textarea, select{
   padding: 1.2em;
 }
 
+ table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+  
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+      font-size: 14px;
+    }
+    th {
+      background-color: #c01d1db9;
+            color: aliceblue;
+
+    }
+    .hora {
+      background-color: #c01d1db9;
+      font-weight: bold;
+                  color: aliceblue;
+
+    }
+    .agente {
+      background-color: #ffffff;
+    }
+    .capa
+  {
+      background-color: #230ee470;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  details {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 15px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+    summary::after {
+      content: "▼";
+      float: right;
+    }
