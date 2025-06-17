@@ -74,21 +74,28 @@
         <span>Paso 2: Se verifica condiciones de emisión</span> <br>
         Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la web de <a href="https://red.ricaleonline.com/Account/Login
         " target="_blank" class="link">Ricale - Condiciones</a> <br>
-        
+        <div class="users">
+                        Usuario general: <br> tomas.devescovi@atrapalo.com.ar
+                        <br>
+                        Contraseña: B85PNCHN
+                        <br>
+
+    </div>
+        Nuestro GDS ya tiene seteadas las comisiones, solo debemos verificar si esta correcta. <br>
         Si la comisión no vino cargada en el pnr, vamos a tener que ingresarla manualmente. <br>
-        Con el comando <strong>TMU</strong> le indicamos al sistema que queremos ingresar algun dato <br>
+        Con el comando <span>TMU</span> le indicamos al sistema que queremos ingresar algun dato <br>
         Seguido de TMU se indica el archivo tarifario y luego el comando para ingresar el dato que se desea. <br>
-        El indicador de comisión es: <strong>Z</strong> <br>
+        El indicador de <span>comisión</span> es: <strong>Z</strong> <br>
         <div class="users">
             Ejemplo Comision 0 para el archivo 1: <strong>TMU</strong>1<strong>Z</strong>0<br>
         </div>
         Por otro lado cuando hay pago de over, se debe cargar el código del over indicado por la aerolinea y la ganancia del mismo en el pnr <br>
-        El indicador de over compuesto es: <strong>AI-</strong> y <strong>VC-</strong> <br>
-         El indicador de over simple es: <strong>TC</strong><br>
+        El indicador de <span>over compuesto</span> es: <strong>AI-</strong> y <strong>VC-</strong> <br>
+         El indicador de <span>over simple</span> es: <strong>TC</strong><br>
         <div class="users">
             Ejemplo de Over compuesto AR para el archivo 1: <br> <strong>TMU</strong>1<strong>AI-</strong> BUE504/ <strong>VC-</strong>ZA<br>
         </div>
-        <strong>Si hay over, hay DI...</strong> <br>
+        <span>Si hay over, hay DI...</span> <br>
         Para que nuestra administración registre la ganancia de ese over es clave dejar el calculo en el pnr <br> 
         El % de la ganancia se calcula sobre la FARE total del pnr <br>
         En el pnr vamos a registrar el importe por pax <br>
@@ -100,9 +107,8 @@
             <strong>DI.FT-</strong>675<br>
         </div>
         <span>Paso 3: Se verifica FOP (forma de pago)</span> <br>
-        Es super importante verificar el numero de comercio y via de ejecucion de pago correcto <br>
-        Esto tambien lo podemos verificar en <a href="https://red.ricaleonline.com/Account/Login
-        " target="_blank" class="link">Ricale - Condiciones</a> <br>  <br>
+        La tarjeta que carga el pax al momento de la compra es la misma que vendrá cargada en el pnr como FOP original. <br>
+        De acuerdo al tipo de tarjeta, podemos pasar a cobrar por Galileo o por pasarela de cobro. <br>
         <div class="users">
 
             <strong>¿Dónde cobrar los vuelos UATP según la Tarjeta?</strong> <br>
@@ -113,25 +119,31 @@
             Cabal: Se cobra telefonicamente. <br> 
             Naranja: Se cobra telefonicamente. <br>
         </div>
-Las Visa tambien se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar click <a href="../pasarelas/payway.html" target="_blank" class="link">acá</a> para ver el proceso manual<br>
-                Para ver el proceso manual de cobro en <strong>Fiserv (Master)</strong> dar click <a href="../pasarelas/fiserv.html" target="_blank" class="link">acá</a> <br>
-              <span>
+        Si el tipo de tarjeta lo permite, pasaremos a la<span>primera instancia: el cobro por GDS</span> <br> 
+                Al tener IATA propio el comando de emisión es solo <strong>TKP</strong> <br>
+                No hace falta el CVV de la tc. Simplemente tirando el comando TKP lo cobra y lo emite <br>
+                
+                <img src="#" alt=""> <br> <br>
+                Si el pago por gds da <strong>Rechazado</strong> pasaremos a la <span> segunda instancia: el cobro por pasarela </span><br> 
+        <span>
 
                   Al momento de procesar un cobro UATP, es súper importante verificar el número de comercio por donde se va a cobrar 
-                </span>
-                <br>
-                Esto lo podemos hacer
-                    desde la web de <a
-                    href="https://red.ricaleonline.com/Account/Login
-                    "
-                    target="_blank" class="link">Ricale</a> <br>
-                    <div class="users">
+                </span> <br>
+        Esto tambien lo podemos verificar en <a href="https://red.ricaleonline.com/Account/Login
+        " target="_blank" class="link">Ricale - Condiciones</a> <br>  
+        <div class="users">
                         Usuario general: <br> tomas.devescovi@atrapalo.com.ar
                         <br>
                         Contraseña: B85PNCHN
                         <br>
 
     </div>
+        <span>Visas</span>: se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar click <a href="../pasarelas/payway.html" target="_blank" class="link">acá</a> para ver el proceso manual<br>
+                 <span>Masters</span>: se pueden cobrar por  <strong>Fiserv (Master)</strong>. Dar click <a href="../pasarelas/fiserv.html" target="_blank" class="link">acá</a> <br>
+              
+                <br>
+                
+                    
 <br>
 <h2>Cobros directo en Galileo</h2>
         
@@ -146,7 +158,10 @@ Las Visa tambien se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar cl
             -Naranja- F<strong>CCTN</strong> <br>
             -Cabal- F<strong>CCCL</strong> <br>
         </div>
-        Cuando cobramos directo en Galileo, solo es posible gestionar 1 solo pago. <br>
+        <span>
+
+            Cuando cobramos directo en Galileo, solo es posible gestionar 1 solo pago. <br>
+        </span>
         <strong>Recordemos que solo las tarjetas de Visa y Amex pueden ser cobradas directo en Galileo</strong> <br> <br>
         
         <span>Paso 4: Se verifica el check list</span>
@@ -160,7 +175,7 @@ Las Visa tambien se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar cl
                 </p>
             </div>
         Una vez revisado el check list, debemos tirar el comendo de emisión. <br>
-        El comando de emisión es: <strong>TKPDXD.FE60D2.6PI3 </strong><br>
+        El comando de emisión es: <strong>TKP</strong><br>
 
         <h2>Proceso de emisión y resultados de cobro</h2>
         El gds nos informa el resultado de la emisión. <br>
@@ -207,7 +222,7 @@ Las Visa tambien se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar cl
         Si la comisión no vino cargada en el pnr, vamos a tener que ingresarla manualmente. <br>
         Con el comando <strong>TMU</strong> le indicamos al sistema que queremos ingresar algun dato <br>
         Seguido de TMU se indica el archivo tarifario y luego el comando para ingresar el dato que se desea. <br>
-        El indicador de comisión es: <strong>Z</strong> <br>
+        El indicador de <span>comisión</span> es: <strong>Z</strong> <br>
         <div class="users">
             Ejemplo Comision 0 para el archivo 1: <strong>TMU</strong>1<strong>Z</strong>0<br>
         </div>
@@ -229,22 +244,50 @@ Las Visa tambien se pueden cobrar por <strong>LaposWeb (Payway)</strong>. Dar cl
             <strong>DI.FT-</strong>675<br>
         </div>
         <span>Paso 3: Se verifica FOP (forma de pago)</span> <br>
-        Es super importante verificar el numero de comercio y via de ejecucion de pago correcto <br>
-        Lo primero que debemos identificar si las cuotas son con interes o sin interes. <br>
-        Esto va a determinar cómo continuamos con la ejecucion del pago. <br>
-        Al momento de la compra el pax va a poder elegir entre promociones de las aerolineas o bien promociones nuestras. <br>
-        <div class="users">
+          Admin de Ejemplo: <a href="https://admin.atrapalo.com.ar/vuelos/?pg=compra&id_compra=73845108&id_pedido=77067029" target="_blank" rel="noopener noreferrer" class="link">V77067028/9</a> <br>
+            Cuando tenemos un pedido solicitado en <strong>cuotas</strong>, lo primero que debemos hacer es <span>Identificar la financiacion por la que ingresó.</span> <br>
+            Esto lo podemos ver desde el botón <strong>Regla de cuotas</strong> de la caja de cobros. <br>
+            <img src="../img/cuotas.jpg" alt=""> <br>
+            Nos abrirá la siguiente pantalla donde podremos validar el <strong>Tipo de Promoción elegida</strong> <br>
+            <img src="../img/cuotas1.jpg" alt=""> <br>
+            Recordemos que nuestra web no reconoce los bines de las tarjetas, por ende el segundo paso es <span>chequear el Bin de la tarjeta cargada</span> <br>
+            <div class="users">
             <h3>Promociones vigentes:</h3>
             <p>
                 <strong>Financiacion Atrapalo:</strong> <br> Cuotas sin interes con Banco Comafi, Ciudad, Naranja y Macro. <br>
                 Cuotas con interés promocional (Plan cuota simple) <br>
-                Dar click <a href="../pasarelas/promociones.html" target="_blank" class="link">acá</a> para ver las condiciones <br>
+                Dar click <a href="https://docs.google.com/spreadsheets/d/1Bt5L-1d-q8RFntmaGQk2MWQH6EP6-Y5L2P09yP9zIlI/edit?gid=497727247#gid=497727247 " target="_blank" class="link">acá</a> para ver las condiciones <br>
                 <strong>Financiacion de la aerolinea:</strong> Actualmente solo Aerolineas Argentinas tiene cuotas sin interes con bancos seleccionados <br>
                 Cuotas con interés promocional (Plan cuota simple) <br>
                 Dar click <a href="../pasarelas/promociones.html" target="_blank" class="link">acá</a> para ver las condiciones <br>
                 
 
                 </div>
+            
+            Cuando el sistema aplica una financiacion propia de Atrapalo, la caja de cobros identifica el pedido y genera el cobro total. <br>
+            <strong>Si aplica cuotas sin interes,</strong> el pago vendrá procesado en las cuotas solicitadas originales. <br>
+            No se carga ninguna linea de sobrecargo. <br>
+            <span>Dejaremos comentarios del bin validado</span> <br>
+            Nuestra tarea es <span>confirmar las cuotas cargadas correctamente en el detalle del cobro.</span>  <br>
+            Esto lo hacemos desde la web de <a href="https://live.decidir.com/sac/LoginServlet" target="_blank" rel="noopener noreferrer" class="link">Decidir</a> con el usuario personal. <br>
+            La verificación se realiza con la <strong>Referencia</strong> <br>
+            <img src="../img/cuotas2.jpg" alt=""> <br>
+            Se carga en la celda de <strong>ID de operacion</strong> <br>
+            <img src="../img/cuotas3.jpg" alt=""> <br>
+            No mostrará el resultado con todo el detalle y las <strong>cuotas</strong> en las que fue procesado el cobro. <br>
+            <img src="../img/cuotas4.jpg" alt="" style="width: 100%;"> <br>
+            Una vez que nos aseguramos que el cobro se ejecutó bien, <span>dejaremos en comentarios la linea del cobro que garantice la emision</span> <br>
+            Procederemos entonces con la <strong>emisión CASH</strong> <br>
+       <div class="users">
+                        <span > 
+                            IMPORTANTE: Recuerden eliminar la forma de pago inicial que venia cargada en el pnr. <br>
+                            Si no lo quitamos, la plataforma va a
+                            generar cobro innecesario al usuario <br>
+                            El comando es F.@ + R.CG / ER. <br>
+                            Cargamos FOP CASH -> TMU1FS.
+                        </span> 
+                    </div>
+       
                 
           
     </section>
