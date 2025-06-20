@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colas Op2025</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <img src="../img/logo.png" alt="logo">
+            <ul>
+                <a href="../index.html">
+                    <li>Calidad</li>
+                </a>
+                <a href="../html/guias.html">
+                    <li>Guias de ayuda</li>
+                </a>
+                <a href="../html/ae.html">
+                    <li>Antiestafa</li>
+                </a>
+                <a href="../html/post.html">
+                    <li>Atención al cliente</li>
+                </a>
+                <a href="../html/galileo.html">
+                    <li>Galileo</li>
+                </a>
+                <a href="../html/amadeus.html">
+                    <li>Amadeus</li>
+                </a>
+                <a href="../html/gdsNdc.html">
+                    <li>GDS NDC</li>
+                </a>
+                <a href="../html/terrestres.html">
+                    <li>Terrestres</li>
+                </a>
+                <a href="../html/form.html">
+                    <li>Sugerencias</li>
+                </a>
+                <a href="../html/devos.html">
+                    <li>Devoluciones</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <h1>Manual de colas</h1>
+    <div class="submenu">
+        <ul>
+            <a href="#comandos">
+                <li>Comandos importantes</li>
+            </a>
+            <a href="#qw2">
+                <li>Cola 2 - Asientos</li>
+            </a>
+            <a href="#qw3">
+                <li>Cola 3 - Sincronizacion</li>
+            </a>
+            <a href="#qw10">
+                <li>Cola 10 - Ticket Review</li>
+            </a>
+            <a href="#qw16">
+                <li>Cola 16 - Vendor Remark</li>
+            </a>
+            <a href="#qw21">
+                <li>Cola 21/22 - Cambios de horario</li>
+            </a>
+            <a href="#qw23">
+                <li>Cola 23 - Cancelaciones</li>
+            </a>
+            <a href="#qw25">
+                <li>Cola 25 - Service info</li>
+            </a>
+            <a href="#qw30">
+                <li>Cola 30/31 - Cambio aceptado por pax</li>
+            </a>
+            <a href="#qw61">
+                <li>Cola 61 - Cambio aceptado/Actualizar en Admin</li>
+            </a>
+            <a href="#qw73">
+                <li>Cola 73 - Cambio no aceptado</li>
+            </a>
+        </ul>
+    </div>
+    <section id="comandos">
+        <h2>Comandos importantes</h2>
+        <p>
+            Cuando se produce un cambio o cancelación en un vuelo o bien la compañía aérea nos realiza alguna
+            notificación sobre un PNR, estas reservas entrarán por colas y deberemos gestionarlas. <br>
+        <div class="users">
+            <span>
+
+                ¿Cómo accedemos al sistema de colas? <br>
+            </span>
+            <strong>QCA: </strong> Para ver todas las colas que tienen alguna reserva dentro. <br>
+            <strong>QPB*: </strong> Aca vemos todas las colas que tenemos con sus respectivos nombres sin importar si
+            tienen o no reservas. <br>
+            <strong>Q/</strong>60 (nro de cola): Para entrar a una determina cola. <br> Si utilizamos Smartpoint
+            clickeamos encima de la cola que vayamos a revisar. <br>
+            <strong>QR: </strong> Para eliminar una reserva de la cola. Pasa a la siguiente reserva <br>
+            <strong>I: </strong> Para salir de una reserva sin eliminarla de la cola. Pasa a la siguiente reserva <br>
+            <strong>QEB/</strong>74 (nro de cola): Para pasar una reserva a otra cola. <br>
+            <strong>QW: </strong> Este comando nos muestra en que otras colas esta la reserva sobre la que estamos
+            parados. <br>
+            <strong>QXI: </strong> Para salir del sistema de colas. <br>
+        </div>
+
+        </p>
+    </section>
+    <section id="qw2">
+        <h2>Cola 2 - Asientos</h2>
+        <p>
+            Son aquellas reservas que tiene reserva de asiento. <br>
+            Vemos que se ha creado el campo SD donde podemos comprobar los números de asiento <br>
+            <img src="../img/sd.png" alt=""> <br>
+            Debemos entrar al campo SD y verificar el estado de los asientos. Nos lo podemos encontrar en KK
+            (confirmado) o en HX/UN (cancelado) <br>
+            <img src="../img/seat.png" alt=""> <br>
+            Si están en KK, como en el ejemplo, los tendremos que pasar a HK. <br>
+            Dos maneras de hacerlo: <br>
+            <li>
+                Si el itinerario está todo en HK: <br>
+                Podemos hacer @all y automáticamente los asientos quedarán confirmados en HK. <br>
+            </li>
+            <li>
+                Si el itinerario tiene algún trayecto en (TK o UN) <strong>OJOOOOO NO PODEMOS HACER LA TRANSACCIÓN
+                    ANTERIOR!!! YA QUE CONFIRMAREMOS EL CAMBIO</strong> <br>
+                En este caso hay que confirmar solamente los asientos con la siguiente transacción
+                <strong>S.S1@*HK</strong> <br>
+            </li>
+            Una vez confirmados los asientos los quitaremos de la cola QR. <br>
+            Si los asientos están en UN o HX, lo primero que haremos es revisar en la Admin si la petición de asientos
+            está realizada por nosotros. En el caso que veamos que el cliente ha reservado los asientos a través nuestro
+            avisaremos a quién tenga la tarea de asientos para que lo gestione y lo quitaremos de cola sin tocar la
+            reserva. <br>
+            Pero si en la Admin no se muestra la info que el cliente haya contratado asientos, ni hay nota de ningún
+            compañero, significa que la contratación de asientos la ha realizado el cliente directamente con la compañía
+            aérea, por lo que tampoco tocaremos la reserva y lo quitaremos de la cola.
+        </p>
+    </section>
+    <section id="qw3">
+        <h2>Cola 3 - Sincronizacion</h2>
+        <p>Son actualizaciones que se han realizado con la compañía aérea, es decir, si se han tomado nuevos lugares, o
+            si la compañía aérea reubicó en el mismo aeropuerto (que a veces saltan las plazas en KK) <br>
+            En estos casos hay que revisar el estado del PNR, si lo vemos todo en HK y comprobar en el HTE es decir, en
+            los billetes si el itinerario es el mismo. Una vez revisado solo hay que quitarlo de cola con QR. <br>
+            Si hay algún trayecto en TK/KK, habrá que actualizar el pedido con @ALL, revisar si hay algún VR de la cia
+            que hayan reubicado a pax o hecho algún cambio y revisar en la Admin que el itinerario esté actualizado, si
+            no lo está actualizado lo pasamos a la Q/61, y si lo está lo quitamos de colas QR. <br>
+        </p>
+    </section>
+    <section id="qw10">
+        <h2>Cola 10 - Ticket Review</h2>
+        <p>Hay que revisar si el billete está emitido. Si tenemos el campo HTE, el billete está emitido, por tanto, lo
+            quitaremos de colas con la transacción QR. <br>
+            Si no hay HTE significa que el billete todavía no está emitido, por lo que buscaremos el pedido en Admin
+            para ver en qué estado se encuentra. Hay que buscar con el estado <strong>“Cualquiera”</strong> y
+            el<strong>“No finalizado”</strong> . <br>
+            Si está pendiente de emisión lo único que haremos es poner una nota <strong>NP.PDTE DE EMISIÓN</strong> y lo
+            dejaremos en la cola hasta que el billete esté emitido. <br>
+            Si el estado es No Finalizado, No dispo, entonces eliminaremos los lugares en GDS con XI, pondremos nota
+            <strong>NP.NO FINALIZADO</strong> y luego quitaremos de colas con QR. <br>
+            También nos podemos encontrar que ya no hay itinerario y tampoco hay HTE, entonces nos fijamos si hay notas
+            en el PNR, porque es posible que algún compañero ya lo haya gestionado porque ha entrado por otra cola: <br>
+            Si no hay ninguna nota en GDS, revisaremos en Admin en qué estado se encuentra el pedido, y en función del
+            estado lo tramitaremos según hemos comentado anteriormente. <br>
+        </p>
+    </section>
+    <section id="qw16">
+        <h2>Cola 16 - Vendor Remark</h2>
+        <p>
+            Aquí nos llegarán los VR, notas que cada compañía aérea haya indicado en un PNR.
+            Nos podemos encontrar con distintas notificaciones, algunas con gestión necesaria y otras solamente
+            informativas. <br>
+            Entramos en la cola Q/16 y veremos que las reservas tienen el campo VR. <br>
+        <h3>VR que nos podemos encontrar: </h3>
+        <li>
+            <h4>Tiempo límite de emisión</h4> <br>
+            Ejemplo:
+        <li>VRMK-VI/AVY *ADTK1GTOVY ON/BEFORE 01DEC 2259Z OTHERWISE WILL BE XLD 0948Z 01DEC
+        </li>
+        <li>VRMK-VI/AUX *ADTK1GTOUX BY 01DEC 0505 MAD TIME ZONE OTHERWISE WILL BE XLD 2004Z 30NOV
+        </li>
+        <li> VRMK-VI/AAF *ADTK1GTOAF BY 02FEB OTHERWISE WILL BE XLD 1600Z 30JAN
+        </li>
+        <li>VRMK-VI/A1A *ADTK1GTONT BY 02DEC 2300 MAD TIME ZONE OTHERWISE WILL BE XLD 1018Z 01DEC
+        </li>
+        <li>VRMK-VI/APS *AUTO XX IF SSR TKNA/E/M/C NOT RCVD BY 1935/13FEB/IE
+        </li>
+        </li>
+        ¿Cómo lo gestionamos? <br>
+        Si el billete está emitido directamente haremos QR. En caso que no lo esté pero las plazas están confirmadas HK
+        revisaremos si hay pedido activo en la Admin, si es así y está pendiente de emisión lo quitamos de colas con QR.
+        En cambio si en la Admin el pedido está anulado / no finalizado / no dispo, lo que haremos es cancelar las
+        plazas con XI y quitar de colas QR.
+        <li>
+            <h4>No Show</h4><br>
+            En estos casos, normalmente nos encontraremos con que hay algún trayecto en HX. <br>
+            - Si tiene un trayecto HX, revisaremos si la reserva está en la cola 23 con la transacción QW, si está en
+            ella lo único que haremos es quitarla de colas y lo gestionará quién tenga de tarea la cola 23. Si no está
+            lo pasaremos a la cola con la transacción QEB/23. <br>
+            -Si no tiene trayecto HX, pondremos nota NP.NOSHOW y lo quitaremos de colas con QR <br>
+
+        </li>
+        <li>
+            <h4>Duplicidad</h4><br>
+            La compañía aérea nos notifica sobre una posible duplicidad en la reserva: <br>
+            ¿Cómo lo gestionamos? <br>
+            Lo primero que haremos es revisar si con el localizador que nos facilitan en el VR tenemos alguna otra
+            reserva en Galileo, ya que puede ser que el cliente haya hecho varios intentos de reserva con nosotros, o
+            que hayamos recuperado plazas en un nuevo PNR y no se hayan cancelado las de la reserva original. <br>
+
+            Si en Galileo no nos sale nada, entonces llamaremos a la compañía aérea para que nos indiquen si realmente
+            hay duplicidad o no, ya que es posible que el cliente haya realizado varios intentos pero solamente tiene
+            una reserva emitida.
+            <br>
+        <li>Si la aerolínea nos indica que no hay duplicidad: Pondremos nota de ello tanto en Admin como en GDS y
+            quitaremos de cola QR
+        </li>
+        <li>La compañía aérea nos indica que SÍ hay duplicidad, es decir, si el cliente tiene dos billetes iguales,
+            preguntaremos si nuestra reserva es la primera o la segunda que se ha emitido. Luego contactaremos con el
+            cliente para informar de ello, e indicarle que deberá solicitar el reembolso de la última reserva que haya
+            confirmado. También pondremos nota de todo tanto en la Admin como en Galileo.</li>
+
+        </li>
+        <li>
+            <h4>Información localizador VY</h4><br>
+            Cuando tenemos vuelos de Iberia operados por Vueling que se han emitido por GDS, la compañía aérea Vueling
+            nos notifica con un VR de su localizador: <br>
+
+
+
+            En estos casos entraremos en la Admin, buscando el pedido con el loc de Galileo, y pondremos nota en la
+            Admin indicando el loc que VY nos ha facilitado. <br>
+
+        </li>
+        <li>
+            <h4>Información de trayecto cancelado</h4>
+        <li>El billete no está emitido: <br>
+            <p>
+                Aquí la compañía aérea nos lo notifica con un VR: <br>
+                Nos podemos encontrar que el billete no está emitido y la compañía aérea cancela la plaza, en estos
+                casos la reserva entrará en dos colas la 16 y la 23. <br>
+                Revisamos en la Admin en qué estado se encuentra, si es una Emisión pasaremos nota a la persona que lo
+                tiene asignado para que haga la gestión que toque. <br>
+                Si el estado en la Admin es no finalizado, no dispo, abandonado… cancelamos las plazas, ponemos nota en
+                GDS y hacemos QR. <br>
+            </p>
+
+
+
+        </li>
+        <li>El billete está emitido y la reserva es futura: <br>
+            <p>
+                En este caso revisaremos si la reserva está en la cola 23 haciendo QW. Si está en la 23 hacemos QR y si
+                no la movemos a la 23 haciendo QEB/23. Lo gestionará quién tenga de tarea la cola 23. <br>
+                <strong>
+
+                    NOTA: En el caso de no saber qué es lo que pone en el VR llamaremos a la compañía aérea para que nos
+                    lo expliquen.
+                </strong>
+            </p>
+
+
+
+
+        </li>
+        </li>
+        <li>
+            <h4>Solicitud contacto de pax</h4> <br>
+            <p>
+                La compañía aérea nos envía un VR solicitando que se indique un SSR con el mail y teléfono de contacto
+                de pax: <br>
+                En este caso nos piden que pongamos un SR con los datos del cliente, por tanto revisaremos en la Admin
+                el mail y número de teléfono del cliente y lo añadiremos en Galileo de la siguiente manera: <br>
+                Indicar mail: <strong>SI.P1/SSRCTCEBAHK1/</strong>LAURA.KONKOL//ATRAPALO.COM <br>
+                Indicar número de teléfono: <strong> SI.P1/SSRCTCMBAHK1/</strong>933197570/ES <br>
+            </p>
+
+        </li>
+        <li>
+            <h4> Solicitud tarjeta viajero frecuente (FQTV) </h4> <br>
+            <p>
+
+                Nos podemos encontrar con algunos VR que indican lo siguiente: <br>
+                Es decir, están indicando que si el cliente tiene FQTV lo indiquemos mediante un SR, en estos casos no
+                haremos nada, directamente lo quitaremos de colas QR, ya que durante el proceso de compra ya facilitamos
+                la opción de que los clientes indiquen la tarjeta de viajero frecuente en caso de disponer de ella, por
+                tanto si no consta en la reserva es que el cliente no tiene.
+
+            </p>
+        </li>
+        </p>
+    </section>
+    <section id="qw23">
+        <h2>Cola 23 - Cancelaciones</h2>
+        <p>
+            Son reservas que tienen algún trayecto en <strong>HX</strong>. <br>
+            Antes de realizar ninguna gestión, deberemos verificar qué es lo que ha ocurrido y por qué motivo está el
+            trayecto cancelado. <br>
+            <span>Estas acciones de parte de las aerolíneas son constantes, por ende el chequeo de esta cola debe ser todo el dia dejandola a 0 al fin del dia</span> <br> <br>
+
+        <h3>Reservas con itinerario limpio sin ticket</h3>
+        Estos son los casos que debemos encontrarnos si estamos haciendo bien el trabajo. <br>
+         Lo primero que debemos hacer es abrir el <a href="https://admin.atrapalo.com.ar/vuelos/" target="_blank"
+            rel="noopener noreferrer" class="link">Admin Vuelos</a> y buscar el pedido con el pnr. <br>
+        Los filtros son: <br>
+        <img src="../img/q23.jpg" alt="" style="width: 100%;"> <br>
+        Simplemente debemos asegurarnos que el estado del admin es correcto, es decir estado <strong>Cancelado/Anulado</strong> <br>
+        Nuestra tarea en estos pnrs es simplemente sacarlos de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <br>
+        <h3>Reservas en HX sin ticket</h3>
+        Reservas no emitidas donde la compañía aérea canceló los lugares. <br>
+        Lo primero que debemos hacer es abrir el <a href="https://admin.atrapalo.com.ar/vuelos/" target="_blank"
+            rel="noopener noreferrer" class="link">Admin Vuelos</a> y buscar el pedido con el pnr. <br><br>
+        <span>Caso 1 - Pedidos por trabajar</span> <br>
+        Si hay pedido en Admin, puede tratarse de una reserva <strong>Confirmado/Pendiente</strong>. <br>
+        En este caso cancelaremos el itinerario limpiando el pnr. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre)
+        </div>
+        Dejaremos un comentario en admin: <strong>Tramos HX, limpio de Q23</strong> <br>
+        Luego daremos aviso al agente que tenga asignado el pedido para que puedan gestionarlo cuanto antes. <br>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <br>
+        <span>Caso 2 - Pedidos trabajados</span> <br>
+        Podemos encontrarnos pedidos en estado <strong>Cancelado/Anulado</strong>. <br>
+        <span>
+        Todos los agentes conocen la importancia de limpiar los pnrs una vez que se cancelan las reservas para evitar los ADM por malas prácticas. <br>
+        </span>
+        <strong>No deberiamos encontrar pedidos con Tramos HX sin ticket con admin cerrado</strong>
+        <br>
+        En este caso cancelaremos el itinerario limpiando el pnr. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre)
+        </div>
+        Dejaremos un comentario en admin: <strong>Tramos HX, limpio de Q23</strong> <br>
+
+        Y para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <br>
+
+         <span>Caso 3 - Estado Vendido</span> <br>
+        Al hacer la busqueda en admin podemos encontrar pedidos en estado <strong>Vendido</strong>. <br>
+        Esto obviamente habla de un error ya que no deberia estar vendido sin ticket emitido. <br>    
+        Estos casos debemos analizarlos para detectar el problema y actuar en base a la mejor solucion posible hacia el cliente. <br>
+        Dejaremos comentarios en admin sobre la acción que tomemos. <br>
+        Agregaremos una nota en la pnr con el localizador Atrapalo correspondiente. <br>
+        <div class="users">
+            Comando de carga de nota: <strong>NP.</strong>VXXXXXX. <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre)
+        </div>
+        
+        Estos pnrs los trasladaremos a la <strong>cola 69</strong>, que son los casos de error. <br>
+        <div class="users">
+            Comando para pasar un pnr a otra cola: <strong>QEB/</strong>69 <br>
+        </div>
+
+
+        <h3>Reservas en HX con ticket emitido</h3>
+        Reservas emitidas y que la compañía aérea canceló uno de los trayectos. <br>
+        Vamos a revisar por qué cancelaron los lugares, por lo que comprobaremos el estado del ticket. <br>
+        Nos podemos encontrar varios casos: <br> <br>
+        <span>Fecha pasada con trayecto HX</span> <br>
+        Puede tratarse de un noshow, esto lo sabremos mirando el ticket. <br>
+        <div class="users">
+            Comando para desglegar el ticket: <strong>*HTE</strong> <br>
+        </div>
+        Si el segmento pasado del ticket sigue figurando en <strong>OPEN</strong> se entiende que el pasajero no lo usó, es decir no se presentó al embarque. <br>
+        <img src="../img/q231.jpg" alt="" style="width: 100%;"> <br>
+        Tambien podemos ver en el historial la fecha de la cancelacion de los tramos. Generalmente la compañia aerea cancela los segmentos el mismo dia que deberia haber embarcado el pax <br>
+        <div class="users">
+            Comando para ver historial: <strong>*HI</strong>
+        </div>
+        <img src="../img/q232.jpg" alt="" > <br>
+        En este caso cancelaremos el itinerario limpiando el pnr. <br>
+        <div class="users">
+        Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+        </div>
+        Dejaremos una nota en el pnr con el aviso de No Show. <br>
+        <div class="users"> 
+            Comando de carga de nota: <strong>NP.</strong>NO SHOW. <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre) <br>
+        </div>
+
+        Desde el botón *NP podremos ver el detalle de lo cargado. <br>
+        <img src="../img/q233.jpg" alt="" style="width: 100%;"> <br>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <span>PNR con ticket en estado EXCH</span> <br>
+        El <strong>EXCH</strong> se genera cuando el pax realiza una acción con la propia Aerolinea. <br>
+        Cuando esto pasa, perdemos el control del ticket <br>
+        <div class="users">
+            Comando para desglegar el ticket: <strong>*HTE</strong> <br>
+        </div>
+        <img src="../img/q234.jpg" alt=""style="width: 100%;"> <br>
+        Al no tener accion posible en el ticket, solo limpiaremos el itinerario. <br>
+        <div class="users">
+        Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+        Para confirmar la accion debemos firmar y cerrar. <br>
+        Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+        Comando de cierre: <strong>ER</strong> (recomiendo doble cierre) <br>
+        </div>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+        Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <span>PNR con ticket en estado USED</span> <br>
+        Podemos tener pedidos que tuvieron cancelaciones/reprogramaciones y no llegaron a gestionarse antes de la salida del vuelo. <br>
+        <div class="users">
+            Comando para desglegar el ticket: <strong>*HTE</strong> <br>
+        </div>
+        Si el pax no tuvo problemas para viajar, el ticket ya figura en <strong>USED</strong> <br>
+        <img src="../img/q237.jpg" alt=""style="width: 100%;"> <br>
+        En este caso solo limpiaremos el itinerario. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre) <br>
+        </div>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+        Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+        <span>PNR con tramos HK y ticket OPEN</span> <br>
+        Recordemos que en esta cola se cargan los pnrs que tuvieron alguna cancelacion de tramo. <br>
+        Si hubo un trabajo manual de agente desde la tarea de emisiones, seguramente se haya retomado (tramos HK) y emitido el ticket pero el pnr sigue estando en la misma cola. <br>
+        En estos casos, debemos verificar que el ticket esta correctamente sincronizado con el itineario que figura confirmado. <br>
+        <div class="users">
+            Comando para desglegar el ticket: <strong>*HTE</strong> <br>
+        </div>
+        Tienen que coincidir: <br>
+        <strong>Nro de vuelo</strong> <br>
+        <strong>Clase</strong> <br>
+        <strong>Fecha</strong><br>
+        <strong>Ruta</strong><br>
+        <strong>Horario(puede haber diferencia de 2hs)</strong><br>
+        <img src="../img/q235.jpg" alt=""style="width: 100%;"> <br>
+        Si el ticket esta <strong>sincronizado</strong> ok, simplemente sacaremos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+
+        <span>PNR con ticket sin acceso</span> <br>
+        Cuando no podemos ingresar a ver el ticket, generalmente es porque la compañia aerea tomó el control de la reserva. <br>
+        Se trabajan como un EXCH <br>
+        <div class="users">
+            Comando para desglegar el ticket: <strong>*HTE</strong> <br>
+        </div>
+        <img src="../img/q236.jpg" alt=""style="width: 100%;"> <br>
+        Al no tener accion posible en el ticket, solo limpiaremos el itinerario. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>@ALL</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>R.</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong> (recomiendo doble cierre) <br>
+        </div>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+        Comando para sacar de cola: <strong>QR</strong> <br>
+        </div>
+
+
+        </p>
+    </section>
+
+    <!-- Cola 21/22    
+    <section id="qw21">
+        <h2>Cola 21/22 - Cambios de horario</h2>
+        <p>
+            Aquí entran las notificaciones de cambios en el itinerario que han realizado las compañías aéreas.
+*En la cola 21 entran los UN, vuelos cancelados por parte de la compañía. La compañía ofrece otro vuelo alternativo que está en estado TK (número de vuelto diferente al original).
+A veces los segmentos están en UN sin alternativas, en este caso revisaremos si está en otra cola y si no es así lo tendremos que pasar a la cola 99. 
+*En la cola 22 entran los TK, cambios de horarios. El mismo número de vuelo pero ha cambiado el horario.
+¿Cómo lo gestionamos?
+Tenemos que notificar el cambio de horario al cliente, para ello pasaremos todas las reservas a la cola 74 (Gestor de Colas). 
+Pero antes de pasar los cambios por el gestor de colas tenemos que verificar que los nuevos horarios tengan suficiente tiempo de conexión, a no ser así se pasarán a la cola 99 y se pondrá en el PNR una nota indicando que no hay tiempo de conexión. 
+** Para verificar el tiempo mínimo de conexión @MT
+
+En el caso que nos encontremos que hay una reserva cuyo vuelo es de fecha pasada (era de primera hora de la mañana o día anterior), revisaremos el HTE, si está en USED, LFTD o EXCH. Entonces actualizaremos el itinerario con @ALL, pondremos nota con un NP.vuelo pasado actualizo itinerario LK y para terminar lo quitaremos de colas con QR. Pero ojo, esto lo haremos siempre y cuando no tengamos un tramo con fecha futura que también tenga TK o UN que entonces sí que hay que pasarlo por el gestor para notificar el cambio.
+Las reservas con cambio de horario y qué conexionan correctamente se pasan a la cola del gestor, la 74,  para poder notificar los cambios al cliente.
+Clicamos en la opción “Cambio Nuevos GC”
+
+
+
+
+Nos aparecerá un listado con todas las reservas que tenemos en la cola 74:
+
+Cómo vemos en el pantallazo, en la columna “Envío Mail” no aparece ninguna fecha, significa que todavía no se le ha notificado el cambio al cliente. En una de las reservas si que nos consta una fecha anterior, y es debido a que ya hubo un cambio de horario y ahora se ha producido uno nuevo que deberemos notificar.
+Seleccionamos todas las reservas y posteriormente clicamos en  “Enviar Mail cambios”
+
+Hay que verificar que en la columna “envío mail” que aparezca la fecha de hoy, eso significa que se ha enviado la notificación al cliente. 
+
+Una vez realizadas estas acciones, volvemos a Galileo, y hay que pasar las reservas a las colas correspondientes de cada mes entre la 92 y la 98 (para saber cuál es cada una, tenéis que hacer QPB*), para que posteriormente se puedan reclamar los cambios  en caso que el cliente no haya respondido.
+Ojo: no pasar por el gestor vuelos cancelados sin alternativa o vuelos que no enlacen.
+
+        </p>
+    </section> -->
+    <footer>
+        <a href="./colas.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
+        <p>Sitio creado por CG</p>
+
+    </footer>
+</body>
+
+</html>

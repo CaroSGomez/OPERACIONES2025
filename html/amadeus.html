@@ -53,6 +53,8 @@
             </a>
             <a href="#dominios">
                 <li>Dominios</li><a>
+                                <a href="../amadeus/colas.html">                     <li>Colas</li><a>
+
         </ul>
     </div>
         <section id="logueo">
@@ -108,7 +110,7 @@
 
     </section>
     <section id="pnr">
-        <h2>¿Como tomar una reserva de cero en Galileo?</h2>
+        <h2>¿Como tomar una reserva de cero en Amadeus?</h2>
         <p>
             <span>Paso 1: Agregar nombres a la reserva</span> <br>
             El indicador de nombre es: <strong>NM1</strong> <br>
@@ -121,7 +123,7 @@
             El indicador de busqueda es: <strong>AN</strong> <br>
             El orden siempre debe ser FECHA/RUTA/CIA <br>
             <div class="users">
-            Ejemplo de busqueda para el 26/09 <br> Saliendo de Aeroparque a Jujuy por Jetsmart: <strong>AN</strong>26SEPAEPJUJ/<strong>A</strong>JA<br>
+            Ejemplo de busqueda para el 26/09 <br> Saliendo de Aeroparque a Bariloche por Jetsmart: <strong>AN</strong>26SEPAEPBRC/<strong>A</strong>JA<br>
             </div>
             <span>Paso 3: Guardar lugares</span> <br>
             En el smart podemos tomar los segmentos dando click sobre la clase que queremos <br>
@@ -134,45 +136,49 @@
                 
             </div>
             <span>Paso 4: Guardar datos basicos de reserva</span> <br>
-            Lo primero que debemos grabar en el pnr para poder cerrarlo es la informacion de la empresa. <br> 
-            El comando que guarda el telefono de la empresa es: <strong>APE</strong> <br>
+            Lo primero que debemos grabar en el pnr para poder cerrarlo es la informacion de la empresa. <br>
+            <div class="users">
+                El comando que guarda el telefono de la empresa es: <strong>AP</strong> <br>
+            </div> 
             El segundo dato obligatorio es el tiempo limite. <br>
-            El comando que guarda el plazo es: <strong>TKTL</strong> <br> <br>
+            <div class="users">
+                El comando que guarda el plazo es: <strong>TKTL</strong>
+            </div>
             <span>Paso 5: Guardar datos de pasajeros</span> <br>
             Para guardar el telefono del pasajero debemos usar el comando: <strong>SRCTCMYYHK1-</strong>xxxxxxxx <br>
             <div class="users">
             Ejemplo de telefono para el pax 1: <strong>SRCTCMYYHK1-</strong>541168554866 <br>
             </div>
-            Para guardar el mail del pasajero debemos usar el comando: <strong>SRCTCMYYHK1-</strong>xxxxxxxx <br>
-
+            Para guardar el mail del pasajero debemos usar el comando: <strong>SRCTCEYYHK1-</strong>xxxxxxxx <br>
             <div class="users">
-            Ejemplo de mail para el pax 1: <strong>SI.P</strong>1<strong>/SSRCTCEYYHK1/</strong>gomez//atrapalo.com.ar <br>
+            Ejemplo de mail para el pax 1: <strong>SRCTCEYYHK1-</strong>gomez//atrapalo.com.ar<strong>/P</strong>1<br>
             </div>
-
-           
+            Por ultimo agregaremos el DNI del pax usando el comando: <br>
+            <strong>SRFOIDYYHK1-NI</strong>xxxxxxxx<strong>/P</strong>x <br>
+            Si quisieramos cargar un pasaporte debemos cambiar las siglas NI por PP. <br>
+            <strong>SRFOIDYYHK1-PP</strong>xxxxxxxx<strong>/P</strong>x <br>
+            <div class="users">
+            Ejemplo de DNI para el pax 1: <strong>SRFOIDYYHK1-NI</strong>34587951<strong>/P</strong>1<br>
+            </div>
             Si bien ya pudimos generar el pnr correspondiente a la reserva de cero, ahora falta la cotizacion y guardado de tarifa. <br>
-
             <span>Paso 6: Cotizar y guardar tarifa</span> <br>
             Tenemos diferentes maneras de cotizar de acuerdo a lo que deseamos. <br>
             <div class="users">
-            <strong>FQ</strong>: El comando para cotizar la clase tomada:  <br> 
-            <strong>FQBB</strong>: Se usa para que el sistema nos muestre la opcion más economica disponible <br> 
-            <strong>FQ/BAG</strong>: Este comando cotiza con equipaje para despachar en bodega <br>
-            <strong>FQBB++-BUSNS</strong>: Este comando muestra tarifas Business <br>
+            <strong>FXR</strong>: Este comando cotiza la clase tomada. No guarda tarifas  <br> 
+            <strong>FXP</strong>: Este comando cotiza la clase tomada y guarda la tarifa  <br> 
+            <strong>FXB</strong>: Se usa para que el sistema nos muestre la opcion más economica disponible. Permite guardar la tarifa <br> 
+           
             </div>
 
              <span>Paso 7: Cerrar la reserva</span> <br>
             Una vez completos los datos de pasajeros, itinerario, datos basicos y plazo, debemos firmar todo el proceso y finalmente cerrarlo para guardarlo. <br>
-            El comando para firmar es: <strong>R.</strong>Iniciales <br>
-            El comando para cerrar es: <strong>ER</strong> <br>
+            <div class="users">
+                El comando para firmar es: <strong>RF</strong>Iniciales <br>
+                El comando para cerrar es: <strong>ER</strong> <br>
+            </div>
             <br>
-                
-
-            <img src="#" alt="" >
         </p>
-        <p>
-         <img src="#" alt="" style="width: 50%;">
-        </p>
+       
     </section>
      <section id="void">
         <h2>Void</h2>
@@ -188,20 +194,22 @@
                         <strong>CHKIN</strong> Ticket con check-in hecho <br> - No permite voidear <br> <strong>ARTP</strong> Ticket en control de aeropuerto <br> - No permite voidear <br> <strong>EXCH</strong> Ticket cambiado <br> - No permite voidear <br>
                     </p>
                 </div>
-            El comando de void es: <strong>TRDC/L(nrodelinea)</strong> <br>
-            <img src="#" alt=""> <br>
+                <div class="users">
+                    El comando de void es: <strong>TRDC/L(nrodelinea)</strong> <br>
+                </div>
             Luego de voidear, el sistema nos devolverá las siguientes respuestas: <br>
-            <img src="#" alt=""> <br>
-            Vamos a ignorar y volver a desplegar el ticket para chequear el estatus: <br>
-            El comando para ignorar es: <strong>IR</strong> <br>
+            <img src="../img/voidam.png" alt="" style="width: 100%;"> <br>
+            Vamos a volver a desplegar el ticket para chequear el estatus: <br>
+            <div class="users">
+                Comando para desplegar el ticket: <strong>TWD/L</strong>(nro de linea donde esta el ticket) <br>
+            </div>
             Es importante destacar que el comando SOLO void el ticket, no elimina los segmentos. <br>
             <span>Es mala práctica dejar segmentos/tramos inactivos.</span>    <br>
             <strong>Siempre</strong> vamos a limpiar el itinerario si no vamos a emitir un ticket. <br>
             El comando para limpiar el pnr es: <strong>XI</strong> <br>
-            <img src="#" alt=""> <br>
             El gds nos informa que el itinerario ha sido limpiado, y el ticket ha sido voideado. <br>
             Veremos solo el nombre en el pnr. <br>
-            <img src="#" alt="">
+            <img src="../img/voidma2.png" alt="" style="width: 100%> <br>
         </p>
     </section>
     <section id="dominios">

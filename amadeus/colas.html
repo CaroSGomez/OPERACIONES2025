@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colas Amadeus</title>
+    <link rel="icon" href="../img/viajar.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header>
+    <nav class="menu">
+        <img src="../img/logo.png" alt="logo">
+        <ul>
+            <a href="../index.html"><li>Calidad</li></a>
+            <a href="../html/guias.html"><li>Guias de ayuda</li></a>
+            <a href="../html/ae.html"><li>Antiestafa</li></a>
+            <a href="../html/post.html"><li>Atención al cliente</li></a>
+            <a href="../html/galileo.html"><li>Galileo</li></a>
+
+            <a href="../html/amadeus.html"><li>Amadeus</li></a>
+            <a href="../html/gdsNdc.html"><li>GDS NDC</li></a>
+
+            <a href="./terrestres.html"><li>Terrestres</li></a>
+            <a href="../html/form.html"><li>Sugerencias</li></a>
+            <a href="../html/devos.html"><li>Devoluciones</li></a>
+
+        </ul>
+    </nav>
+</header>
+    <h1>Manual de colas</h1>
+    <div class="submenu">
+        <ul>
+            <a href="#comandos"><li>Comandos importantes</li></a>
+             <a href="#qw21"><li>Cola 7 - Cambios de horario</li></a>
+        <a href="#qw12"><li>Cola 12 - Tiempo Limite Pasado</li></a>
+       </ul>
+    </div>
+    <section id="comandos">
+        <h2>Comandos importantes</h2>
+        <p>
+            Cuando se produce un cambio o cancelación en un vuelo o bien la compañía aérea nos realiza alguna notificación sobre un PNR, estas reservas entrarán por colas y deberemos gestionarlas. <br>
+            <div class="users">
+                <span>
+                    ¿Cómo accedemos al sistema de colas? <br>
+                </span>
+                <strong>QT: </strong> Para ver todas las colas que tienen alguna reserva dentro. <br>
+                <strong>QTQ: </strong> Aca vemos todas las colas que tenemos con sus respectivos nombres sin importar si tienen o no reservas. <br>
+                <strong>QC/</strong>12 (nro de cola): Para ver una determina cola. <br> 
+                <strong>QS/</strong>12 (nro de cola): Para entrar a una determina cola. <br> Si utilizamos Smartpoint clickeamos encima de la cola que vayamos a revisar. <br>
+                <strong>QD: </strong> Para salir de una reserva sin eliminarla de la cola. Pasa a la siguiente reserva <br>
+                <strong>QN: </strong> Para eliminar una reserva de la cola. Pasa a la siguiente reserva <br>
+                <strong>QE/</strong>7 (nro de cola): Para pasar una reserva a otra cola. <br>
+                <strong>QI: </strong> Para ignorar el PNR y salir de la cola. <br>
+                <strong>QIR: </strong> Para ignorar el PNR, sale de la cola y recupera el PNR. <br>
+
+            </div>
+            Amadeus se maneja ademas con categorias y rangos de fechas. <br>
+            <div class="users">
+                <strong>Categorias</strong> <br>
+                Cat 0 - General <br>
+Cat 1 - Servicios aéreos <br>
+Cat 2 - Servicios de hotel <br>
+Cat 3 - Servicios de coche <br>
+Cat 4 - Servicios de tour <br>
+Cat 5 - Otros proveedores <br>
+Cat 6 - SSR’s <br>
+<strong>Rangos de fechas</strong> <br>
+D1 - Hoy y dos días más <br>
+D2 - De tres a cinco días desde la fecha actual <br>
+D3 - De seis a ocho días desde la fecha actual <br>
+D4 - De nueve días en adelante desde la fecha actual <br>
+            </div>
+        </p>
+    </section>
+    <section id="qw12">
+        <h2>Cola 12 - Tiempo Limite Pasado</h2>
+        <p>
+            Son reservas que tienen algún trayecto en <strong>HX</strong>. <br>
+            Antes de realizar ninguna gestión, deberemos verificar qué es lo que ha ocurrido y por qué motivo está el
+            trayecto cancelado. <br>
+            <span>Estas acciones de parte de las aerolíneas son constantes, por ende el chequeo de esta cola debe ser todo el dia dejandola a 0 al fin del dia</span> <br> <br>
+
+        <h3>Reservas con itinerario limpio sin ticket</h3>
+        Estos son los casos que debemos encontrarnos si estamos haciendo bien el trabajo. <br>
+         Lo primero que debemos hacer es abrir el <a href="https://admin.atrapalo.com.ar/vuelos/" target="_blank"
+            rel="noopener noreferrer" class="link">Admin Vuelos</a> y buscar el pedido con el pnr. <br>
+        Los filtros son: <br>
+        <img src="../img/q23.jpg" alt="" style="width: 100%;"> <br>
+        Simplemente debemos asegurarnos que el estado del admin es correcto, es decir estado <strong>Cancelado/Anulado</strong> <br>
+        Nuestra tarea en estos pnrs es simplemente sacarlos de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QN</strong> <br>
+        </div>
+        <br>
+        <h3>Reservas en HX sin ticket</h3>
+        Reservas no emitidas donde la compañía aérea canceló los lugares. <br>
+        Lo primero que debemos hacer es abrir el <a href="https://admin.atrapalo.com.ar/vuelos/" target="_blank"
+            rel="noopener noreferrer" class="link">Admin Vuelos</a> y buscar el pedido con el pnr. <br><br>
+        <span>Caso 1 - Pedidos por trabajar</span> <br>
+        Si hay pedido en Admin, puede tratarse de una reserva <strong>Confirmado/Pendiente</strong>. <br>
+        En este caso cancelaremos el itinerario limpiando el pnr. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>XI</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>RF</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong>
+        </div>
+        Dejaremos un comentario en admin: <strong>Tramos HX, limpio de Q12</strong> <br>
+        Luego daremos aviso al agente que tenga asignado el pedido para que puedan gestionarlo cuanto antes. <br>
+        Para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QN</strong> <br>
+        </div>
+        <br>
+        <span>Caso 2 - Pedidos trabajados</span> <br>
+        Podemos encontrarnos pedidos en estado <strong>Cancelado/Anulado</strong>. <br>
+        <span>
+        Todos los agentes conocen la importancia de limpiar los pnrs una vez que se cancelan las reservas para evitar los ADM por malas prácticas. <br>
+        </span>
+        <strong>No deberiamos encontrar pedidos con Tramos HX sin ticket con admin cerrado</strong>
+        <img src="../img/q12.jpg" alt="" style="width: 100%;">
+        <br>
+        En este caso cancelaremos el itinerario limpiando el pnr. <br>
+        <div class="users">
+            Comando de limpieza de pnr: <strong>XI</strong> <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>RF</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong>
+        </div>
+        <img src="../img/q121.jpg" alt="" > <br>
+        Dejaremos un comentario en admin: <strong>Tramos HX, limpio de Q12</strong> <br>
+
+        Y para finalizar el proceso, sacamos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QN</strong> <br>
+        </div>
+        <br>
+
+        <span>Caso 3 - Estado Vendido</span> <br>
+        Al hacer la busqueda en admin podemos encontrar pedidos en estado <strong>Vendido</strong>. <br>
+        Esto obviamente habla de un error ya que no deberia estar vendido sin ticket emitido. <br>    
+        Estos casos debemos analizarlos para detectar el problema y actuar en base a la mejor solucion posible hacia el cliente. <br>
+        Dejaremos comentarios en admin sobre la acción que tomemos. <br>
+        Agregaremos una nota en la pnr con el localizador Atrapalo correspondiente. <br>
+        <div class="users">
+            Comando de carga de nota: <strong>RM.</strong>VXXXXXX. <br>
+            Para confirmar la accion debemos firmar y cerrar. <br>
+            Comando de firma: <strong>RF</strong>CG(iniciales) <br>
+            Comando de cierre: <strong>ER</strong>
+        </div>
+        
+       
+       
+        <h3>PNR con tramos HK y ticket OPEN</h3>
+        Recordemos que en esta cola se cargan los pnrs que tuvieron alguna cancelacion de tramo. <br>
+        Si hubo un trabajo manual de agente desde la tarea de emisiones, seguramente se haya retomado (tramos HK) y emitido el ticket pero el pnr sigue estando en la misma cola. <br>
+        En estos casos, debemos verificar que el ticket esta correctamente sincronizado con el itineario que figura confirmado. <br>
+        <div class="users">
+                Comando para desplegar el ticket: <strong>TWD/L</strong>(nro de linea donde esta el ticket) <br>
+            </div>
+        Tienen que coincidir: <br>
+        <strong>Nro de vuelo</strong> <br>
+        <strong>Clase</strong> <br>
+        <strong>Fecha</strong><br>
+        <strong>Ruta</strong><br>
+        <strong>Horario(puede haber diferencia de 2hs)</strong><br>
+       
+        Si el ticket esta <strong>sincronizado</strong> ok, simplemente sacaremos el pnr de la cola. <br>
+        <div class="users">
+            Comando para sacar de cola: <strong>QN</strong> <br>
+        </div>
+
+            </p>
+    </section>
+
+
+    <footer>
+        <a href="./colas.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
+        <p>Sitio creado por CG</p>
+
+   </footer>
+</body>
+</html>

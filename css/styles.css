@@ -86,14 +86,22 @@ section p img{
 text-align: center;
 }
 
-h2, h3{
+h2{
   color: rgba(245, 40, 40, 0.959);
   margin: 0.5em;
   text-align: center;
   font-size: 2em;
 }
 
-span{
+h3{
+  color: rgba(245, 40, 40, 0.959);
+  margin: 0.5em;
+  text-align: center;
+  font-size: 1.5em;
+text-decoration-line: underline;
+  text-decoration-color: (245, 40, 40, 0.959);
+}
+  span{
     font-style: italic;
     font-weight: 600;
     margin: 0.5em;
@@ -270,7 +278,7 @@ input, textarea, select{
 .users{
   border-left: 3px solid rgba(245, 40, 40, 0.692);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  margin: 2em 30em 2em 30em; 
+  margin: 2em 20em 2em 20em; 
  border-radius: 4px;
   
 }
