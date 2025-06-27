@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galileo</title>
+    <title>Amadeus</title>
     <link rel="icon" href="../img/viajar.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,82 +17,210 @@
         <nav class="menu">
             <img src="../img/logo.png" alt="logo">
             <ul>
-                <a href="../index.html">
-                    <li>Calidad</li>
-                </a>
-                <a href="./guias.html">
-                    <li>Guias de ayuda</li>
-                </a>
-                <a href="./ae.html">
-                    <li>Antiestafa</li>
-                </a>
-                <a href="./post.html">
-                    <li>Atención al cliente</li>
-                </a>
-                <a href="./galileo.html">
-                    <li>Galileo</li>
-                </a>
-
-                <a href="./amadeus.html">
-                    <li>Amadeus</li>
-                </a>
-                <a href="./gdsNdc.html">
-                    <li>GDS NDC</li>
-                </a>
-
-                <a href="./terrestres.html">
-                    <li>Terrestres</li>
-                </a>
-                <a href="./form.html">
-                    <li>Sugerencias</li>
-                </a>
+                <a href="../index.html"><li>Calidad</li></a>
+                <a href="../html/guias.html"><li>Guias de ayuda</li></a>
+                <a href="../html/ae.html"><li>Antiestafa</li></a>
+                <a href="../html/post.html"><li>Atención al cliente</li></a>
+                <a href="../html/galileo.html"><li>Galileo</li></a>
+    
+                <a href="../html/amadeus.html"><li>Amadeus</li></a>
+                <a href="../html/gdsNdc.html"><li>GDS NDC</li></a>
+    
+                <a href="../html/terrestres.html"><li>Terrestres</li></a>
+                <a href="../html/form.html"><li>Sugerencias</li></a>
             </ul>
         </nav>
     </header>
-    <h1>Paso a paso de emisión en 1 pago con tarjeta de crédito</h1>
-   
+    <h1>Atrapalo Argentina</h1>
+    <h5>(Iata propio)</h5>
+    <div class="submenu">
+        <ul>
+            <a href="#cobroTC">
+                <li>Cobros con TC en 1 pago</li>
+            </a>
+            <a href="#cuotasTc">
+                <li>Cobros con TC en cuotas</li>
+            </a>
+            <a href="#cobroEfectivo">
+                <li>Cobros con débito/transferencia/efectivo</li>
+            </a>
+             <a href="#inter">
+                <li>Cobros internacionales</li>
+            </a>
+        </ul>
+    </div>
+    <section id="cobroTC">
+        <h2>Paso a paso: 1 Pago con TC</h2>
+        <span>Paso 1: Se verifica el estado del pnr en el gds</span> <br>
+        Chequeamos: <br>
+        Nombres<br>
+        Status de segmentos de itinerario <br>
+        <div class="users">
+                <h3>Status segmentos:</h3>
+                <p>
+                    <strong>DK</strong> Segmento solicitado <br>
+                    <strong>HK</strong> Segmento confirmado <br> <strong>HX</strong> Segmento cancelado <br>
+                    <strong>TK/UN</strong> Vuelo reprogramado/cancelado <br>
+                </p>
+            </div>
+        Equipaje <br>
+        Tarifa <br>
+        Comando para ver todos los archivos tarifarios ingresamos comando <strong>*FF</strong> <br>
+        <div class="users">
+            <h3>Status de tarifa:</h3>
+            <p>
+                <strong>G</strong> Tarifa Ok para emitir <br> <strong>X</strong> Tarifa cancelada / no se puede emitir <br>
+            </p>
+        </div>
+        <span>Paso 2: Se verifica condiciones de emisión</span> <br>
+        Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la web de <a href="https://red.ricaleonline.com/Account/Login
+        " target="_blank" class="link">Ricale - Condiciones</a> <br>
+        <div class="users">
+                        Usuario general: <br> tomas.devescovi@atrapalo.com.ar
+                        <br>
+                        Contraseña: B85PNCHN
+                        <br>
 
-        <ol>
-            <li>
-                SE VERIFICA ESTADO DE PNR
-                <ul>
-                    <li>Chequeamos nombres e itinerario</li>
-                    <li>Chequeamos tarifa y equipaje
-                        <ul>
-                            <li>Comando para ver el archivo  tarifario actual <strong>TQT</strong></li>
-                            <li>Comando para ver todos los archivos existentes (activos y eliminados) <strong>TTH</strong></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                SE VERIFICA CONDICIONES DE EMISIÓN
-                <ul>
-                    <li>
-                        Chequeamos si la aerolínea nos pasa comisión y over en la planilla de <a href="https://docs.google.com/spreadsheets/d/1yIAIP361Wq6mDnGWNwcEYlGuRoNjzcJWgLn4ZNxTGjs/edit?gid=1880966847#gid=1880966847" target="_blank" class="link">Condiciones de emisión</a>
-                        <ul>
-                            <li>
-                                Se carga comision: <strong>FM</strong>0 (Ej Comision 0)</li>
-                            <li>
-                                Si hay pago de over, se debe cargar la ganancia del mismo en el pnr
-                                <ul>
-                                    <li>
-                                        ***El % de la ganancia se calcula sobre la FARE*** El comando para cargar EL % de ganancia: <strong>RM.OP*3%</strong> (Ej over 3%)
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+    </div>
+        Nuestro GDS ya tiene seteadas las comisiones, solo debemos verificar si esta correcta. <br>
+        Si la comisión no vino cargada en el pnr, vamos a tener que ingresarla manualmente. <br>
+        El indicador de <span>comisión</span> es: <strong>FM</strong> <br>
+        <div class="users">
+            Ejemplo Comision 0 : <strong>FM</strong>0<br>
+        </div>
+        Por otro lado cuando hay pago de over, se debe cargar el código del over indicado por la aerolinea y la ganancia del mismo en el pnr <br>
+        <div class="users">
+            Ejemplo de carga de Tourcode: <br> <strong>FT</strong>XXXX<br>
+        </div>
+        <span>Si hay over, hay ganancia...</span> <br>
+        Para que nuestra administración registre la ganancia de ese over es clave dejar el calculo en el pnr <br> 
+        En el pnr vamos a registrar el porcentaje de la ganancia <br>
+         <div class="users">
+        El comando para para cargar la ganancia en el pnr es: <strong>RM.OP*</strong>2%<br>  
+        </div>
+        <span>Paso 3: Se verifica FOP (forma de pago)</span> <br>
+        La tarjeta que carga el pax al momento de la compra es la misma que vendrá cargada en el pnr como FOP original. <br>
+        En este gds podemos procesar cualquier tarjeta, sea Visa, Master o Amex. Incluso se puede pagar en cuotas. <br> <br>    
+        Pasaremos a la<span>primera instancia: el cobro por GDS</span> <br> 
+                Al tener IATA propio el comando de emisión es solo <strong>TTP</strong> <br>
+                No hace falta el CVV de la tc. Simplemente tirando el comando lo cobra y lo emite <br>
+                Al momento de procesar un cobro UATP, es súper importante verificar el número de comercio por donde se va a cobrar 
+                </span> <br>
+        Esto tambien lo podemos verificar en <a href="https://red.ricaleonline.com/Account/Login
+        " target="_blank" class="link">Ricale - Condiciones</a> <br>  
+        <div class="users">
+                        Usuario general: <br> tomas.devescovi@atrapalo.com.ar
+                        <br>
+                        Contraseña: B85PNCHN
+                        <br>
+
+    </div>
+    
+        <span>Paso 4: Se verifica el check list</span>
+        <div class="users">
+                <h3>Check List: <br> Antes de emitir</h3>
+                <p>
+                    <strong>Comisión</strong><br>
+                    <strong>Chapa/Placa</strong><br>
+                    <strong>Over</strong> (DI cargado)<br>
+                    <strong>FOP</strong><br>        
+                </p>
+            </div>
+        Una vez revisado el check list, debemos tirar el comendo de emisión. <br>
+        <div class="users">
+
+            El comando de emisión es: <strong>TTP/RT</strong><br>
+        </div>
+
+        <h2>Cobros directo en Amadeus</h2>
+        
+        Debemos eliminar la linea de la FOP original para poder cargar la nueva tarjeta <br> 
+        <div class="users">
+            Ejemplo de comando para eliminar la linea 12: <strong>XE</strong>12 <br> 
+        </div>
+        El indicador de forma de pago es: <strong>FP</strong> <br>
+        Cuando cargamos una tarjeta como medio de pago debemos informar las siglas de la entidad bancaria, el numero de la tarjeta y el vencimiento <br> 
+        <div class="users">
+            Las siglas indentificadoras de la tarjeta son: <br>
+            -Visa- FP<strong>CCVI</strong> <br>
+            -Master- FP<strong>CCCA</strong> <br>
+            -Amex- FP<strong>CCAX</strong> <br>
+        </div>
+        Luego cargaremos los datos de la tarjeta, el nro de la tarjeta y el vencimiento <br>
+        <div class="users">
+            Ejemplo de carga de tarjeta Visa con vencimiento en Enero del 2029: <br> <strong>FPCCVI</strong>4546XXXXXXXXXX/0129<br>
+
+        </div>
+
+        <h2>Proceso de emisión y resultados de cobro</h2>
+        El gds nos informa el resultado de la emisión. <br>
+        Si el cobro paso OK, nos informa el nro de autorización. <br>
+        Por lo que finalizaremos el proceso en admin. <br>
+        Para ver el proceso en <strong>Admin</strong> dar click <a href="../html/admin.html" target="_blank" rel="noopener noreferrer" class="link">acá</a> <br>
+        Si por el contrario el cobro no paso OK, nos informa el motivo del rechazo. <br>
+        Por ende procederemos a trabajar el pedido como si fuera bankia. <br>
+        Para ver el proceso <strong>Tag Bankia</strong> dar click <a href="../html/guias.html" target="_blank" rel="noopener noreferrer" class="link">acá</a>    <br>
+        
+      
+        
+        
+    </section>
+    
+    <section id="inter" class="fondo">
+        <h2>Reservas internacionales</h2>
+        <h3>Introducción:</h3>
+        <p>
+            Para una mayor rentabilidad, estas reservas entran de la siguiente manera: <br>
+            <span>Ingreso por Iata Ricale</span> <br>
+            Pueden tener pseudo BUEZO2107 <br> <br>
+            <span>Estado CONFIRMADO</span> <br>
+            Estas compran ingresan con el importe total cobrado en <strong>PESOS ARGENTINOS</strong> en la caja del admin, listos para emisión manual en gds. <br>
+            <span>Tarifa en USD</span> <br>
+            Al ingresar al pnr verán que el archivo tarifario se muestra guardado en USD. <br> <br>
+
             
+            <h2>Paso a paso:</h2>
+
+            <span>Paso 1: Se verifica el estado del pnr en el gds correspondiente</span> <br>
+            Realizamos el check list obligatorio para avanzar, itinerario, tarifa, equipaje. <br> <br>
+            <span>Paso 2: Se verifica condiciones de emisión</span> <br>
+            El hecho de estar en otra moneda no cambia el proceso de validación de condiciones. <br>
+            Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la web de <a href="https://red.ricaleonline.com/Account/Login" target="_blank" rel="noopener noreferrer" class="link"> Ricale - Condiciones</a> <br> <br>
+            <span>Paso 3: Se valida pago</span> <br>
+            Recuerden que estos pedidos ingresan ya cobrados en pesos argentinos. <br>
+            Nuestra tarea en este punto es verificar y dejar registro del tipo de cambio con el que ingresó el pedido. <br>
+            Esta información la pueden calcular ustedes mismos o bien consultar con su super. <br> <br>
+            <span>Paso 4: Emision siempre CASH</span> <br>
+
+            <strong>
+                Las aerolineas no aceptan el UATP en USD. <br>
+            </strong>
+            Es importante entender que en este procedimiento el hecho de cargar como FOP una tarjeta teniendo una tarifa cotizada en USD es <strong>MOTIVO DE ADM</strong> <br>
+            Nuestra tarea es garantizar que el cobro esta confirmado correctamente en el admin y emitir <strong>CASH</strong> <br> <br>
+
+            <div class="users">
+                        <span > 
+                            IMPORTANTE: Recuerden eliminar la linea de la FOP inicial que venia cargada en el pnr. <br>
+                            Si no lo quitamos, la plataforma puede generar cobro innecesario al usuario <br> <br>
+                            El comando para eliminar la linea es: XE12 + RFCG + ER. <br> 
+                            Cargamos FOP CASH -> FPCASH.
+                        </span> 
+                    </div> <br>
+
+            <h3>Casos Google Fligth</h3>
+            Estos casos ingresan con el tag <strong>Google Fligth</strong> <br>
+            Van a entrar cobramos en pesos argentinos y la tarifa ingresa en la misma moneda. Esto es un error del sincronia del sistema. <br> Debemos hacer una retarifacion convirtiendo el archivo grabado en el gds a USD. <br>
+            <div class="users">
+                El comando para cotizar en USD es: <strong>FXP/R,FC-USD</strong>
+            </div>
+            <br><br><br>
             
-            
-            </li>
-        </ol>
-    </section>    
+        </p>
+
+    </section>
     <footer>
-            <a href="/html/amadeus.html"><img src="../img/flecha-hacia-arriba.png" alt="logo"/></a>
-            <p>Sitio creado por CG</p>
+        <a href="../galileo/gestionCobros.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
+        <p>Sitio creado por CaroGomez</p>
     </footer>
 </body>
 </html>

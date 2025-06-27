@@ -32,7 +32,7 @@
         </nav>
     </header>
     <h1>Atrapalo Argentina</h1>
-    <h5>(Iata Ricale)</h5>
+    <h5>(Iata propio)</h5>
     <div class="submenu">
         <ul>
             <a href="#cobroTC">
@@ -43,6 +43,9 @@
             </a>
             <a href="#cobroEfectivo">
                 <li>Cobros con débito/transferencia/efectivo</li>
+            </a>
+             <a href="#inter">
+                <li>Cobros internacionales</li>
             </a>
         </ul>
     </div>
@@ -294,6 +297,58 @@
     <section id="cobroEfectivo">
 
     </section>
+    <section id="inter">
+        <h2>Reservas internacionales</h2>
+        <h3>Introducción:</h3>
+        <p>
+            Para una mayor rentabilidad, estas reservas entran de la siguiente manera: <br>
+            <span>Ingreso por Iata Ricale</span> <br>
+            Pueden tener pseudo 7C08 O 313T <br> <br>
+            <span>Estado CONFIRMADO</span> <br>
+            Estas compran ingresan con el importe total cobrado en <strong>PESOS ARGENTINOS</strong> en la caja del admin, listos para emisión manual en gds. <br>
+            <span>Tarifa en USD</span> <br>
+            Al ingresar al pnr verán que el archivo tarifario se muestra guardado en USD. <br> <br>
+
+            
+            <h2>Paso a paso:</h2>
+
+            <span>Paso 1: Se verifica el estado del pnr en el gds correspondiente</span> <br>
+            Realizamos el check list obligatorio para avanzar, itinerario, tarifa, equipaje. <br> <br>
+            <span>Paso 2: Se verifica condiciones de emisión</span> <br>
+            El hecho de estar en otra moneda no cambia el proceso de validación de condiciones. <br>
+            Chequeamos si la aerolínea nos paga comisión y over (sobrecomisión) en la web de <a href="https://red.ricaleonline.com/Account/Login" target="_blank" rel="noopener noreferrer" class="link"> Ricale - Condiciones</a> <br> <br>
+            <span>Paso 3: Se valida pago</span> <br>
+            Recuerden que estos pedidos ingresan ya cobrados en pesos argentinos. <br>
+            Nuestra tarea en este punto es verificar y dejar registro del tipo de cambio con el que ingresó el pedido. <br>
+            Esta información la pueden calcular ustedes mismos o bien consultar con su super. <br> <br>
+            <span>Paso 4: Emision siempre CASH</span> <br>
+
+            <strong>
+                Las aerolineas no aceptan el UATP en USD. <br>
+            </strong>
+            Es importante entender que en este procedimiento el hecho de cargar como FOP una tarjeta teniendo una tarifa cotizada en USD es <strong>MOTIVO DE ADM</strong> <br>
+            Nuestra tarea es garantizar que el cobro esta confirmado correctamente en el admin y emitir <strong>CASH</strong> <br> <br>
+
+            <div class="users">
+                        <span > 
+                            IMPORTANTE: Recuerden eliminar la FOP inicial que venia cargada en el pnr. <br>
+                            Si no lo quitamos, la plataforma puede generar cobro innecesario al usuario <br> <br>
+                            El comando es F.@ + R.CG / ER. <br> 
+                            Cargamos FOP CASH -> TMUXFS.
+                        </span> 
+                    </div> <br>
+
+            <h3>Casos Google Fligth</h3>
+            Estos casos ingresan con el tag <strong>Google Fligth</strong> <br>
+            Van a entrar cobramos en pesos argentinos y la tarifa ingresa en la misma moneda. Esto es un error del sincronia del sistema. <br> Debemos hacer una retarifacion convirtiendo el archivo grabado en el gds a USD. <br>
+            <div class="users">
+                El comando para cotizar en USD es: <strong>FQ:USD</strong>
+            </div>
+            <br><br><br>
+            
+        </p>
+
+    </section>
     <footer>
         <a href="../galileo/gestionCobros.html"><img src="../img/flecha-hacia-arriba.png" alt="logo" /></a>
         <p>Sitio creado por CaroGomez</p>
