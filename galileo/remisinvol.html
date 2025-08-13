@@ -13,75 +13,94 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <nav class="menu">
             <img src="../img/logo.png" alt="logo">
             <ul>
-                <a href="../index.html">
-                    <li>Calidad</li>
-                </a>
-                <a href="./guias.html">
-                    <li>Guias de ayuda</li>
-                </a>
-                <a href="./ae.html">
-                    <li>Antiestafa</li>
-                </a>
-                <a href="./post.html">
-                    <li>Atención al cliente</li>
-                </a>
-                <a href="./galileo.html">
-                    <li>Galileo</li>
-                </a>
-
-                <a href="./amadeus.html">
-                    <li>Amadeus</li>
-                </a>
-                <a href="./gdsNdc.html">
-                    <li>GDS NDC</li>
-                </a>
-
-                <a href="./terrestres.html">
-                    <li>Terrestres</li>
-                </a>
-                <a href="./form.html">
-                    <li>Sugerencias</li>
-                </a>
+                <a href="../index.html"><li>Calidad</li></a>
+                <a href="../html/guias.html"><li>Guias de ayuda</li></a>
+                <a href="../html/ae.html"><li>Antiestafa</li></a>
+                <a href="../html/post.html"><li>Atención al cliente</li></a>
+                <a href="../html/galileo.html"><li>Galileo</li></a>
+    
+                <a href="../html/amadeus.html"><li>Amadeus</li></a>
+                <a href="../html/gdsNdc.html"><li>GDS NDC</li></a>
+    
+                <a href="../html/terrestres.html"><li>Terrestres</li></a>
+                <a href="../html/form.html"><li>Sugerencias</li></a>
             </ul>
         </nav>
     </header>
     <section id="remiinvol">
-        <span>***Llamamos remisiones NO ADC a aquellas que se realizan a costo 0, ya sea por una reprogramación, correct
-            name o cambio con autorización de la aerolínea***</span>
-        <h2>REMISIÓN NO ADC GALILEO</h2>
+        <h2>REMISIÓN NO ADC</h2>
         <p>
-            Desplegamos el itinerario y verificamos cambios en el historial
-            <img src="../img/pnrG.png" alt=""> <br>
+        Llamamos remisiones NO ADC a aquellas que se realizan a costo 0, ya sea por una reprogramación, correct
+            name o cambio con autorización de la aerolínea <br><br>
+            <span>PASO 1 - Verificacón de condiciones y estados de pnr</span> <br>
+
+            Desplegamos el itinerario y verificamos cambios en el historial <br>
+            <img src="../img/pnrG.png" alt="" style="width: 100%;"> <br>
             Es muy importante que verifiquen si aplica el cambio involuntario ya que cada aerolínea tiene sus
             condiciones. <br>
+            <div class="users">
+                Les dejo el enlace para verificar los Agendar de AR ya que es la aerolínea que mas remitimos. <br>
+                <a href="https://agencias.aerolineas.com.ar/main.asp?idSitio=AR&idPagina=1003&idIdioma=es" target="_blank" class="link">Agendar</a>
+            </div>
             Si corresponde el cambio NO ADC, tenemos que confirmar que los tramos estan ok en la cia y avanzar creando
             la máscara <br>
             <img src="../img/asterisco.png" alt=""> <br>
+            <div class="users">
+                Aca tenemos una salvedad importante: Si nosotros confirmamos un itinerario con el comando <strong>@ALL</strong>, es decir no tomamos lugares manualmente, es posible avanzar con la remision a pesar de no tener el 0* <br>
+            </div> 
+
+            <span>PASO 2 - Creación de la mascara</span> <br>
             En Galileo tenemos 3 maneras de crear la máscara: automatica, semiautomatica o manual
         <h3>Automática</h3>
         Esta herramienta cumple la función de generar la máscara de forma automática. <br>
-        ***Generalmente si el pnr ya tuvo una remisión o bien cambió la ruta, no suele funcionar*** <br>
-        Debemos ingresar el comando <strong>INVOL/FOP</strong>
-        <img src="../img/INVOL.png" alt="">
+        <span>Generalmente si el pnr ya tuvo una remisión o bien cambió la ruta, no suele funcionar <br>
+
+        </span>
+        Debemos ingresar el comando:
+        <div class="users">
+            <strong>INVOL/FOP</strong>
+        </div> 
+        <img src="../img/INVOL.png" alt="" style="width: 100%;"> <br>
         Una vez que ingresamos el comando les va a arrojar la siguiente pantalla informando que la máscara fue
         realizada.
-        <img src="../img/involok.png" alt="">
+        <img src="../img/involok.png" alt="" > <br>
+        Luego debemos verificar si los datos que trajo el sistema son correctos para continuar con la remisión. (paso 3) <br>
         <h3>Semiautomática</h3>
-        Cuando el comando de remisión automática no funciona tendremos que realizar la máscara con el siguiente comando.
-        <strong>FQTE.Hxxxxx/Sx@xxxx/Sx@xxxx</strong>
-        <img src="../img/comando.png" alt="">
-        Este comando se debe ingresar por pasajero asi crea cada máscara. <br>
+        Cuando el comando de remisión automática no funciona tendremos que realizar la máscara teniendo en cuenta la informacion del ticket que usaremos para pagar dicha remision. <br>
+        Para crear la máscara debemos ingresar con el siguiente comando:  <br>
+        <div class="users">
+            <strong>FQTEPx.Hxxxxx/Sx@xxxx/Sx@xxxx</strong>
+        </div>
+        <span>
+            Este comando se debe ingresar por pasajero ya que cada uno se pagará de forma diferente. <br>
+        </span> <br>
+        <img src="../img/comando.png" alt="" style="width: 100%;"> <br> <br>
+<span>Paso 3: Checklist comparativo</span> <br>
+
         Una vez generada la máscara se deben verificar que estén todos los componentes cargados y que sean idénticos al
-        ticket open.
+        ticket open. <br>
         <img src="../img/part1.png" alt=""><br>
         <img src="../img/part2.png" alt=""><br>
-        Verificamos que figure la COMISIÓN, CHAPA, ENDOSO, FEX <br>
-        Ya con la confirmación con todos los componentes cargados en la máscara, pueden ingresar al comando de emisión.
-        <strong>TKPDXD.FE60D2.6PI3</strong>
+
+        <span>Paso 4: Ingreso de condiciones en la máscara</span> <br>
+        Siempre vamos a verificar que se encuentren cargados los siguientes puntos en el archivo tarifario: <br>
+        <div class="users">
+            <strong>COMISIÓN: Siempre 0</strong> <br>
+            <strong>ENDOSO: Otorgado por la Aerolinea</strong> <br>
+            <strong>CHAPA/PLACA</strong> <br>
+            <strong>FEX: Nro de ticket open como FOP</strong> <br>            
+        </div><br>
+
+        <span>Paso 6: Ingreso de la remisión</span> <br>
+        Ya con la confirmación con todos los componentes cargados en la máscara, pueden ingresar al comando de emisión de acuerdo al pseudo en el que estemos.
+        <div class="users">
+            <strong>TKPDXD.FE60D2.6PI3</strong>: Para Iata Ricale <br>
+            <strong>TKPDTDAD</strong>: Para Iata propio <br>
+        </div>
         </p>
     </section>
 </body>
