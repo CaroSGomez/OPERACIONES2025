@@ -50,7 +50,98 @@
         </nav>
     </header>
     <section id="involA">
-        <h2>REMISIÓN NO ADC AMADEUS</h2>
+
+    <h2>Remisiones INVOL NO ADC</h2>
+        <p>
+            Tenemos varias maneras de crear una máscara para un cambio sin costo <br>
+            La primera opción y la más sencilla es el:
+
+            <div class="users">
+                Comando: <strong>FXI</strong>
+            </div>
+
+            La entrada volverá a emitir todos los cupones elegibles restantes con el estado A, O o U de un billete electrónico, desde el último segmento volado en adelante. <br>
+
+            Se crea el nuevo <strong>TTS</strong> para cada pasajero con los segmentos de vuelo actualizados automáticamente. <br>
+            No hay un nuevo cálculo de tarifa. <br>
+
+            <div class="users">
+
+                *Las actualizaciones automáticas incluyen lo siguiente: <br>
+                *El TST está marcado como manual. <br>
+                *El indicador de emisión de TST está configurado en modo de reemisión. <br>
+                *El campo <strong>origen/destino</strong> se actualiza en función del nuevo itinerario. <br>
+                *La base de la tarifa se actualiza en función de la base de tarifa de los cupones del billete original. <br>
+                *Se aplica la fecha No válido después (Not Valid After NVA) del billete original. <br>
+                *El equipaje permitido del segmento original se aplica. <br>
+                *La nueva tarifa base y la moneda son iguales a la tarifa base y la moneda originales. <br>
+                *Los impuestos del billete original se utilizan y se muestran como impuestos pagados antiguos. <br>
+                *La tarifa total es <strong>0</strong> y se muestra como <strong>NOADC</strong> (sin cobro adicional) en la moneda de la oficina de reemisión. <br>
+                *La forma de pago del billete original, que se emitió a cambio del billete de reemisiones posteriores, se añade como una forma de pago original (FPO). El FPO incluirá la forma de pago y el código de proveedor para las tarjetas de crédito. <br>
+                *Se añade la tarifa equivalente pagada <strong>(EQUIV)</strong> del billete original. <br>
+                *El elemento de endoso/restricciones <strong>(FE)</strong> se actualiza con el siguiente texto: SKCHG. Por ejemplo, FE PAX NO ENDORSABLE PLZ CHECK/ NONREF/S2-4 se convierte en FE PAX SKCHG NO ENDORSABLE PLZ CHECK/ NONREF/S2-4. <br>
+                
+                <br>
+                <span>
+                    
+                    El sistema va a generar un campo de endoso automatico por ende hay que verificar con la aerolinea si es correto o se debe modificar 
+                </span> <br> <br>
+                
+                *La aerolínea validadora <strong>(FV)</strong> se añadirá en función de la oficina de reemisión para los agentes de la aerolínea ATO/CTO. <br>
+                *El elemento <strong>FO</strong> (emisión/emitido original a cambio de) se elimina automáticamente, y se añade un nuevo elemento FO. <br>
+            </div>
+
+            Ya con la máscara creada vamos a verificar que las lineas este correctas. <br>
+
+            Avanzaremos con la emision por pasajero: 
+
+            <div class="users">
+                Comando: <strong>TTP/TX/PX</strong>
+            </div>
+
+            <h3>Máscara semiautomatica</h3>
+            En cualquier caso también puedes hacer <strong>TTI/EXCH</strong> para actualizar la máscara de emisión y preparar la reemisión a coste cero, y luego abrir el <strong>TST</strong> y actualizar los campos que puedan necesitarlo (equipaje, not valid after-before, etc) <br>
+
+          
+            Seguir los siguientes pasos del ejemplo: <br>
+            1) Modificar el PNR de acuerdo a las fechas y/ó vuelos solicitados <br>
+            2) Grabar nuevamente la tarifa: <strong>FXP o FXB</strong>. <br> Si al grabar la tarifa no se cumpliera la condición de compra anticipada entonces tarificar con fecha pasada (tomar en cuenta la fecha de emisión del boleto original): <strong>FXP/R,10APR10</strong>  <br>
+
+            <span>
+                Nota  importante:  Si  al  grabar  la  tarifa  el  sistema  le  responde:  EL  TST  ANTERIOR EXISTE/SUPERPOSICION DE SEGMENTOS  significa  que  tenemos  una tarifa  grabada la  cual debe ser eliminada (para poder cotizar la nueva tarifa) con el comando <strong>TTE/ALL</strong>
+            </span> <br>
+            4) Ingresar la forma de pago original: <br>
+             El comando <strong>TTI/EXCH</strong> convierte en forma automática la forma de pago en forma de pago original <strong>(FPO)</strong> siempre y cuando el elemento FP haya estado presente en el PNR. Pero si el agente ya lo hubiera eliminado (con XE) ó estuviese trabajando en un nuevo PNR entonces se deberá ingresar en forma manual de la siguiente manera:
+
+            <div class="users">
+                Comandos: <br>
+                <strong>FPO/CASH</strong>: Si fue pagado en efectivo <br>
+                <strong>FPO/CCVI</strong>:Si fue pagado con tarjeta CC <br>
+            </div>
+            5) Ingresar la forma original: Consiste en ingresar el número de boleto original <strong>(FO)</strong> de acuerdo a los siguientes formatos: <br>
+            <strong>FO*L</strong>nrolinea donde esta el ticket a remitir <br>
+            <strong>Formato gráfico:</strong>  Llenar en el campo EMISION ORIGINAL/POR INTERCAMBIO:   001-4290123456E1LPB21JAN10/12345678  <br>
+            Si utiliza el comando ingresar: <strong>FO 001-4290123456E1BUEZO210721JAN10/12345678</strong> <br>
+            Donde: <br>
+            FO  es     Código de transacción <br>
+            001-4290123456  Número de boleto original<br>
+             E      Significa que el boleto original fue electrónico<br>
+              1       Número de cupón a partir del cual se reemite el boleto<br>
+               BUEZO2107       Código de ciudad de emisión del boleto original <br>
+                21JAN10    Fecha de emisión original <br>
+                /55507491    Oblicua seguido del código IATA de la agencia que emitió e  boleto original <br>
+
+                6)  Remitir  el  boleto: <br> 
+                 Verificar  que  todos  los  elementos  necesarios  (FV,  FM,  FT,  etc,)  estén ingresados en el PNR para luego poder emitir. <br>
+                 <span>
+
+                     Es importante verificar que tanto el TST como los elementos necesarios estén ingresados en forma correcta ya que una reemisión <strong>NO SE PUEDE ANULAR.</strong> 
+                 </span>
+
+        </p>
+    </section>
+    <section >
+        <h2>Máscara Manual</h2>
         
             Desplegamos itinerario y verificamos cambios en el historial <br>
             <img src="../img/involrhi.png" alt="" width="100%">  <br>
